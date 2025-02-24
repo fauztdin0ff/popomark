@@ -1,0 +1,33 @@
+<svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip2_687">
+			<rect id="united states" rx="7.185628" width="14.371258" height="14.371257" transform="translate(5.628906 5.628784)" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip2_674">
+			<rect id="Property 1=currency" rx="0.000000" width="18.400000" height="18.400000" transform="translate(0.800000 0.800000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip2_674)">
+		<path id="Vector" d="M14.37 7.18C14.37 11.15 11.15 14.37 7.18 14.37C3.21 14.37 0 11.15 0 7.18C0 3.21 3.21 0 7.18 0C11.15 0 14.37 3.21 14.37 7.18Z" fill="#0052B4" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Vector" d="M7.18 2.81L7.41 3.52L8.17 3.52L7.56 3.97L7.79 4.68L7.18 4.24L6.57 4.68L6.8 3.97L6.2 3.52L6.95 3.52L7.18 2.81Z" fill="#FFDA44" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Vector" d="M4.09 4.09L4.76 4.43L5.29 3.9L5.17 4.64L5.84 4.98L5.1 5.1L4.98 5.84L4.64 5.17L3.9 5.29L4.43 4.76L4.09 4.09Z" fill="#FFDA44" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Vector" d="M2.81 7.18L3.52 6.95L3.52 6.2L3.97 6.8L4.68 6.57L4.24 7.18L4.68 7.79L3.97 7.56L3.52 8.17L3.52 7.41L2.81 7.18Z" fill="#FFDA44" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Vector" d="M4.09 10.27L4.43 9.6L3.9 9.07L4.64 9.19L4.98 8.52L5.1 9.26L5.84 9.38L5.17 9.72L5.29 10.46L4.76 9.93L4.09 10.27Z" fill="#FFDA44" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Vector" d="M7.18 11.55L6.95 10.84L6.2 10.84L6.8 10.4L6.57 9.68L7.18 10.12L7.79 9.68L7.56 10.4L8.17 10.84L7.41 10.84L7.18 11.55Z" fill="#FFDA44" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Vector" d="M10.27 10.27L9.6 9.93L9.07 10.46L9.19 9.72L8.52 9.38L9.26 9.26L9.38 8.52L9.72 9.19L10.46 9.07L9.93 9.6L10.27 10.27Z" fill="#FFDA44" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Vector" d="M11.55 7.18L10.84 7.41L10.84 8.17L10.4 7.56L9.68 7.79L10.12 7.18L9.68 6.57L10.4 6.8L10.84 6.2L10.84 6.95L11.55 7.18Z" fill="#FFDA44" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Vector" d="M10.27 4.09L9.93 4.76L10.46 5.29L9.72 5.17L9.38 5.84L9.26 5.1L8.52 4.98L9.19 4.64L9.07 3.9L9.6 4.43L10.27 4.09Z" fill="#FFDA44" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<rect id="united states" rx="7.185628" width="14.371258" height="14.371257" transform="translate(5.628906 5.628784)" fill="#FFFFFF" fill-opacity="0"/>
+		<g clip-path="url(#clip2_687)">
+			<path id="Vector" d="M20 12.81C20 16.78 16.78 20 12.81 20C8.84 20 5.62 16.78 5.62 12.81C5.62 8.84 8.84 5.62 12.81 5.62C16.78 5.62 20 8.84 20 12.81Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+			<path id="Vector" d="M12.5 12.81L20 12.81C20 12.16 19.91 11.53 19.75 10.93L12.5 10.93L12.5 12.81Z" fill="#D80027" fill-opacity="1.000000" fill-rule="nonzero"/>
+			<path id="Vector" d="M12.5 9.06L18.94 9.06C18.5 8.34 17.94 7.71 17.28 7.19L12.5 7.19L12.5 9.06Z" fill="#D80027" fill-opacity="1.000000" fill-rule="nonzero"/>
+			<path id="Vector" d="M12.81 20C14.5 20 16.05 19.41 17.28 18.43L8.34 18.43C9.56 19.41 11.12 20 12.81 20Z" fill="#D80027" fill-opacity="1.000000" fill-rule="nonzero"/>
+			<path id="Vector" d="M6.68 16.56L18.94 16.56C19.29 15.98 19.57 15.35 19.75 14.68L5.87 14.68C6.05 15.35 6.33 15.98 6.68 16.56Z" fill="#D80027" fill-opacity="1.000000" fill-rule="nonzero"/>
+			<path id="Vector" d="M8.95 6.75L9.61 6.75L9 7.19L9.23 7.9L8.62 7.46L8.01 7.9L8.21 7.29C7.68 7.73 7.21 8.26 6.82 8.84L7.03 8.84L6.64 9.12C6.58 9.22 6.52 9.32 6.47 9.43L6.65 10L6.31 9.75C6.22 9.93 6.14 10.11 6.07 10.3L6.28 10.93L7.03 10.93L6.42 11.37L6.65 12.09L6.04 11.65L5.68 11.91C5.64 12.21 5.62 12.51 5.62 12.81L12.81 12.81C12.81 8.84 12.81 8.37 12.81 5.62C11.39 5.62 10.07 6.04 8.95 6.75ZM9.23 12.09L8.62 11.65L8.01 12.09L8.25 11.37L7.64 10.93L8.39 10.93L8.62 10.22L8.85 10.93L9.61 10.93L9 11.37L9.23 12.09ZM9 9.28L9.23 10L8.62 9.56L8.01 10L8.25 9.28L7.64 8.84L8.39 8.84L8.62 8.12L8.85 8.84L9.61 8.84L9 9.28ZM11.81 12.09L11.2 11.65L10.59 12.09L10.82 11.37L10.21 10.93L10.97 10.93L11.2 10.22L11.43 10.93L12.18 10.93L11.58 11.37L11.81 12.09ZM11.58 9.28L11.81 10L11.2 9.56L10.59 10L10.82 9.28L10.21 8.84L10.97 8.84L11.2 8.12L11.43 8.84L12.18 8.84L11.58 9.28ZM11.58 7.19L11.81 7.9L11.2 7.46L10.59 7.9L10.82 7.19L10.21 6.75L10.97 6.75L11.2 6.03L11.43 6.75L12.18 6.75L11.58 7.19Z" fill="#0996C7" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+	</g>
+</svg>

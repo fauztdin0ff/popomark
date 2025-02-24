@@ -1,0 +1,72 @@
+[
+   {
+      "name": "Liam J.",
+      "country": "USA",
+      "img": "img/users/user-11.png",
+      "asset": "Ethereum",
+      "assetImg": "img/currency/zcash.svg",
+      "assetType": "Crypto",
+      "buySell": "Buy",
+      "profit": 7500
+   },
+   {
+      "name": "Sophia R.",
+      "country": "Canada",
+      "img": "img/users/user-17.png",
+      "asset": "Tesla",
+      "assetImg": "img/currency/nasq.svg",
+      "assetType": "Indicies",
+      "buySell": "Sell",
+      "profit": 8100
+   },
+   {
+      "name": "Lucas M.",
+      "country": "Germany",
+      "img": "img/users/user-13.png",
+      "asset": "Apple",
+      "assetImg": "img/currency/ripple.svg",
+      "assetType": "Crypto",
+      "buySell": "Buy",
+      "profit": 7800
+   },
+   {
+      "name": "Emma D.",
+      "country": "UK",
+      "img": "img/users/user-14.png",
+      "asset": "Bitcoin",
+      "assetImg": "img/currency/bitcoin.svg",
+      "assetType": "Crypto",
+      "buySell": "Buy",
+      "profit": 7300
+   },
+   {
+      "name": "Noah W.",
+      "country": "Australia",
+      "img": "img/users/user-15.png",
+      "asset": "Amazon",
+      "assetImg": "img/currency/zcash.svg",
+      "assetType": "Crypto",
+      "buySell": "Sell",
+      "profit": 8200
+   },
+   {
+      "name": "Isabella T.",
+      "country": "France",
+      "img": "img/users/user-16.png",
+      "asset": "Gold",
+      "assetImg": "img/currency/bitcoin.svg",
+      "assetType": "Crypto",
+      "buySell": "Buy",
+      "profit": 7900
+   },
+   {
+      "name": "Mason B.",
+      "country": "Japan",
+      "img": "img/users/user-12.png",
+      "asset": "Microsoft",
+      "assetImg": "img/currency/reddit.svg",
+      "assetType": "Stocks",
+      "buySell": "Sell",
+      "profit": 7600
+   }
+]

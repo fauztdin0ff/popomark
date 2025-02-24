@@ -1,0 +1,14 @@
+<svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip2_795">
+			<rect id="Property 1=stocks" rx="9.200000" width="18.400000" height="18.400000" transform="translate(0.800000 0.800000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip2_795)">
+		<circle id="Ellipse 1" cx="10.000000" cy="10.000000" r="10.000000" fill="#FF0004" fill-opacity="1.000000"/>
+		<path id="Vector" d="M10 16.25L11.39 8.34C12.73 8.34 13.15 8.49 13.21 9.09C13.21 9.09 14.1 8.75 14.55 8.07C12.79 7.25 11.02 7.22 11.02 7.22L9.99 8.48L9.99 8.48L8.96 7.22C8.96 7.22 7.19 7.25 5.43 8.07C5.88 8.75 6.78 9.09 6.78 9.09C6.84 8.49 7.26 8.34 8.58 8.34L10 16.25ZM10 6.85C11.42 6.84 13.05 7.07 14.71 7.8C14.94 7.4 15 7.22 15 7.22C13.17 6.5 11.47 6.25 10 6.25C8.52 6.25 6.82 6.5 5 7.22C5 7.22 5.08 7.44 5.28 7.8C6.94 7.08 8.57 6.84 10 6.85Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

@@ -1,0 +1,2464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+   <link rel="stylesheet" href="css/style.min.css">
+   <title>Главная</title>
+   <style>
+      .preloader {
+         position: fixed;
+         top: 0;
+         left: 0;
+         inset: 0;
+         width: 100%;
+         height: 100%;
+         background: #181818;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         z-index: 999;
+      }
+
+      .preloader p {
+         color: #fff;
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 110%;
+         letter-spacing: -0.01em;
+         text-align: center;
+
+      }
+
+      .preloader svg {
+         width: 80px;
+         height: 80px;
+      }
+
+      .preloader svg path {
+         animation: float 1.5s ease-in-out infinite;
+      }
+
+      .preloader svg path:nth-child(1) {
+         animation-delay: 0s;
+      }
+
+      .preloader svg path:nth-child(2) {
+         animation-delay: 0.2s;
+      }
+
+      .preloader svg path:nth-child(3) {
+         animation-delay: 0.4s;
+      }
+
+      .preloader svg path:nth-child(4) {
+         animation-delay: 0.6s;
+      }
+
+      .preloader svg path:nth-child(5) {
+         animation-delay: 0.8s;
+      }
+
+      .preloader svg path:nth-child(6) {
+         animation-delay: 1s;
+      }
+
+      .preloader svg path:nth-child(7) {
+         animation-delay: 1.2s;
+      }
+
+      .preloader svg path:nth-child(8) {
+         animation-delay: 1.4s;
+      }
+
+      .preloader.hidden {
+         display: none;
+      }
+
+      @keyframes float {
+         0% {
+            transform: translateY(0);
+         }
+
+         50% {
+            transform: translateY(-5px);
+         }
+
+         100% {
+            transform: translateY(0);
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+   <div class="header__body container-xl">
+
+      <div class="header__logo">
+         <a href="index.html" aria-label="Home"><img src="img/logo-brand.svg" alt="PopoMark"></a>
+      </div>
+
+      <div class="header__menu menu">
+         <div class="menu__icon">
+            <svg>
+               <use xlink:href="#icon-burger"></use>
+            </svg>
+         </div>
+         <nav class="menu__body">
+            <ul class="menu__list">
+               <li class="menu__item">
+                  <a href="#" class="menu__link">
+                     Markets
+                     <svg>
+                        <use xlink:href="#icon-chevron"></use>
+                     </svg>
+                  </a>
+                  <div class="menu__sublist">
+                     <div class="menu__sublist-body container">
+                        <div class="menu__sublist-items">
+                           <div class="menu__sublist-row">
+                              <p>Forex</p>
+                              <a href="" class="menu__sublink">EUR/USD</a>
+                              <a href="" class="menu__sublink">GBP/JPY</a>
+                              <a href="" class="menu__sublink">USD/JPY</a>
+                              <a href="" class="menu__sublink">GBP/USD</a>
+                              <a href="" class="menu__sublink">AUD/USD</a>
+                              <a href="" class="menu__sublink">All Pairs</a>
+                           </div>
+                           <div class="menu__sublist-row">
+                              <p>Crypto</p>
+                              <a href="" class="menu__sublink">Bitcoin (BTC)</a>
+                              <a href="" class="menu__sublink">Ethereum (ETH)</a>
+                              <a href="" class="menu__sublink">Ripple (XRP)</a>
+                              <a href="" class="menu__sublink">Litecoin (LTC)</a>
+                              <a href="" class="menu__sublink">Dogecoin (DOGE)</a>
+                           </div>
+                           <div class="menu__sublist-row">
+                              <p>Stocks</p>
+                              <a href="" class="menu__sublink">Apple (AAPL)</a>
+                              <a href="" class="menu__sublink">Tesla (TSLA)</a>
+                              <a href="" class="menu__sublink">Amazon (AMZN)</a>
+                              <a href="" class="menu__sublink">Microsoft (MSFT)</a>
+                           </div>
+                           <div class="menu__sublist-row">
+                              <p>Options</p>
+                              <a href="" class="menu__sublink">Binary</a>
+                              <a href="" class="menu__sublink">Digital</a>
+                           </div>
+                        </div>
+                        <div class="menu__sublist-assets">
+                           <p class="menu__sublist-assets-title">
+                              All assets for you to discover
+                           </p>
+                           <p class="menu__sublist-assets-subtitle">
+                              Any convinient device for your comfortable using
+                           </p>
+                           <a href="" class="menu__sublist-assets-link">
+                              View all assets
+                              <svg>
+                                 <use xlink:href="#icon-chevron-right"></use>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <li class="menu__item">
+                  <a href="#" class="menu__link">
+                     For traders
+                     <svg>
+                        <use xlink:href="#icon-chevron"></use>
+                     </svg>
+                  </a>
+                  <div class="menu__sublist">
+                     <div class="menu__sublist-body container">
+                        <div class="menu__sublist-items">
+                           <div class="menu__sublist-row">
+                              <p>Forex</p>
+                              <a href="" class="menu__sublink">EUR/USD</a>
+                              <a href="" class="menu__sublink">GBP/JPY</a>
+                              <a href="" class="menu__sublink">USD/JPY</a>
+                              <a href="" class="menu__sublink">GBP/USD</a>
+                              <a href="" class="menu__sublink">AUD/USD</a>
+                              <a href="" class="menu__sublink">All Pairs</a>
+                           </div>
+                           <div class="menu__sublist-row">
+                              <p>Crypto</p>
+                              <a href="" class="menu__sublink">Bitcoin (BTC)</a>
+                              <a href="" class="menu__sublink">Ethereum (ETH)</a>
+                              <a href="" class="menu__sublink">Ripple (XRP)</a>
+                              <a href="" class="menu__sublink">Litecoin (LTC)</a>
+                              <a href="" class="menu__sublink">Dogecoin (DOGE)</a>
+                           </div>
+                           <div class="menu__sublist-row">
+                              <p>Stocks</p>
+                              <a href="" class="menu__sublink">Apple (AAPL)</a>
+                              <a href="" class="menu__sublink">Tesla (TSLA)</a>
+                              <a href="" class="menu__sublink">Amazon (AMZN)</a>
+                              <a href="" class="menu__sublink">Microsoft (MSFT)</a>
+                           </div>
+                           <div class="menu__sublist-row">
+                              <p>Options</p>
+                              <a href="" class="menu__sublink">Binary</a>
+                              <a href="" class="menu__sublink">Digital</a>
+                           </div>
+                        </div>
+                        <div class="menu__sublist-assets">
+                           <p class="menu__sublist-assets-title">
+                              All assets for you to discover
+                           </p>
+                           <p class="menu__sublist-assets-subtitle">
+                              Any convinient device for your comfortable using
+                           </p>
+                           <a href="" class="menu__sublist-assets-link">
+                              View all assets
+                              <svg>
+                                 <use xlink:href="#icon-chevron-right"></use>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <li class="menu__item menu__item-add">
+                  <a href="#" class="menu__link">
+                     Download App
+                     <svg>
+                        <use xlink:href="#icon-chevron"></use>
+                     </svg>
+                  </a>
+                  <div class="menu__sublist">
+                     <div class="menu__sublist-body container">
+
+                        <div class="menu__sublist-assets">
+                           <p class="menu__sublist-assets-title">All in one place</p>
+                           <p class="menu__sublist-assets-subtitle">
+                              Any convinient device for your comfortable using
+                           </p>
+                        </div>
+
+                        <div class="menu__sublist-apps">
+                           <a href="" class="menu__sublist-app">
+                              <svg>
+                                 <use xlink:href="#icon-desktop"></use>
+                              </svg>
+                              <p>Download for Mac<span>38 MB · 10.1 Mac OS or higher</span></p>
+                           </a>
+                           <a href="" class="menu__sublist-app">
+                              <svg>
+                                 <use xlink:href="#icon-computer"></use>
+                              </svg>
+                              <p>Download for Windows<span>24 MB · Windows 7, 8, 8.1, 10</span></p>
+                           </a>
+                           <a href="" class="menu__sublist-app">
+                              <svg>
+                                 <use xlink:href="#icon-desktop"></use>
+                              </svg>
+                              <p>Download for Android<span>89 MB · Android 5.1 or later</span></p>
+                           </a>
+                           <a href="" class="menu__sublist-app mob">
+                              <svg>
+                                 <use xlink:href="#icon-android"></use>
+                              </svg>
+                              <p>Download for Android<span>89 MB · Android 5.1 or later</span></p>
+                           </a>
+                           <a href="" class="menu__sublist-app mob">
+                              <svg>
+                                 <use xlink:href="#icon-ios"></use>
+                              </svg>
+                              <p>Download for iOS<span>89 MB · iOS 18.1 or later</span></p>
+                           </a>
+                           <a href="" class="menu__sublist-assets-link">
+                              View all options
+                              <svg>
+                                 <use xlink:href="#icon-chevron-right"></use>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <li class="menu__item"><a href="" class="menu__link">Company</a></li>
+               <li class="menu__item"><a href="" class="menu__link">Blog</a></li>
+               <li class="menu__item"><a href="" class="menu__link">Affiliate Program</a></li>
+            </ul>
+
+            <div class="menu__body-mob-panel">
+               <img src="img/logo-brand.svg" alt="" class="menu__body-logo">
+               <div class="menu__body-close">
+                  <img src="img/icons/close.svg" alt="">
+               </div>
+            </div>
+         </nav>
+      </div>
+
+      <div class="header__controls-wrap">
+         <div class="header__controls">
+            <div class="header__lang">
+               <div class="header__lang-active">
+                  English
+                  <svg>
+                     <use xlink:href="#icon-chevron"></use>
+                  </svg>
+               </div>
+               <ul class="header__lang-list">
+                  <li><a href="">Deutsch</a></li>
+                  <li><a href="">Français</a></li>
+                  <li><a href="">Русский</a></li>
+               </ul>
+            </div>
+            <div class="header__auth">
+               <button class="header__auth-btn button-white">Log in</button>
+               <button class="header__auth-btn button-orange">Sign up</button>
+            </div>
+         </div>
+      </div>
+
+   </div>
+</header>
+      <main>
+         <div class="preloader" id="preloader">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#f9be08" xmlns:xlink="http://www.w3.org/1999/xlink"
+               version="1.1" viewBox="0 0 120 125" style="enable-background:new 0 0 120 125;" xml:space="preserve">
+               <path d="M10,63.2h-1.8v-7.6h-1v7.6h-1.8c-0.9,0-1.6,0.7-1.6,1.6v19.1c0,0.9,0.7,1.6,1.6,1.6h1.8v7.6h1v-7.6h1.8 
+                          c0.9,0,1.6-0.7,1.6-1.6V64.8C11.6,63.9,10.9,63.2,10,63.2z" />
+               <path d="M28,14.6h-1.8v-4.3h-1v4.3h-1.8c-0.9,0-1.6,0.7-1.6,1.6v48.2c0,0.9,0.7,1.6,1.6,1.6h1.8v22.7h1V66h1.8 
+                          c0.9,0,1.6-0.7,1.6-1.6V16.2C29.6,15.3,28.9,14.6,28,14.6z" />
+               <path d="M46,32.5h-1.8V19.8h-1v12.8h-1.8c-0.9,0-1.6,0.7-1.6,1.6v8.5c0,0.9,0.7,1.6,1.6,1.6h1.8v34.7h1V44.2H46 
+                          c0.9,0,1.6-0.7,1.6-1.6v-8.5C47.6,33.2,46.9,32.5,46,32.5z" />
+               <path d="M64.5,47.4h-1.8V6.8h-1v40.6h-1.8c-0.9,0-1.6,0.7-1.6,1.6v33.9c0,0.9,0.7,1.6,1.6,1.6h1.8v8.1h1v-8.1h1.8 
+                          c0.9,0,1.6-0.7,1.6-1.6V49C66,48.1,65.3,47.4,64.5,47.4z" />
+               <path d="M83,17h-1.8V6.1h-1V17h-1.8c-0.9,0-1.6,0.7-1.6,1.6v19.1c0,0.9,0.7,1.6,1.6,1.6h1.8v10.9h1V39.3h1.8 
+                          c0.9,0,1.6-0.7,1.6-1.6V18.6C84.6,17.7,83.9,17,83,17z" />
+               <path d="M100,50h-1.8V30h-1v20h-1.8c-0.9,0-1.6,0.7-1.6,1.6v30c0,0.9,0.7,1.6,1.6,1.6h1.8v10h1v-10h1.8 
+                          c0.9,0,1.6-0.7,1.6-1.6v-30C101.6,50.7,100.9,50,100,50z" />
+               <path d="M115,25h-1.8V10h-1v15h-1.8c-0.9,0-1.6,0.7-1.6,1.6v15c0,0.9,0.7,1.6,1.6,1.6h1.8v10h1v-10h1.8 
+                          c0.9,0,1.6-0.7,1.6-1.6v-15C116.6,25.7,115.9,25,115,25z" />
+            </svg>
+            <p>loading</p>
+         </div>
+         <section class="intro">
+            <div class="intro__body container">
+               <div class="intro__text">
+                  <h1 class="intro__title">
+                     Trading made <span class="text-gradient">simple</span>
+                  </h1>
+                  <p class="intro__subtitle">
+                     Trade crypto, forex, stocks and more all in one seamless platform
+                  </p>
+                  <div class="intro__buttons">
+                     <a href="" class="button-orange">Get started</a>
+                     <a href="" class="button-white">Learn more</a>
+                  </div>
+                  <div class="intro__rules">
+                     <span class="intro__rules-name">up to</span>
+                     <div class="intro__rules-items">
+                        <div class="intro__rule">
+                           <span class="intro__rule-value">$<span>10</span></span>
+                           Minimal deposit
+                        </div>
+                        <div class="intro__rule">
+                           <span class="intro__rule-value">$<span>200</span></span>
+                           Deposit bonus
+                        </div>
+                        <div class="intro__rule">
+                           <span class="intro__rule-value"><span>40</span>+</span>
+                           Instruments
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="intro__video">
+                  <video autoplay muted loop playsinline webkit-playsinline ismuted="true" preload="auto"
+                     id="intro-video" class="video-item">
+                     <source src="files/intro.mp4" type="video/mp4" media="(min-width: 767px)">
+                     <source src="files/intro-mob.mp4" type="video/mp4" media="(max-width: 766px)">
+                  </video>
+
+                  <div class="loading-icon"></div>
+               </div>
+            </div>
+            <div class="intro__brands">
+               <div class="intro__brands-slider swiper">
+                  <div class="swiper-wrapper">
+                     <div class="intro__brand swiper-slide">
+                        <img src="img/futures/commodities.svg" alt="">
+                        <span>Commodities</span>
+                     </div>
+                     <div class="intro__brand swiper-slide">
+                        <img src="img/futures/forex.svg" alt="">
+                        <span>Forex</span>
+                     </div>
+                     <div class="intro__brand swiper-slide">
+                        <img src="img/futures/indicies.svg" alt="">
+                        <span>Indicies</span>
+                     </div>
+                     <div class="intro__brand swiper-slide">
+                        <img src="img/futures/stocks.svg" alt="">
+                        <span>Stocks</span>
+                     </div>
+                     <div class="intro__brand swiper-slide">
+                        <img src="img/futures/bonds.png" alt="">
+                        <span>Bonds & ETFs</span>
+                     </div>
+                     <div class="intro__brand swiper-slide">
+                        <img src="img/futures/crypto.svg" alt="">
+                        <span>Cryptocurrencies</span>
+                     </div>
+                     <div class="intro__brand swiper-slide">
+                        <img src="img/futures/gold.svg" alt="">
+                        <span>Metals</span>
+                     </div>
+                     <div class="intro__brand swiper-slide">
+                        <img src="img/futures/commodities.svg" alt="">
+                        <span>Commodities</span>
+                     </div>
+                     <div class="intro__brand swiper-slide">
+                        <img src="img/futures/forex.svg" alt="">
+                        <span>Forex</span>
+                     </div>
+                     <div class="intro__brand swiper-slide">
+                        <img src="img/futures/indicies.svg" alt="">
+                        <span>Indicies</span>
+                     </div>
+                     <div class="intro__brand swiper-slide">
+                        <img src="img/futures/stocks.svg" alt="">
+                        <span>Stocks</span>
+                     </div>
+                     <div class="intro__brand swiper-slide">
+                        <img src="img/futures/bonds.png" alt="">
+                        <span>Bonds & ETFs</span>
+                     </div>
+                     <div class="intro__brand swiper-slide">
+                        <img src="img/futures/crypto.svg" alt="">
+                        <span>Cryptocurrencies</span>
+                     </div>
+                     <div class="intro__brand swiper-slide">
+                        <img src="img/futures/gold.svg" alt="">
+                        <span>Metals</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <video autoplay muted loop playsinline webkit-playsinline ismuted="true" preload="auto" id="intro-video-bg">
+               <source src="files/candles-bg.mp4" type="video/mp4" media="(min-width: 767px)">
+               <source src="files/candles-bg-mob.mp4" type="video/mp4" media="(max-width: 766px)">
+            </video>
+         </section>
+         <section class="leaderboard">
+            <div class="leaderboard__body container">
+               <div class="live">
+                  <div class="live__circles">
+                     <div class="live__circle"></div>
+                     <div class="live__circle"></div>
+                     <div class="live__circle"></div>
+                     <div class="live__circle"></div>
+                  </div>
+                  <div class="live__label">
+                     <span class="live__point"></span>
+                     <span class="live__text">LIVE</span>
+                  </div>
+               </div>
+               <h2 class="leaderboard__title title">The most profitable traders</h2>
+               <div class="leaderboard__pedestal pedestal">
+                  <div class="pedestal__wrap">
+                     <img src="img/icons/crown.svg" alt="" class="pedestal__crown">
+                     <div class="pedestal__lider">
+                        <img src="img/users/user-1.png" alt="" width="43" height="43">
+                        <div>
+                           <div class="pedestal__name">Alexandro G.</div>
+                           <div class="pedestal__profit">+$9,967</div>
+                        </div>
+                     </div>
+                     <div class="pedestal__item">
+                        <div class="pedestal__block">
+                           <div class="pedestal__block-perspective"></div>
+                        </div>
+                        <div class="pedestal__number"><img src="img/icons/1.svg" alt=""></div>
+                     </div>
+                  </div>
+
+                  <div class="pedestal__wrap">
+                     <img src="img/icons/crown.svg" alt="" class="pedestal__crown">
+                     <div class="pedestal__lider">
+                        <img src="img/users/user-2.png" alt="" width="43" height="43">
+                        <div>
+                           <div class="pedestal__name">Ana C.</div>
+                           <div class="pedestal__profit">+$9,874</div>
+                        </div>
+                     </div>
+                     <div class="pedestal__item">
+                        <div class="pedestal__block">
+                           <div class="pedestal__block-perspective"></div>
+                        </div>
+                        <div class="pedestal__number"><img src="img/icons/2.svg" alt=""></div>
+                     </div>
+                  </div>
+
+                  <div class="pedestal__wrap">
+                     <img src="img/icons/crown.svg" alt="" class="pedestal__crown">
+                     <div class="pedestal__lider">
+                        <img src="img/users/user-3.png" alt="" width="43" height="43">
+                        <div>
+                           <div class="pedestal__name">Daniela G.</div>
+                           <div class="pedestal__profit">+$9,523</div>
+                        </div>
+                     </div>
+                     <div class="pedestal__item">
+                        <div class="pedestal__block">
+                           <div class="pedestal__block-perspective"></div>
+                        </div>
+                        <div class="pedestal__number">
+                           <img src="img/icons/3.svg" alt="">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <table class="leaderboard__table">
+                  <thead>
+                     <tr>
+                        <th>#</th>
+                        <th>User</th>
+                        <th>Asset</th>
+                        <th>Time</th>
+                        <th>Date</th>
+                        <th>Buy · Sell</th>
+                        <th>Profit</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>4</td>
+                        <td class="cell-with-image">
+                           <div class="cell-flex">
+                              <img src="img/users/user-12.png" alt="">
+                              <div class="cell-text">
+                                 <p>Gabriel L.</p>
+                                 <span>Argentina</span>
+                              </div>
+                           </div>
+                        </td>
+                        <td class="cell-with-image">
+                           <div class="cell-flex">
+                              <img src="img/currency/reddit.svg" alt="">
+                              <div class="cell-text">
+                                 <p>Reddit</p>
+                                 <span>Stocks</span>
+                              </div>
+                           </div>
+                        </td>
+                        <td>13:15</td>
+                        <td>10 Feb</td>
+                        <td class="cell-buy">
+                           <span>
+                              <svg>
+                                 <use xlink:href="#icon-arrow-up"></use>
+                              </svg>
+                              Buy
+                           </span>
+                        </td>
+                        <td class="cell-profit">+$8,749</td>
+                     </tr>
+
+                     <tr>
+                        <td>5</td>
+                        <td class="cell-with-image">
+                           <div class="cell-flex">
+                              <img src="img/users/user-5.png" alt="">
+                              <div class="cell-text">
+                                 <p>Valentina M.</p>
+                                 <span>Brasil</span>
+                              </div>
+                           </div>
+                        </td>
+                        <td class="cell-with-image">
+                           <div class="cell-flex">
+                              <img src="img/currency/zcash.svg" alt="">
+                              <div class="cell-text">
+                                 <p>Zcash</p>
+                                 <span>Crypto</span>
+                              </div>
+                           </div>
+                        </td>
+                        <td>13:14</td>
+                        <td>10 Feb</td>
+                        <td class="cell-buy">
+                           <span>
+                              <svg>
+                                 <use xlink:href="#icon-arrow-up"></use>
+                              </svg>
+                              Buy
+                           </span>
+                        </td>
+                        <td class="cell-profit">+$8,197</td>
+                     </tr>
+
+                     <tr>
+                        <td>6</td>
+                        <td class="cell-with-image">
+                           <div class="cell-flex">
+                              <img src="img/users/user-6.png" alt="">
+                              <div class="cell-text">
+                                 <p>Enrico L.</p>
+                                 <span>Guatemala</span>
+                              </div>
+                           </div>
+                        </td>
+                        <td class="cell-with-image">
+                           <div class="cell-flex">
+                              <img src="img/currency/ripple.svg" alt="">
+                              <div class="cell-text">
+                                 <p>Ripple</p>
+                                 <span>Crypto</span>
+                              </div>
+                           </div>
+                        </td>
+                        <td>13:13</td>
+                        <td>10 Feb</td>
+                        <td class="cell-sell">
+                           <span>
+                              <svg>
+                                 <use xlink:href="#icon-arrow-up"></use>
+                              </svg>
+                              Sell
+                           </span>
+                        </td>
+                        <td class="cell-profit">+$8,419</td>
+                     </tr>
+
+                     <tr>
+                        <td>7</td>
+                        <td class="cell-with-image">
+                           <div class="cell-flex">
+                              <img src="img/users/user-7.png" alt="">
+                              <div class="cell-text">
+                                 <p>Nicolás V.</p>
+                                 <span>Guatemala</span>
+                              </div>
+                           </div>
+                        </td>
+                        <td class="cell-with-image">
+                           <div class="cell-flex">
+                              <img src="img/currency/bitcoin.svg" alt="">
+                              <div class="cell-text">
+                                 <p>Bitcoin</p>
+                                 <span>Crypto</span>
+                              </div>
+                           </div>
+                        </td>
+                        <td>13:12</td>
+                        <td>10 Feb</td>
+                        <td class="cell-buy">
+                           <span>
+                              <svg>
+                                 <use xlink:href="#icon-arrow-up"></use>
+                              </svg>
+                              Buy
+                           </span>
+                        </td>
+                        <td class="cell-profit">+$8,067</td>
+                     </tr>
+
+                     <tr>
+                        <td>8</td>
+                        <td class="cell-with-image">
+                           <div class="cell-flex">
+                              <img src="img/users/user-8.png" alt="">
+                              <div class="cell-text">
+                                 <p>Santiago T.</p>
+                                 <span>Uruguay</span>
+                              </div>
+                           </div>
+                        </td>
+                        <td class="cell-with-image">
+                           <div class="cell-flex">
+                              <img src="img/currency/ripple.svg" alt="">
+                              <div class="cell-text">
+                                 <p>Ripple</p>
+                                 <span>Crypto</span>
+                              </div>
+                           </div>
+                        </td>
+                        <td>13:11</td>
+                        <td>10 Feb</td>
+                        <td class="cell-sell">
+                           <span>
+                              <svg>
+                                 <use xlink:href="#icon-arrow-up"></use>
+                              </svg>
+                              Sell
+                           </span>
+                        </td>
+                        <td class="cell-profit">+$8,128</td>
+                     </tr>
+
+                     <tr>
+                        <td>9</td>
+                        <td class="cell-with-image">
+                           <div class="cell-flex">
+                              <img src="img/users/user-2.png" alt="">
+                              <div class="cell-text">
+                                 <p>Isabel C.</p>
+                                 <span>Argentina</span>
+                              </div>
+                           </div>
+                        </td>
+                        <td class="cell-with-image">
+                           <div class="cell-flex">
+                              <img src="img/currency/bt.svg" alt="">
+                              <div class="cell-text">
+                                 <p>Corn</p>
+                                 <span>Crypto</span>
+                              </div>
+                           </div>
+                        </td>
+                        <td>13:10</td>
+                        <td>10 Feb</td>
+                        <td class="cell-buy">
+                           <span>
+                              <svg>
+                                 <use xlink:href="#icon-arrow-up"></use>
+                              </svg>
+                              Buy
+                           </span>
+                        </td>
+                        <td class="cell-profit">+$8,321</td>
+                     </tr>
+
+                     <tr>
+                        <td>10</td>
+                        <td class="cell-with-image">
+                           <div class="cell-flex">
+                              <img src="img/users/user-4.png" alt="">
+                              <div class="cell-text">
+                                 <p>Nathan W.</p>
+                                 <span>Venezuela</span>
+                              </div>
+                           </div>
+                        </td>
+                        <td class="cell-with-image">
+                           <div class="cell-flex">
+                              <img src="img/currency/nasq.svg" alt="">
+                              <div class="cell-text">
+                                 <p>Nasdaq</p>
+                                 <span>Indicies</span>
+                              </div>
+                           </div>
+                        </td>
+                        <td>13:09</td>
+                        <td>10 Feb</td>
+                        <td class="cell-sell">
+                           <span>
+                              <svg>
+                                 <use xlink:href="#icon-arrow-up"></use>
+                              </svg>
+                              Sell
+                           </span>
+                        </td>
+                        <td class="cell-profit">+$8,523</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </section>
+         <section class="steps">
+            <div class="steps__body container">
+               <div class="steps__att">5 steps</div>
+               <h2 class="steps__title title">How to trade on <span class="title-line">PoPoMark</span></h2>
+               <div class="steps__subtitle subtitle">Simple explanations of complex topics. Get expert insights and stay
+                  informed.</div>
+               <div class="steps__content">
+                  <div class="steps__items-wrap">
+                     <div class="steps__items">
+                        <div class="steps__item active" data-slide="1">
+                           <div class="steps__number">1</div>
+                           <div class="steps__value">Learn the basics</div>
+                        </div>
+                        <div class="steps__item" data-slide="2">
+                           <div class="steps__number">2</div>
+                           <div class="steps__value">Understand the market</div>
+                        </div>
+                        <div class="steps__item" data-slide="3">
+                           <div class="steps__number">3</div>
+                           <div class="steps__value">Analyse trends</div>
+                        </div>
+                        <div class="steps__item" data-slide="4">
+                           <div class="steps__number">4</div>
+                           <div class="steps__value">Start safe&fast</div>
+                        </div>
+                        <div class="steps__item" data-slide="5">
+                           <div class="steps__number">5</div>
+                           <div class="steps__value">Practice and grow</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="steps__cards">
+                     <div class="steps__slider swiper">
+                        <div class="steps__slider-wrapper swiper-wrapper">
+                           <div class="steps__card swiper-slide">
+                              <div class="steps__card-title title-xl" data-swiper-parallax-y="-200"
+                                 data-swiper-parallax-duration="1200">Trading Made <span
+                                    class="text-gradient-brown">Simple</span></div>
+                              <div class="steps__card-subtitle subtitle" data-swiper-parallax-y="-200"
+                                 data-swiper-parallax-duration="1400">Understand <b>how forex works</b>—buy one
+                                 currency
+                                 while
+                                 selling another, like trading EUR/USD. <br>
+                                 <b>Get familiar with terms</b> like pips, spreads, and leverage.
+                              </div>
+                              <div class="steps__card-link" data-swiper-parallax-y="-200"
+                                 data-swiper-parallax-duration="1600">
+                                 <a href="" class="button-orange">
+                                    Latest articles
+                                    <svg>
+                                       <use xlink:href="#icon-chevron-right"></use>
+                                    </svg>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="steps__card swiper-slide">
+                              <div class="steps__card-title title-xl" data-swiper-parallax-y="-200"
+                                 data-swiper-parallax-duration="1200"><span
+                                    class="text-gradient-brown">Everything</span>
+                                 your traders needs. Best UI/UX</div>
+                              <div class="steps__card-subtitle subtitle" data-swiper-parallax-y="-200"
+                                 data-swiper-parallax-duration="1400">We've built a platform where everything is
+                                 <b>just one click away,</b> supported by practical tutorials to help you start
+                                 confidently without feeling overwhelmed!
+                              </div>
+                              <div class="steps__card-link" data-swiper-parallax-y="-200"
+                                 data-swiper-parallax-duration="1600">
+                                 <a href="" class="button-orange">
+                                    Request demo
+                                    <svg>
+                                       <use xlink:href="#icon-chevron-right"></use>
+                                    </svg>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="steps__card swiper-slide">
+                              <div class="steps__card-title title-xl" data-swiper-parallax-y="-200"
+                                 data-swiper-parallax-duration="1200"><span class="text-gradient-brown">Real-time
+                                    charts</span>, indicators & patterns</div>
+                              <div class="steps__card-subtitle subtitle" data-swiper-parallax-y="-200"
+                                 data-swiper-parallax-duration="1400">Analyze market trends with <b>technical and
+                                    fundamental analysis.</b> Stay updated on news and events that impact prices, and
+                                 develop a strategy based on historical data and market behavior.</div>
+                              <div class="steps__card-link" data-swiper-parallax-y="-200"
+                                 data-swiper-parallax-duration="1600">
+                                 <a href="" class="button-orange">
+                                    Learn more
+                                    <svg>
+                                       <use xlink:href="#icon-chevron-right"></use>
+                                    </svg>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="steps__card swiper-slide">
+                              <div class="steps__card-title title-xl" data-swiper-parallax-y="-200"
+                                 data-swiper-parallax-duration="1200">Fast Deposit <span
+                                    class="text-gradient-brown">Fast
+                                    Withdrawal</span></div>
+                              <div class="steps__card-subtitle subtitle" data-swiper-parallax-y="-200"
+                                 data-swiper-parallax-duration="1500">Deposits are processed instantly and once
+                                 you've made a profit, <b>you can withdraw your funds immediately!</b></div>
+                              <div class="steps__card-link" data-swiper-parallax-y="-200"
+                                 data-swiper-parallax-duration="1600">
+                                 <a href="" class="button-orange">
+                                    Get a free account
+                                    <svg>
+                                       <use xlink:href="#icon-chevron-right"></use>
+                                    </svg>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="steps__card swiper-slide">
+                              <div class="steps__card-title title-xl" data-swiper-parallax-y="-200"
+                                 data-swiper-parallax-duration="1200">Enjoy the <span
+                                    class="text-gradient-brown">ultimate platform</span></div>
+                              <div class="steps__card-subtitle subtitle" data-swiper-parallax-y="-200"
+                                 data-swiper-parallax-duration="1400">A multichart layout, technical analysis,
+                                 historical quotes and beyond. <b>Everything you're looking for in a platform</b> — on
+                                 the device of your choice.</div>
+                              <div class="steps__card-link" data-swiper-parallax="-200"
+                                 data-swiper-parallax-duration="1600">
+                                 <a href="" class="button-orange">
+                                    Start trading
+                                    <svg>
+                                       <use xlink:href="#icon-chevron-right"></use>
+                                    </svg>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="features">
+            <div class="features__body container">
+               <div class="features__title title">Features</div>
+               <div class="features__content">
+                  <div class="features__block features__block-1">
+                     <div class="features__text">
+                        <div class="features__text-title title"><span class="text-gradient-brown">Analysis</span> &
+                           Alerts</div>
+                        <div class="features__text-subtitle subtitle">
+                           <p>Get the <b>most out of fundamental and technical analysis</b> with our News Feed and
+                              Economic Calendars.</p>
+                           <p>
+                              More than <b>100 most widely used technical indicators and widgets.</b> Always stay
+                              up-to-date on what is happening in the
+                              financial markets with our customizable price alerts.
+                           </p>
+                        </div>
+                        <a href="" class="features__text-link button">
+                           Learn more
+                           <svg>
+                              <use xlink:href="#icon-chevron-right"></use>
+                           </svg>
+                        </a>
+                     </div>
+
+                     <div class="features__infographic infographic infographic-1">
+                        <div class="infographic__card-1">
+                           <div class="infographic__alert-name">
+                              <svg class="infographic__alert-name-icon">
+                                 <use xlink:href="#icon-bell"></use>
+                              </svg>
+                              <span class="infographic__alert-name-text color-red">Price alert triggered!</span>
+                           </div>
+                           <div class="infographic__alert-message">
+                              <svg width="39" height="40" viewBox="0 0 39 40" class="infographic__alert-message-icon"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M5 28L13.8525 19.5625L21.7213 27.0625L35 13" stroke="#00916D" stroke-width="4"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                 <path d="M25 12H35V21" stroke="#00916D" stroke-width="4" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                              </svg>
+                              <span><b>BTC/USD</b> just hit <span class="color-green">$45,000</span></span>
+                           </div>
+                        </div>
+                        <div class="infographic__card-2">
+                           <div class="indicators">
+                              <p class="indicators__title card-title">Technical Indicators</p>
+                              <div class="indicators__links">
+                                 <p class="indicators__link">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <g clip-path="url(#clip0_235_4911)">
+                                          <path
+                                             d="M10.9584 12.5336V9.54657C10.9584 8.87266 10.4121 8.32631 9.73815 8.32631C9.06425 8.32631 8.5179 8.87266 8.5179 9.54657V12.5336C7.02936 12.7423 5.87988 14.0234 5.87988 15.5687V31.9563C5.87988 33.5016 7.02928 34.7827 8.5179 34.9915V37.9785C8.5179 38.6524 9.06425 39.1987 9.73815 39.1987C10.4121 39.1987 10.9584 38.6524 10.9584 37.9785V34.9915C12.4469 34.7827 13.5964 33.5016 13.5964 31.9563V15.5687C13.5964 14.0234 12.4469 12.7423 10.9584 12.5336ZM11.1559 31.9563C11.1559 32.3009 10.8755 32.5814 10.5308 32.5814H8.94548C8.60088 32.5814 8.32038 32.301 8.32038 31.9563V15.5687C8.32038 15.2241 8.6008 14.9436 8.94548 14.9436H10.5308C10.8754 14.9436 11.1559 15.224 11.1559 15.5687V31.9563Z"
+                                             fill="#1A1A19" />
+                                          <path
+                                             d="M29.7835 10.5362V7.54918C29.7835 6.87527 29.2371 6.32893 28.5632 6.32893C27.8893 6.32893 27.343 6.87527 27.343 7.54918V10.5362C25.8543 10.7449 24.7049 12.0261 24.7049 13.5714V25.1627C24.7049 26.7079 25.8543 27.989 27.343 28.1979V40.6246C27.343 41.2985 27.8893 41.8448 28.5632 41.8448C29.2371 41.8448 29.7835 41.2985 29.7835 40.6246V28.1979C31.2721 27.9891 32.4216 26.7079 32.4216 25.1627V13.5714C32.4216 12.0262 31.2721 10.745 29.7835 10.5362ZM29.9811 25.1627C29.9811 25.5073 29.7006 25.7878 29.356 25.7878H27.7705C27.4259 25.7878 27.1454 25.5074 27.1454 25.1627V13.5714C27.1454 13.2268 27.4259 12.9463 27.7705 12.9463H29.356C29.7006 12.9463 29.9811 13.2267 29.9811 13.5714V25.1627Z"
+                                             fill="#1A1A19" />
+                                          <path
+                                             d="M20.3709 8.41564V5.42862C20.3709 4.75472 19.8246 4.20837 19.1507 4.20837C18.4768 4.20837 17.9304 4.75472 17.9304 5.42862V8.41564C16.4419 8.62438 15.2924 9.90556 15.2924 11.4508V24.515C15.2924 26.0602 16.4418 27.3413 17.9304 27.5501V30.5372C17.9304 31.2111 18.4768 31.7574 19.1507 31.7574C19.8246 31.7574 20.3709 31.2111 20.3709 30.5372V27.5501C21.8595 27.3414 23.009 26.0603 23.009 24.515V11.4507C23.009 9.90556 21.8596 8.62438 20.3709 8.41564ZM20.5685 24.515C20.5685 24.8596 20.288 25.1401 19.9434 25.1401H18.358C18.0134 25.1401 17.7329 24.8597 17.7329 24.515V11.4507C17.7329 11.1061 18.0133 10.8256 18.358 10.8256H19.9434C20.288 10.8256 20.5685 11.106 20.5685 11.4507V24.515Z"
+                                             fill="#1A1A19" />
+                                          <path
+                                             d="M39.196 16.2632V7.09459C39.196 6.42069 38.6496 5.87434 37.9757 5.87434C37.3018 5.87434 36.7555 6.42069 36.7555 7.09459V16.2632C35.2669 16.4719 34.1175 17.7531 34.1175 19.2983V32.3626C34.1175 33.9078 35.2669 35.1889 36.7555 35.3977V38.3848C36.7555 39.0587 37.3018 39.605 37.9757 39.605C38.6496 39.605 39.196 39.0587 39.196 38.3848V35.3977C40.6846 35.1891 41.8341 33.9079 41.8341 32.3626V19.2983C41.8341 17.7532 40.6847 16.4719 39.196 16.2632ZM39.3936 32.3626C39.3936 32.7072 39.1132 32.9877 38.7685 32.9877H37.1831C36.8385 32.9877 36.558 32.7073 36.558 32.3626V19.2983C36.558 18.9537 36.8384 18.6732 37.1831 18.6732H38.7685C39.1131 18.6732 39.3936 18.9536 39.3936 19.2983V32.3626Z"
+                                             fill="#1A1A19" />
+                                       </g>
+                                       <defs>
+                                          <clipPath id="clip0_235_4911">
+                                             <rect width="37.6364" height="37.6364" fill="white"
+                                                transform="translate(5.03906 4.2085)" />
+                                          </clipPath>
+                                       </defs>
+                                    </svg>
+                                    <span>Bolinger Bands</span>
+                                 </p>
+                                 <p class="indicators__link">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M8.80016 24.0701C8.80017 24.07 8.80019 24.0698 8.8002 24.0697L8.80016 24.0701ZM8.8002 24.0697L8.80088 24.0629C8.80151 24.0568 8.80253 24.0468 8.80397 24.0331C8.80684 24.0057 8.81136 23.9635 8.81762 23.9074C8.83015 23.7951 8.84965 23.6275 8.87688 23.4124C8.93138 22.982 9.01666 22.3632 9.1388 21.6191C9.384 20.1253 9.77356 18.1524 10.3518 16.1952C10.9366 14.216 11.6829 12.3632 12.5961 11.0384C13.5174 9.7021 14.4027 9.17959 15.2544 9.17959C16.2803 9.17959 17.1165 9.63807 17.8806 10.571C18.6807 11.5481 19.3336 12.9774 19.8611 14.6816C20.6146 17.1159 21.0074 19.6865 21.3302 21.7988C21.4694 22.7096 21.5955 23.5351 21.732 24.2278L21.7381 24.2591C22.1407 26.3029 22.9695 30.5111 24.4347 34.2305C25.1691 36.0947 26.1047 37.9466 27.3047 39.3582C28.5111 40.7774 30.1271 41.9069 32.1758 41.9069C34.4418 41.9069 36.0217 40.2599 37.0551 38.5809C38.122 36.8476 38.9018 34.6238 39.4709 32.5226C40.0461 30.3985 40.4349 28.2889 40.6796 26.7196C40.8024 25.9324 40.8898 25.2753 40.9467 24.813C40.9752 24.5816 40.996 24.3987 41.01 24.2722C41.0169 24.209 41.0221 24.1598 41.0257 24.1257C41.0274 24.1087 41.0288 24.0954 41.0298 24.086L41.0312 24.0715L41.0313 24.0704C41.0314 24.07 41.0314 24.0697 39.55 23.9193L41.0314 24.0697C41.1199 23.1704 40.4738 22.3685 39.5882 22.2786C38.7027 22.1887 37.913 22.8446 37.8243 23.7437M37.8243 23.744L37.8242 23.7448L37.8235 23.7514C37.8229 23.7578 37.8218 23.768 37.8204 23.7819C37.8175 23.8097 37.813 23.8524 37.8067 23.909C37.7943 24.0222 37.7751 24.1909 37.7484 24.407C37.6952 24.8395 37.6126 25.4609 37.4962 26.2078C37.2624 27.7067 36.8958 29.6879 36.3631 31.6548C35.8242 33.6445 35.1435 35.5116 34.3219 36.8464C33.4668 38.2357 32.7301 38.6341 32.1758 38.6341C31.4043 38.6341 30.6029 38.2295 29.7446 37.2197C28.8797 36.2024 28.103 34.7303 27.4273 33.015C26.0798 29.5944 25.2981 25.645 24.8925 23.5859C24.7974 23.1031 24.6941 22.4294 24.5716 21.631C24.2396 19.4666 23.7669 16.3851 22.9359 13.7003C22.3555 11.825 21.5479 9.93042 20.3588 8.47849C19.1336 6.98247 17.4517 5.90686 15.2544 5.90686C12.883 5.90686 11.1496 7.4298 9.95566 9.16165C8.75377 10.9051 7.8885 13.1432 7.26461 15.2548C6.63417 17.3886 6.21796 19.5067 5.95954 21.081C5.82987 21.871 5.73889 22.5306 5.68008 22.9951C5.65065 23.2274 5.62923 23.4114 5.615 23.5388C5.60789 23.6025 5.60258 23.6522 5.59896 23.6867C5.59816 23.6943 5.59745 23.7011 5.59682 23.7072C5.59601 23.715 5.59533 23.7217 5.59478 23.7271L5.59363 23.7385L5.59316 23.7432C5.59312 23.7437 5.59308 23.744 7.19664 23.9069L5.59308 23.744C5.50452 24.6433 6.15066 25.4452 7.03628 25.5351C7.92176 25.625 8.71138 24.9692 8.80016 24.0701"
+                                          fill="#1A1A19" />
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M11.2255 23.9069C11.2255 23.0031 11.9471 22.2705 12.8371 22.2705H17.6718C18.5618 22.2705 19.2833 23.0031 19.2833 23.9069C19.2833 24.8106 18.5618 25.5432 17.6718 25.5432H12.8371C11.9471 25.5432 11.2255 24.8106 11.2255 23.9069Z"
+                                          fill="#1A1A19" />
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M27.3411 23.9069C27.3411 23.0031 28.0627 22.2705 28.9527 22.2705H33.7874C34.6774 22.2705 35.3989 23.0031 35.3989 23.9069C35.3989 24.8106 34.6774 25.5432 33.7874 25.5432H28.9527C28.0627 25.5432 27.3411 24.8106 27.3411 23.9069Z"
+                                          fill="#1A1A19" />
+                                    </svg>
+                                    <span>Stochastic Oscillator</span>
+                                 </p>
+                                 <p class="indicators__link indicators__link-3">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M25.531 9.7251C27.5795 9.7251 29.6079 10.1286 31.5004 10.9125C33.3929 11.6964 35.1125 12.8454 36.5609 14.2938C38.0094 15.7423 39.1584 17.4619 39.9423 19.3544C40.7262 21.2469 41.1297 23.2753 41.1297 25.3237C41.1297 28.7086 39.785 31.9548 37.3916 34.3482C34.9982 36.7416 31.752 38.0862 28.3671 38.0862C25.5825 38.0862 22.9118 36.98 20.9428 35.011C18.9737 33.0419 17.8675 30.3713 17.8675 27.5866C17.8675 25.282 18.783 23.0718 20.4125 21.4423C22.0421 19.8127 24.2523 18.8972 26.5569 18.8972C28.4773 18.8972 30.3191 19.6601 31.6771 21.0181C33.0351 22.3761 33.798 24.2179 33.798 26.1384C33.798 27.7508 33.1575 29.2971 32.0173 30.4372C30.8772 31.5774 29.3309 32.2179 27.7185 32.2179C26.3538 32.2179 25.0446 31.6772 24.0777 30.7142C23.1107 29.7512 22.5647 28.4443 22.5592 27.0796L22.5591 27.0766V27.0737C22.5591 25.8894 23.0296 24.7536 23.867 23.9162C24.7044 23.0788 25.8402 22.6083 27.0245 22.6083C27.8244 22.6083 28.4727 23.2567 28.4727 24.0565C28.4727 24.8564 27.8244 25.5048 27.0245 25.5048C26.6084 25.5048 26.2094 25.6701 25.9151 25.9643C25.6216 26.2579 25.4563 26.6558 25.4556 27.0709C25.4589 27.6683 25.6982 28.2403 26.1216 28.6619C26.5457 29.0843 27.1199 29.3214 27.7185 29.3214C28.5627 29.3214 29.3723 28.9861 29.9692 28.3891C30.5662 27.7922 30.9015 26.9826 30.9015 26.1384C30.9015 24.9861 30.4438 23.881 29.629 23.0662C28.8142 22.2514 27.7091 21.7937 26.5569 21.7937C25.0205 21.7937 23.547 22.404 22.4607 23.4904C21.3743 24.5768 20.7639 26.0502 20.7639 27.5866C20.7639 29.6031 21.565 31.537 22.9909 32.9629C24.4167 34.3887 26.3507 35.1898 28.3671 35.1898C30.9838 35.1898 33.4933 34.1503 35.3435 32.3001C37.1937 30.4498 38.2332 27.9404 38.2332 25.3237C38.2332 23.6557 37.9047 22.0039 37.2663 20.4628C36.628 18.9217 35.6923 17.5214 34.5128 16.3419C33.3333 15.1624 31.933 14.2268 30.3919 13.5885C28.851 12.9502 27.1995 12.6216 25.5317 12.6216C21.2252 12.6254 17.0965 14.3388 14.0526 17.3852C11.0087 20.4317 9.2988 24.5622 9.2988 28.8689C9.2988 29.6687 8.65041 30.3171 7.85057 30.3171C7.05074 30.3171 6.40234 29.6687 6.40234 28.8689C6.40234 23.7945 8.41703 18.9276 12.0037 15.3379C15.5903 11.7483 20.4554 9.72942 25.5298 9.7251L25.531 9.7251Z"
+                                          fill="#1A1A19" />
+                                    </svg>
+                                    <span>Fibonacci Retracement</span>
+                                 </p>
+                                 <p class="indicators__link">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M38.0389 9.2417V38.969M24.1298 12.3629V31.8781M10.2207 31.8781V19.6114M16.7662 37.3326V22.3326M31.4934 32.6962V20.1508"
+                                          stroke="#1A1A19" stroke-width="3" stroke-linecap="round" />
+                                    </svg>
+                                    <span>Relative Strenght Index</span>
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="fibonacci">
+                              <p class="indicators__title card-title"><span class="color-orange">Fibonacci</span>
+                                 Retracement</p>
+                              <div class="fibonacci__items">
+                                 <div class="fibonacci__item">
+                                    <div class="fibonacci__item-name">Upward Retracement</div>
+                                    <div class="fibonacci__item-img">
+                                       <img src="img/icons/graphic-1.svg" alt="">
+                                    </div>
+                                 </div>
+                                 <div class="fibonacci__item">
+                                    <div class="fibonacci__item-name">Downward Retracement</div>
+                                    <div class="fibonacci__item-img">
+                                       <img src="img/icons/graphic-2.svg" alt="">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="cursor"></div>
+                        </div>
+                        <div class="infographic__card-3">
+                           <div class="average">
+                              <div class="average__title card-title">Moving <span class="color-orange">Averages</span>
+                              </div>
+                              <div class="average__image">
+                                 <svg width="616" height="235" class="average__image-chart" viewBox="0 0 616 235"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M14.3848 189.53C15.0123 174.287 29.5346 160.74 33.4621 153.402C40.7729 139.743 48.3755 122.37 56.2901 111.691C60.7562 105.664 63.5932 98.2808 67.3485 90.3982C72.2202 80.1722 78.4389 74.1613 84.2271 68.5824C96.4437 56.8073 111.313 51.3042 123.804 51.3042C128.032 51.3042 135.762 51.8726 139.001 59.1579C142.918 67.9671 152.143 70.7223 155.233 81.1483C157.689 89.4325 166.208 98.5789 169.59 104.011C174.359 111.673 179.699 125.83 185.498 126.7C194.987 128.123 207.245 147.097 216.345 156.544C219.315 159.626 231.953 161.874 234.323 156.544C235.942 152.903 245.664 152.004 247.839 151.832C251.147 151.569 258.032 148.603 261.161 144.851C264.597 140.729 271.417 139.266 275.129 139.266C281.421 139.266 287.483 136.124 293.754 136.124C305.962 136.124 320.389 130.213 329.257 106.28C338.007 82.6669 352.592 70.1531 364.76 70.1531C373.968 70.1531 377.937 87.3054 386.295 92.318C390.347 94.7483 392.896 83.8506 398.259 88.3039C410.282 98.288 421.87 116.935 433.826 129.841C439.333 135.785 452.833 136.881 457.188 125.129C474.223 79.1556 502.342 61.436 517.718 62.1249C551.055 63.6184 509 134.5 552 135.5C579 136.128 597 129.841 611.5 129.841"
+                                       stroke="#FF3737" stroke-width="8" stroke-linecap="round"
+                                       stroke-linejoin="round" />
+                                    <path
+                                       d="M2 49.0287C9.62389 51.4782 82.0833 121.894 86.1327 120.248C91.1945 118.191 141.25 166.104 147.999 174.041C153.398 180.39 171.62 185.113 180.056 186.681C191.242 190.992 210.921 194.451 227.269 196.567C247.704 199.213 242.653 235.976 265.794 230.399C273.403 228.565 290.564 196.567 310.623 196.567C324.12 196.567 341.462 172.571 353.835 174.041C366.209 175.511 380.831 145.822 388.143 132.888C395.454 119.954 424.325 119.954 427.512 110.842C432.204 97.4273 516.141 4.13867 538.317 4.13867C568 4.13867 572 37.8561 604 36.5001"
+                                       stroke="#285FD9" stroke-width="8" stroke-linejoin="round" />
+                                 </svg>
+                                 <div class="average__labels">
+                                    <div class="average__label">EMA</div>
+                                    <div class="average__label">SMA</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="features__block features__block-2">
+                     <div class="features__text">
+                        <div class="features__text-title title">Risk Management</div>
+                        <div class="features__text-subtitle subtitle">
+                           With features such as Stop Loss/Take Profit, Negative Balance Protection and Trailing Stop,
+                           <b>you can manage your losses
+                              and profits at the levels you set.</b>
+                        </div>
+                        <a href="" class="features__text-link button">
+                           Check all features
+                           <svg>
+                              <use xlink:href="#icon-chevron-right"></use>
+                           </svg>
+                        </a>
+                     </div>
+                     <div class="features__infographic infographic-2">
+                        <div class="infographic__card-1">
+                           <div class="infographic__alert-name">
+                              <svg class="infographic__alert-name-icon">
+                                 <use xlink:href="#icon-lightning"></use>
+                              </svg>
+                              <span class="infographic__alert-name-text color-red">Real-Time Display</span>
+                           </div>
+                           <div class="infographic__alert-message">
+                              <span>If you risk <b>$100</b>, your potential profit is <br><span class="color-green">$300
+                                    (1:3 R/R)</span></span>
+                           </div>
+                        </div>
+                        <div class="infographic__card-2">
+                           <div class="risk-reward">
+                              <div class="risk-reward__title card-title">
+                                 <span class="color-red">Risk-</span><span class="color-green">Reward</span> Ratio
+                              </div>
+                              <div class="risk-reward__grid">
+                                 <div class="risk-reward__row">
+                                    <div class="risk-reward__cell moving-cell"><span>Entry</span></div>
+                                    <div class="risk-reward__cell"></div>
+                                    <div class="risk-reward__cell"></div>
+                                    <div class="risk-reward__cell"></div>
+                                    <div class="risk-reward__cell"></div>
+                                    <div class="risk-reward__cell"></div>
+                                 </div>
+                                 <div class="risk-reward__row">
+                                    <div class="risk-reward__cell moving-cell"></div>
+                                    <div class="risk-reward__cell moving-cell"><span>Entry</span></div>
+                                    <div class="risk-reward__cell"></div>
+                                    <div class="risk-reward__cell"></div>
+                                    <div class="risk-reward__cell"></div>
+                                    <div class="risk-reward__cell"></div>
+                                 </div>
+                                 <div class="risk-reward__row">
+                                    <div class="risk-reward__cell moving-cell"></div>
+                                    <div class="risk-reward__cell moving-cell"></div>
+                                    <div class="risk-reward__cell moving-cell"><span>Entry</span></div>
+                                    <div class="risk-reward__cell"></div>
+                                    <div class="risk-reward__cell"></div>
+                                    <div class="risk-reward__cell"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="infographic__card-3">
+                           <div class="sl-tp">
+                              <div class="sl-tp__title card-title">Stop-Loss and <br><span
+                                    class="title-line">Take-Profit</span> Points</div>
+
+                              <div class="sl-tp__chart">
+                                 <svg width="674" height="283" class="sl-tp__image" viewBox="0 0 674 283" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M104.322 9.54127H102.877V7.60063H106.388V19.0737H104.322V9.54127Z"
+                                       fill="#1A1A19" class="svg-number" />
+                                    <path d="M445.218 265.483H443.773V263.543H447.284V275.016H445.218V265.483Z"
+                                       fill="#1A1A19" class="svg-number" />
+                                    <path class="svg-number"
+                                       d="M208.246 33.339C208.319 33.8979 208.521 34.3378 208.852 34.6586C209.184 34.9691 209.603 35.1244 210.111 35.1244C210.639 35.1244 211.069 34.9484 211.4 34.5965C211.742 34.2343 211.913 33.7737 211.913 33.2148C211.913 32.6248 211.706 32.1591 211.291 31.8175C210.887 31.4656 210.344 31.2897 209.66 31.2897H209.318V29.3025H209.489C210.007 29.3025 210.401 29.2042 210.67 29.0075C210.95 28.8005 211.089 28.5055 211.089 28.1226C211.089 27.8017 210.996 27.543 210.81 27.3463C210.623 27.1393 210.38 27.0358 210.08 27.0358C209.531 27.0358 209.21 27.3825 209.116 28.076H207.019C207.092 27.1652 207.397 26.451 207.936 25.9335C208.474 25.4057 209.184 25.1418 210.064 25.1418C210.509 25.1418 210.918 25.2194 211.291 25.3746C211.675 25.5299 212.001 25.7472 212.27 26.0267C212.55 26.2958 212.767 26.6218 212.923 27.0048C213.078 27.3774 213.156 27.7862 213.156 28.2312C213.156 28.6763 213.078 29.0592 212.923 29.3801C212.767 29.6906 212.524 29.9649 212.192 30.2029C213.383 30.7411 213.979 31.7296 213.979 33.1682C213.979 33.7271 213.881 34.2446 213.684 34.7207C213.497 35.1865 213.233 35.5901 212.891 35.9317C212.55 36.2732 212.141 36.5423 211.664 36.739C211.198 36.9253 210.685 37.0184 210.126 37.0184C209.577 37.0184 209.065 36.9305 208.588 36.7545C208.122 36.5682 207.713 36.3146 207.361 35.9938C207.019 35.6626 206.739 35.2745 206.522 34.8294C206.315 34.374 206.196 33.8772 206.165 33.339H208.246Z"
+                                       fill="#1A1A19" />
+                                    <path class="svg-number"
+                                       d="M572.224 235.165C572.296 235.724 572.498 236.164 572.83 236.485C573.161 236.795 573.581 236.95 574.088 236.95C574.616 236.95 575.046 236.774 575.378 236.423C575.719 236.06 575.89 235.6 575.89 235.041C575.89 234.451 575.683 233.985 575.269 233.644C574.865 233.292 574.321 233.116 573.638 233.116H573.296V231.128H573.467C573.984 231.128 574.378 231.03 574.647 230.834C574.927 230.627 575.067 230.332 575.067 229.949C575.067 229.628 574.974 229.369 574.787 229.172C574.601 228.965 574.357 228.862 574.057 228.862C573.508 228.862 573.187 229.209 573.094 229.902H570.996C571.069 228.991 571.374 228.277 571.913 227.76C572.452 227.232 573.161 226.968 574.041 226.968C574.487 226.968 574.896 227.045 575.269 227.201C575.652 227.356 575.978 227.573 576.247 227.853C576.527 228.122 576.745 228.448 576.9 228.831C577.055 229.203 577.133 229.612 577.133 230.057C577.133 230.502 577.055 230.885 576.9 231.206C576.745 231.517 576.501 231.791 576.17 232.029C577.361 232.567 577.956 233.556 577.956 234.994C577.956 235.553 577.858 236.071 577.661 236.547C577.475 237.013 577.211 237.416 576.869 237.758C576.527 238.099 576.118 238.368 575.642 238.565C575.176 238.751 574.663 238.844 574.104 238.844C573.555 238.844 573.042 238.756 572.566 238.581C572.099 238.394 571.69 238.141 571.338 237.82C570.996 237.489 570.717 237.1 570.499 236.655C570.292 236.2 570.173 235.703 570.142 235.165H572.224Z"
+                                       fill="#1A1A19" />
+                                    <path class="svg-number"
+                                       d="M160.297 198.679L164.383 194.813C164.859 194.368 165.196 193.97 165.392 193.618C165.6 193.255 165.703 192.888 165.703 192.515C165.703 192.257 165.662 192.019 165.579 191.801C165.496 191.584 165.377 191.398 165.222 191.242C165.077 191.077 164.9 190.947 164.693 190.854C164.497 190.761 164.279 190.714 164.041 190.714C163.502 190.714 163.067 190.921 162.736 191.335C162.415 191.749 162.254 192.298 162.254 192.981H160.219C160.219 192.339 160.307 191.765 160.483 191.258C160.659 190.74 160.913 190.306 161.244 189.954C161.576 189.591 161.975 189.312 162.441 189.115C162.917 188.919 163.445 188.82 164.025 188.82C164.564 188.82 165.061 188.914 165.517 189.1C165.972 189.286 166.366 189.55 166.697 189.892C167.039 190.223 167.303 190.616 167.49 191.072C167.676 191.527 167.769 192.019 167.769 192.546C167.769 192.898 167.733 193.23 167.661 193.54C167.588 193.84 167.464 194.146 167.288 194.456C167.112 194.756 166.884 195.067 166.604 195.388C166.325 195.698 165.972 196.045 165.548 196.428L163.202 198.555H167.723V200.495H160.297V198.679Z"
+                                       fill="#1A1A19" />
+                                    <path class="svg-number"
+                                       d="M497.642 97.1005L501.728 93.2347C502.204 92.7897 502.541 92.3912 502.737 92.0393C502.945 91.6771 503.048 91.3096 503.048 90.937C503.048 90.6783 503.007 90.4402 502.924 90.2229C502.841 90.0055 502.722 89.8192 502.566 89.664C502.421 89.4984 502.245 89.369 502.038 89.2758C501.841 89.1827 501.624 89.1361 501.386 89.1361C500.847 89.1361 500.412 89.3431 500.081 89.7571C499.76 90.1711 499.599 90.7197 499.599 91.4028H497.564C497.564 90.7611 497.652 90.1867 497.828 89.6795C498.004 89.162 498.258 88.7273 498.589 88.3754C498.921 88.0131 499.32 87.7337 499.786 87.537C500.262 87.3404 500.79 87.2421 501.37 87.2421C501.909 87.2421 502.406 87.3352 502.862 87.5215C503.317 87.7078 503.711 87.9717 504.042 88.3133C504.384 88.6445 504.648 89.0378 504.835 89.4932C505.021 89.9486 505.114 90.4402 505.114 90.9681C505.114 91.32 505.078 91.6512 505.006 91.9617C504.933 92.2618 504.809 92.5672 504.633 92.8777C504.457 93.1778 504.229 93.4883 503.949 93.8092C503.67 94.1197 503.317 94.4664 502.893 94.8493L500.547 96.9763H505.068V98.9169H497.642V97.1005Z"
+                                       fill="#1A1A19" />
+                                    <path fill-rule="evenodd" class="green-1" clip-rule="evenodd"
+                                       d="M110.962 45.2023L23.9626 243.923L19.0826 241.79L106.082 43.0688L110.962 45.2023Z"
+                                       fill="#44988A" />
+                                    <path fill-rule="evenodd" class="green-2" clip-rule="evenodd"
+                                       d="M448.528 240.679L361.306 41.9576L356.429 44.0957L443.65 242.817L448.528 240.679Z"
+                                       fill="#44988A" />
+                                    <path fill-rule="evenodd" class="red-1" clip-rule="evenodd"
+                                       d="M106.107 44.1495L110.937 41.9038L165.013 158.035L209.718 53.5001L313.184 217.93L308.674 220.764L210.621 64.9341L165.22 171.096L106.107 44.1495Z"
+                                       fill="#E72C39" />
+                                    <path fill-rule="evenodd" class="red-2" clip-rule="evenodd"
+                                       d="M443.452 241.734L448.282 243.979L503.063 126.334L569.315 209.204L648.731 20.5492L643.822 18.4852L567.881 198.883L501.859 116.301L443.452 241.734Z"
+                                       fill="#E72C39" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" class="svg-number"
+                                       d="M105.637 25.7273C112.378 25.7273 117.843 20.2659 117.843 13.529C117.843 6.79207 112.378 1.33072 105.637 1.33072C98.8954 1.33072 93.4303 6.79207 93.4303 13.529C93.4303 20.2659 98.8954 25.7273 105.637 25.7273ZM105.637 27.058C113.114 27.058 119.175 21.0009 119.175 13.529C119.175 6.05714 113.114 0 105.637 0C98.16 0 92.0987 6.05714 92.0987 13.529C92.0987 21.0009 98.16 27.058 105.637 27.058Z"
+                                       fill="#1A1A19" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" class="svg-number"
+                                       d="M446.533 281.669C453.274 281.669 458.739 276.208 458.739 269.471C458.739 262.734 453.274 257.273 446.533 257.273C439.791 257.273 434.326 262.734 434.326 269.471C434.326 276.208 439.791 281.669 446.533 281.669ZM446.533 283C454.01 283 460.071 276.943 460.071 269.471C460.071 261.999 454.01 255.942 446.533 255.942C439.056 255.942 432.995 261.999 432.995 269.471C432.995 276.943 439.056 283 446.533 283Z"
+                                       fill="#1A1A19" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" class="svg-number"
+                                       d="M210.835 43.4702C217.577 43.4702 223.042 38.0089 223.042 31.2719C223.042 24.535 217.577 19.0737 210.835 19.0737C204.094 19.0737 198.629 24.535 198.629 31.2719C198.629 38.0089 204.094 43.4702 210.835 43.4702ZM210.835 44.8009C218.312 44.8009 224.373 38.7438 224.373 31.2719C224.373 23.8001 218.312 17.7429 210.835 17.7429C203.358 17.7429 197.297 23.8001 197.297 31.2719C197.297 38.7438 203.358 44.8009 210.835 44.8009Z"
+                                       fill="#1A1A19" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" class="svg-number"
+                                       d="M574.813 245.296C581.554 245.296 587.019 239.835 587.019 233.098C587.019 226.361 581.554 220.9 574.813 220.9C568.071 220.9 562.606 226.361 562.606 233.098C562.606 239.835 568.071 245.296 574.813 245.296ZM574.813 246.627C582.29 246.627 588.351 240.57 588.351 233.098C588.351 225.626 582.29 219.569 574.813 219.569C567.336 219.569 561.274 225.626 561.274 233.098C561.274 240.57 567.336 246.627 574.813 246.627Z"
+                                       fill="#1A1A19" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" class="svg-number"
+                                       d="M164.672 207.149C171.414 207.149 176.879 201.688 176.879 194.951C176.879 188.214 171.414 182.752 164.672 182.752C157.931 182.752 152.466 188.214 152.466 194.951C152.466 201.688 157.931 207.149 164.672 207.149ZM164.672 208.48C172.149 208.48 178.21 202.422 178.21 194.951C178.21 187.479 172.149 181.422 164.672 181.422C157.195 181.422 151.134 187.479 151.134 194.951C151.134 202.422 157.195 208.48 164.672 208.48Z"
+                                       fill="#1A1A19" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" class="svg-number"
+                                       d="M501.573 105.571C508.315 105.571 513.78 100.109 513.78 93.3723C513.78 86.6353 508.315 81.174 501.573 81.174C494.832 81.174 489.367 86.6353 489.367 93.3723C489.367 100.109 494.832 105.571 501.573 105.571ZM501.573 106.901C509.05 106.901 515.111 100.844 515.111 93.3723C515.111 85.9004 509.05 79.8433 501.573 79.8433C494.096 79.8433 488.035 85.9004 488.035 93.3723C488.035 100.844 494.096 106.901 501.573 106.901Z"
+                                       fill="#1A1A19" />
+                                 </svg>
+                                 <div class="sl-tp__image-cover"></div>
+                                 <div class="sl-tp__label sl-tp__label-1">Bullish <br> Trend</div>
+                                 <div class="sl-tp__label sl-tp__label-2">Reversal</div>
+                                 <div class="sl-tp__label sl-tp__label-3">Bearish <br> Trend</div>
+                                 <div class="sl-tp__label sl-tp__label-4">Reversal</div>
+                              </div>
+                           </div>
+
+                        </div>
+                     </div>
+                  </div>
+                  <div class="features__block features__block-3">
+                     <div class="features__text">
+                        <div class="features__text-title title"><span class="text-gradient-brown">Fast & Seamless</span>
+                           Transactions</div>
+                        <div class="features__text-subtitle subtitle">
+                           <p>
+                              <b>Fund your account instantly</b> and start trading without delay. Withdraw your profits
+                              anytime, hassle-free. With support
+                              for <b>bank transfers, credit cards, and cryptocurrency,</b> every transaction is secure
+                              and
+                              completed in just a few clicks.
+                           </p>
+                           <p>Trade with confidence – <b>start now and never miss an opportunity.</b></p>
+                        </div>
+                        <a href="" class="features__text-link button">
+                           Get a free account now
+                           <svg>
+                              <use xlink:href="#icon-chevron-right"></use>
+                           </svg>
+                        </a>
+                     </div>
+                     <div class="features__infographic infographic infographic-3">
+                        <div class="infographic__card-1">
+                           <div class="infographic__alert-name">
+                              <svg class="infographic__alert-name-icon">
+                                 <use xlink:href="#icon-bank"></use>
+                              </svg>
+                              <span class="infographic__alert-name-text color-green">Deposit Confirmed!</span>
+                           </div>
+                           <div class="infographic__alert-message">
+                              <span>Your deposit of <b>$1,000</b> has been processed successfully.
+                                 You can now start trading instantly.</span>
+                           </div>
+                           <div class="infographic__alert-message-2">
+                              <span>Transaction ID: #A1B2C3D4</span> <span>Time: 12:45 PM UTC</span>
+                           </div>
+                        </div>
+                        <div class="infographic__card-2">
+                           <div class="depozit">
+                              <div class="depozit__head">
+                                 <div class="depozit__value">
+                                    <div class="depozit__summ">
+                                       <p><span class="depozit__summ-value">10</span>€</p>
+                                       EURO
+                                    </div>
+                                    <div class="depozit__summ-chevron">
+                                       <svg>
+                                          <use xlink:href="#icon-chevron"></use>
+                                       </svg>
+                                    </div>
+                                 </div>
+                                 <div class="depozit__country">
+                                    <img src="img/icons/es.svg" alt="">
+                                 </div>
+                              </div>
+                              <div class="depozit__buttons">
+                                 <div class="depozit__button ">
+                                    <div class="depozit__button-icon depozit__button-sel">
+                                       <svg>
+                                          <use xlink:href="#icon-plus"></use>
+                                       </svg>
+                                    </div>
+                                    <p class="depozit__button-text">Add money</p>
+                                 </div>
+                                 <div class="depozit__button">
+                                    <div class="depozit__button-icon">
+                                       <svg>
+                                          <use xlink:href="#icon-refresh"></use>
+                                       </svg>
+                                    </div>
+                                    <p class="depozit__button-text">Exchange</p>
+                                 </div>
+                                 <div class="depozit__button">
+                                    <div class="depozit__button-icon">
+                                       <svg>
+                                          <use xlink:href="#icon-dots"></use>
+                                       </svg>
+                                    </div>
+                                    <p class="depozit__button-text">More</p>
+                                 </div>
+                              </div>
+                              <div class="depozit__footer">
+                                 <div class="depozit__history">
+                                    <div class="depozit__history-title">Transactions</div>
+                                    <div class="depozit__history-items">
+                                       <div class="depozit__history-item">
+                                          <div class="depozit__history-icon">
+                                             <img src="img/icons/rcard.svg" alt="">
+                                          </div>
+                                          <p class="depozit__history-info">
+                                             Metal Plan Free
+                                             <span>Today, 8:50 AM</span>
+                                          </p>
+                                          <p class="depozit__history-value">-19.99€</p>
+                                       </div>
+                                       <div class="depozit__history-item">
+                                          <div class="depozit__history-icon">
+                                             <img src="img/icons/mastercard.svg" alt="">
+                                          </div>
+                                          <p class="depozit__history-info">
+                                             Money added via
+                                             <span>Today, 8:49 AM</span>
+                                          </p>
+                                          <p class="depozit__history-value">+34.99€</p>
+                                       </div>
+                                    </div>
+
+                                 </div>
+                                 <div class="depozit__enter">
+                                    <div class="depozit__enter-title">Enter amount</div>
+                                    <div class="depozit__enter-input">
+                                       <p class="depozit__enter-input-p">12€</p>
+                                       <svg>
+                                          <use xlink:href="#icon-chevron"></use>
+                                       </svg>
+                                    </div>
+                                    <div class="depozit__enter-submit">Deposit now</div>
+                                 </div>
+                              </div>
+                              <div class="depozit__alert">
+                                 Deposit of 12.00€ via VISA **02 was successfuly made
+                              </div>
+                           </div>
+                        </div>
+                        <div class="infographic__card-3">
+                           <div class="founding">
+                              <div class="founding__title card-title">Funding options</div>
+                              <div class="founding__options">
+                                 <div class="founding__option">
+                                    <img src="img/icons/bank-icon.svg" alt="">
+                                    <span>Bank Transfer</span>
+                                 </div>
+                                 <div class="founding__option founding__option-sel">
+                                    <img src="img/icons/credit-card.svg" alt="">
+                                    <span>Credit Card</span>
+                                 </div>
+                                 <div class="founding__option">
+                                    <img src="img/icons/bitcoin-icon.svg" alt="">
+                                    <span>Crypto</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cursor"></div>
+                     </div>
+                  </div>
+                  <div class="features__block features__block-4">
+                     <div class="features__text">
+                        <div class="features__text-title title"><span class="text-gradient-brown">Multi-Asset</span>
+                           Trading</div>
+                        <div class="features__text-subtitle subtitle">
+                           <p>Trade <b>Forex, Stocks, Crypto, Indices & Commodities</b> on one seamless platform.</p>
+                           <p>Deep liquidity, tight spreads, and ultra-fast execution. A single account for diversified
+                              trading opportunities.</p>
+                        </div>
+                        <a href="" class="features__text-link button">
+                           Start trading
+                           <svg>
+                              <use xlink:href="#icon-chevron-right"></use>
+                           </svg>
+                        </a>
+                     </div>
+                     <div class="features__infographic infographic-4">
+                        <div class="infographic__card-1">
+                           <div class="infographic__alert-name">
+                              <svg class="infographic__alert-name-icon">
+                                 <use xlink:href="#icon-circle-check"></use>
+                              </svg>
+                              <span class="infographic__alert-name-text color-green">Trade Executed Successfully!</span>
+                           </div>
+                           <div class="infographic__alert-message">
+                              <span>You just bought <b>0.5 BTC</b> at <b>$48,750</b>. <br> Order confirmed.</span>
+                           </div>
+                           <div class="infographic__alert-message-2">
+                              <span>Transaction ID: #C3B2C3J9</span> <span>Time: 12:43 PM UTC</span>
+                           </div>
+                        </div>
+                        <div class="infographic__card-2">
+                           <div class="summary">
+                              <div class="summary__title card-title">Portfolio Summary Card</div>
+                              <div class="summary__items">
+                                 <div class="summary__item">
+                                    <div class="summary__item-name">
+                                       <img src="img/icons/chart-arrow-up.svg" alt="">
+                                       Top Performing Asset
+                                    </div>
+                                    <div class="summary__item-value color-green">
+                                       BTC/USD +12.5%
+                                    </div>
+                                 </div>
+                                 <div class="summary__item">
+                                    <div class="summary__item-name">
+                                       <img src="img/icons/chart-arrow-down.svg" alt="">
+                                       Biggest Loser
+                                    </div>
+                                    <div class="summary__item-value color-red">
+                                       EUR/USD -1.8%
+                                    </div>
+                                 </div>
+                                 <div class="summary__item">
+                                    <div class="summary__item-name">
+                                       <img src="img/icons/dollar-icon.svg" alt="">
+                                       Total Portfolio Value
+                                    </div>
+                                    <div class="summary__item-value color-orange">
+                                       $15,250
+                                    </div>
+                                 </div>
+                                 <div class="summary__item">
+                                    <div class="summary__item-name">
+                                       <img src="img/icons/table.svg" alt="">
+                                       Active Trades
+                                    </div>
+                                    <div class="summary__item-value color-green">
+                                       3 Open Positions
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="infographic__card-3">
+                           <div class="pie-chart">
+                              <svg width="772" height="571" viewBox="0 0 772 571" class="pie-chart__image" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" class="pie-arrow pie-arrow-1"
+                                    d="M267.53 26.2377C269.984 26.2378 272.251 27.5466 273.477 29.6713L306.776 87.3457L305.861 87.874L272.562 30.1996C271.525 28.4017 269.606 27.2942 267.53 27.2942L210.902 27.2941L210.902 26.2376L267.53 26.2377Z"
+                                    fill="#6F6F6A" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd" class="pie-arrow pie-arrow-2"
+                                    d="M169.277 100.192C171.731 100.192 173.998 101.501 175.224 103.625L208.523 161.3L207.608 161.828L174.31 104.154C173.272 102.356 171.353 101.248 169.277 101.248L112.649 101.248L112.649 100.192L169.277 100.192Z"
+                                    fill="#6F6F6A" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd" class="pie-arrow pie-arrow-3"
+                                    d="M168.015 293.672H66.6035V292.136H168.015V293.672Z" fill="#6F6F6A" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd" class="pie-arrow pie-arrow-4"
+                                    d="M164.522 438.892C166.976 438.892 169.243 437.583 170.47 435.459L203.768 377.784L202.853 377.256L169.555 434.93C168.517 436.728 166.598 437.836 164.522 437.836L107.894 437.836L107.894 438.892L164.522 438.892Z"
+                                    fill="#6F6F6A" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd" class="pie-arrow pie-arrow-5"
+                                    d="M267.53 544.012C269.984 544.012 272.251 542.703 273.477 540.579L306.776 482.904L305.861 482.376L272.562 540.05C271.525 541.848 269.606 542.956 267.53 542.956L210.902 542.956L210.902 544.012L267.53 544.012Z"
+                                    fill="#6F6F6A" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd" class="pie-arrow pie-arrow-6"
+                                    d="M480.004 544.012C477.55 544.012 475.283 542.703 474.057 540.579L440.758 482.904L441.673 482.376L474.972 540.05C476.01 541.848 477.928 542.956 480.004 542.956L536.632 542.956L536.632 544.012L480.004 544.012Z"
+                                    fill="#6F6F6A" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd" class="pie-arrow pie-arrow-7"
+                                    d="M578.785 438.892C576.332 438.892 574.065 437.583 572.838 435.459L539.54 377.784L540.455 377.256L573.753 434.93C574.791 436.728 576.709 437.836 578.785 437.836L635.414 437.836L635.414 438.892L578.785 438.892Z"
+                                    fill="#6F6F6A" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd" class="pie-arrow pie-arrow-8"
+                                    d="M678.148 293.672H576.736V292.136H678.148V293.672Z" fill="#6F6F6A" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd" class="pie-arrow pie-arrow-9"
+                                    d="M578.785 100.192C576.332 100.192 574.065 101.501 572.838 103.625L539.54 161.3L540.455 161.828L573.753 104.154C574.791 102.356 576.709 101.248 578.785 101.248L635.414 101.248L635.414 100.192L578.785 100.192Z"
+                                    fill="#6F6F6A" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd" class="pie-arrow pie-arrow-10"
+                                    d="M480.004 26.2377C477.55 26.2378 475.283 27.5466 474.057 29.6713L440.758 87.3457L441.673 87.874L474.972 30.1996C476.01 28.4017 477.928 27.2942 480.004 27.2942L536.632 27.2941L536.632 26.2376L480.004 26.2377Z"
+                                    fill="#6F6F6A" />
+                                 <path
+                                    d="M247.147 110.889C283.764 84.3892 327.866 70.1124 373.132 70.1045L373.144 141.254C342.967 141.259 313.566 150.777 289.155 168.443L247.147 110.889Z"
+                                    fill="#5CD4E3" />
+                                 <path
+                                    d="M498.372 110.889C461.755 84.3892 417.654 70.1124 372.388 70.1045L372.375 141.254C402.553 141.259 431.954 150.777 456.365 168.443L498.372 110.889Z"
+                                    fill="#EC474A" />
+                                 <path
+                                    d="M247.147 458.465C283.764 485.172 327.866 499.56 373.132 499.568L373.144 427.863C342.967 427.858 313.566 418.266 289.155 400.461L247.147 458.465Z"
+                                    fill="#2FB66D" />
+                                 <path
+                                    d="M498.372 458.465C461.755 485.172 417.654 499.56 372.388 499.568L372.375 427.863C402.553 427.858 431.954 418.266 456.365 400.461L498.372 458.465Z"
+                                    fill="#B62F68" />
+                                 <path
+                                    d="M168.188 217.836C182.338 174.817 209.743 137.351 246.476 110.807L288.285 168.667C263.797 186.362 245.526 211.34 236.093 240.019L168.188 217.836Z"
+                                    fill="#9F3FFF" />
+                                 <path
+                                    d="M577.274 217.836C563.124 174.817 535.719 137.351 498.986 110.807L457.177 168.667C481.665 186.362 499.936 211.34 509.369 240.019L577.274 217.836Z"
+                                    fill="#E1BD00" />
+                                 <path
+                                    d="M168.162 351.017C154.054 307.984 153.913 261.565 167.76 218.412L235.731 240.222C226.5 268.991 226.594 299.937 235.999 328.625L168.162 351.017Z"
+                                    fill="#FF6108" />
+                                 <path
+                                    d="M577.3 351.017C591.408 307.984 591.549 261.565 577.702 218.412L509.731 240.222C518.962 268.991 518.868 299.937 509.463 328.625L577.3 351.017Z"
+                                    fill="#226AF6" />
+                                 <path
+                                    d="M246.607 458.298C209.897 431.78 182.495 394.312 168.328 351.264L236.135 328.949C245.58 357.648 263.848 382.627 288.321 400.305L246.607 458.298Z"
+                                    fill="#56C2FE" />
+                                 <path
+                                    d="M498.855 458.298C535.565 431.78 562.967 394.312 577.134 351.264L509.327 328.949C499.882 357.648 481.614 382.627 457.141 400.305L498.855 458.298Z"
+                                    fill="#FECC56" />
+                              </svg>
+                              <div class="pie-chart__name">
+                                 Investment <br> Choices
+                              </div>
+                              <div class="pie-chart__labels">
+                                 <div class="pie-chart__row">
+                                    <div class="pie-chart__label label-1">Stocks</div>
+                                    <div class="pie-chart__label label-10">Commodities</div>
+                                 </div>
+                                 <div class="pie-chart__row">
+                                    <div class="pie-chart__label label-2">Bonds</div>
+                                    <div class="pie-chart__label label-9">Derivatives</div>
+                                 </div>
+                                 <div class="pie-chart__row">
+                                    <div class="pie-chart__label label-3">ETFs</div>
+                                    <div class="pie-chart__label label-8">Options</div>
+                                 </div>
+                                 <div class="pie-chart__row">
+                                    <div class="pie-chart__label label-4">Indicies</div>
+                                    <div class="pie-chart__label label-7">Metals</div>
+                                 </div>
+                                 <div class="pie-chart__row">
+                                    <div class="pie-chart__label label-5">Cryptocurrency</div>
+                                    <div class="pie-chart__label label-6">Mutual Funds</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="testimonials">
+            <div class="testimonials__body container">
+               <div class="testimonials__title title-xl">
+                  What our traders say about <span class="text-gradient-brown">PoPoMark</span>
+               </div>
+               <div class="testimonials__subtitle subtitle">
+                  At PoPoMark, we deliver a seamless trading experience. Hear from real <b>traders who have elevated
+                     their
+                     strategies</b> with
+                  our platform.
+               </div>
+               <div class="testimonials__items">
+                  <div class="testimonials__item testimonial">
+                     <div class="testimonial__icon">
+                        <svg>
+                           <use xlink:href="#icon-commas"></use>
+                        </svg>
+                     </div>
+                     <div class="testimonial__head">
+                        <div class="testimonial__rating">
+                           <svg>
+                              <use xlink:href="#icon-star"></use>
+                           </svg>
+                           <svg>
+                              <use xlink:href="#icon-star"></use>
+                           </svg>
+                           <svg>
+                              <use xlink:href="#icon-star"></use>
+                           </svg>
+                           <svg>
+                              <use xlink:href="#icon-star"></use>
+                           </svg>
+                           <svg>
+                              <use xlink:href="#icon-star"></use>
+                           </svg>
+                        </div>
+                        <p class="testimonial__title">"The best trading experience I've ever had!"</p>
+                     </div>
+                     <div class="testimonial__text">
+                        "PoPoMark makes trading effortless! The platform is super intuitive, and I love how fast
+                        deposits and withdrawals are.
+                        Plus, the risk management tools help me stay in control of my trades."
+                     </div>
+                     <div class="testimonial__author">
+                        <div class="testimonial__author-photo">
+                           <img src="img/users/user-9.png" alt="">
+                        </div>
+                        <div class="testimonial__author-info">
+                           <p class="testimonial__author-name">Michael T., Experienced Trader</p>
+                           <div class="testimonial__author-merit">
+                              <p>
+                                 <svg>
+                                    <use xlink:href="#icon-check"></use>
+                                 </svg>
+                                 ROI: 125%
+                              </p>
+                              <p>
+                                 <svg>
+                                    <use xlink:href="#icon-coin"></use>
+                                 </svg>
+                                 Profit: $8,000/month
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="testimonials__item testimonial">
+                     <div class="testimonial__icon">
+                        <svg>
+                           <use xlink:href="#icon-commas"></use>
+                        </svg>
+                     </div>
+                     <div class="testimonial__head">
+                        <div class="testimonial__rating">
+                           <svg>
+                              <use xlink:href="#icon-star"></use>
+                           </svg>
+                           <svg>
+                              <use xlink:href="#icon-star"></use>
+                           </svg>
+                           <svg>
+                              <use xlink:href="#icon-star"></use>
+                           </svg>
+                           <svg>
+                              <use xlink:href="#icon-star"></use>
+                           </svg>
+                           <svg>
+                              <use xlink:href="#icon-star"></use>
+                           </svg>
+                        </div>
+                        <p class="testimonial__title">"Finally, a platform that puts traders first!"</p>
+                     </div>
+                     <div class="testimonial__text">
+                        "I’ve tried many brokers, but PoPoMark stands out. The customizable price alerts and technical
+                        analysis tools give me a
+                        real edge in the market. Highly recommend for both beginners and pros!"
+                     </div>
+                     <div class="testimonial__author">
+                        <div class="testimonial__author-photo">
+                           <img src="img/users/user-10.png" alt="">
+                        </div>
+                        <div class="testimonial__author-info">
+                           <p class="testimonial__author-name">Samantha R., Swing Trader</p>
+                           <div class="testimonial__author-merit">
+                              <p>
+                                 <svg>
+                                    <use xlink:href="#icon-procente"></use>
+                                 </svg>
+                                 Win Rate: 78%
+                              </p>
+                              <p>
+                                 <svg>
+                                    <use xlink:href="#icon-coin"></use>
+                                 </svg>
+                                 Profit: $5,500/month
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="testimonials__item testimonial">
+                     <div class="testimonial__icon">
+                        <svg>
+                           <use xlink:href="#icon-commas"></use>
+                        </svg>
+                     </div>
+                     <div class="testimonial__head">
+                        <div class="testimonial__rating">
+                           <svg>
+                              <use xlink:href="#icon-star"></use>
+                           </svg>
+                           <svg>
+                              <use xlink:href="#icon-star"></use>
+                           </svg>
+                           <svg>
+                              <use xlink:href="#icon-star"></use>
+                           </svg>
+                           <svg>
+                              <use xlink:href="#icon-star"></use>
+                           </svg>
+                           <svg>
+                              <use xlink:href="#icon-star"></use>
+                           </svg>
+                        </div>
+                        <p class="testimonial__title">"Lightning-fast execution and great support!"</p>
+                     </div>
+                     <div class="testimonial__text">
+                        "PoPoMark's ultra-fast trade execution has saved me so many times. I never miss an opportunity
+                        thanks to their economic
+                        calendar and real-time news updates. Plus, the support team is top-notch!"
+                     </div>
+                     <div class="testimonial__author">
+                        <div class="testimonial__author-photo">
+                           <img src="img/users/user-10.png" alt="">
+                        </div>
+                        <div class="testimonial__author-info">
+                           <p class="testimonial__author-name">Michael T., Experienced Trader</p>
+                           <div class="testimonial__author-merit">
+                              <p>
+                                 <svg>
+                                    <use xlink:href="#icon-lightning"></use>
+                                 </svg>
+                                 Execution Speed: 0.01s
+                              </p>
+                              <p>
+                                 <svg>
+                                    <use xlink:href="#icon-coin"></use>
+                                 </svg>
+                                 Profit: $8,000/month
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="calendar">
+            <div class="calendar__body container">
+               <div class="calendar__att">News & Economic Calendar</div>
+               <div class="calendar__title title-xl">
+                  Stay <span class="title-line">Ahead</span> of the Market
+               </div>
+               <div class="calendar__subtitle">
+                  <p>
+                     <svg>
+                        <use xlink:href="#icon-calendar"></use>
+                     </svg>
+                     Upcoming economic events
+                  </p>
+                  <a href="" class="calendar__subtitle-link">
+                     View full calendar
+                     <svg>
+                        <use xlink:href="#icon-chevron-right"></use>
+                     </svg>
+                  </a>
+               </div>
+               <div class="calendar__items">
+                  <div class="calendar__slider swiper">
+                     <div class="calendar__slider-wrapper swiper-wrapper">
+                        <div class="calendar__slide calendar-event swiper-slide">
+                           <div class="calendar-event__head">
+                              <p class="calendar-event__date">Feb <span>14</span></p>
+                              <div class="calendar-event__name">The 61st Munich Security Conference</div>
+                           </div>
+                           <div class="calendar-event__footer">
+                              <p class="calendar-event__impact high-impact">High Impact</p>
+                              <a href="" class="calendar-event__link">Details
+                                 <svg>
+                                    <use xlink:href="#icon-chevron-right"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                        </div>
+
+                        <div class="calendar__slide calendar-event swiper-slide">
+                           <div class="calendar-event__head">
+                              <p class="calendar-event__date">Mar <span>8</span></p>
+                              <div class="calendar-event__name">U.S. Fed Interest Rate Decision</div>
+                           </div>
+                           <div class="calendar-event__footer">
+                              <p class="calendar-event__impact medium-impact">Medium Impact</p>
+                              <a href="" class="calendar-event__link">Details
+                                 <svg>
+                                    <use xlink:href="#icon-chevron-right"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                        </div>
+
+                        <div class="calendar__slide calendar-event swiper-slide">
+                           <div class="calendar-event__head">
+                              <p class="calendar-event__date">Apr <span>21</span></p>
+                              <div class="calendar-event__name">CPI Inflation Data Release</div>
+                           </div>
+                           <div class="calendar-event__footer">
+                              <p class="calendar-event__impact low-impact">Low Impact</p>
+                              <a href="" class="calendar-event__link">Details
+                                 <svg>
+                                    <use xlink:href="#icon-chevron-right"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                        </div>
+
+                        <div class="calendar__slide calendar-event swiper-slide">
+                           <div class="calendar-event__head">
+                              <p class="calendar-event__date">Jul <span>13</span></p>
+                              <div class="calendar-event__name">European GDP Growth Report</div>
+                           </div>
+                           <div class="calendar-event__footer">
+                              <p class="calendar-event__impact high-impact">High Impact</p>
+                              <a href="" class="calendar-event__link">Details
+                                 <svg>
+                                    <use xlink:href="#icon-chevron-right"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                        </div>
+
+                        <div class="calendar__slide calendar-event swiper-slide">
+                           <div class="calendar-event__head">
+                              <p class="calendar-event__date">Sep <span>3</span></p>
+                              <div class="calendar-event__name">U.S. Fed Interest Rate Decision</div>
+                           </div>
+                           <div class="calendar-event__footer">
+                              <p class="calendar-event__impact medium-impact">Medium Impact</p>
+                              <a href="" class="calendar-event__link">Details
+                                 <svg>
+                                    <use xlink:href="#icon-chevron-right"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                        </div>
+
+                        <div class="calendar__slide calendar-event swiper-slide">
+                           <div class="calendar-event__head">
+                              <p class="calendar-event__date">Feb <span>14</span></p>
+                              <div class="calendar-event__name">The 61st Munich Security Conference</div>
+                           </div>
+                           <div class="calendar-event__footer">
+                              <p class="calendar-event__impact high-impact">High Impact</p>
+                              <a href="" class="calendar-event__link">Details
+                                 <svg>
+                                    <use xlink:href="#icon-chevron-right"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                        </div>
+
+                        <div class="calendar__slide calendar-event swiper-slide">
+                           <div class="calendar-event__head">
+                              <p class="calendar-event__date">Mar <span>8</span></p>
+                              <div class="calendar-event__name">U.S. Fed Interest Rate Decision</div>
+                           </div>
+                           <div class="calendar-event__footer">
+                              <p class="calendar-event__impact medium-impact">Medium Impact</p>
+                              <a href="" class="calendar-event__link">Details
+                                 <svg>
+                                    <use xlink:href="#icon-chevron-right"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!--news-->
+               <div class="calendar__subtitle">
+                  <p>
+                     <svg>
+                        <use xlink:href="#icon-grid"></use>
+                     </svg>
+                     Latest news
+                  </p>
+                  <a href="" class="calendar__subtitle-link">
+                     Read all news
+                     <svg>
+                        <use xlink:href="#icon-chevron-right"></use>
+                     </svg>
+                  </a>
+               </div>
+               <div class="calendar__items">
+                  <div class="calendar__slider swiper">
+                     <div class="calendar__slider-wrapper swiper-wrapper">
+                        <article class="calendar__slide news-preview swiper-slide">
+                           <div class="news-preview__image"><img src="img/news/news-1.png" alt=""></div>
+                           <div class="news-preview__info">
+                              <div class="news-preview__time">
+                                 <svg>
+                                    <use xlink:href="#icon-clock"></use>
+                                 </svg>
+                                 2h ago
+                              </div>
+                              <a href="" class="news-preview__title">
+                                 Softbank set to invest $40 billion in OpenAI at $260 billion valuation, sources say
+                              </a>
+                              <p class="news-preview__text">
+                                 The Japanese tech giant is reportedly in talks to back OpenAI, marking one of the
+                                 biggest AI investments to date.</p>
+                              <a href="" class="news-preview__link">
+                                 Read more
+                                 <svg>
+                                    <use xlink:href="#icon-chevron-right"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                        </article>
+                        <article class="calendar__slide news-preview swiper-slide">
+                           <div class="news-preview__image"><img src="img/news/news-2.png" alt=""></div>
+                           <div class="news-preview__info">
+                              <div class="news-preview__time">
+                                 <svg>
+                                    <use xlink:href="#icon-clock"></use>
+                                 </svg>
+                                 2,5h ago
+                              </div>
+                              <a href="" class="news-preview__title">European markets nudge lower as investors assess
+                                 U.S. jobs data L’Oreal down 4%</a>
+                              <p class="news-preview__text">
+                                 European stocks slipped as traders analyzed U.S. employment figures, while L’Oréal
+                                 shares tumbled after
+                                 weaker-than-expected earnings.</p>
+                              <a href="" class="news-preview__link">
+                                 Read more
+                                 <svg>
+                                    <use xlink:href="#icon-chevron-right"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                        </article>
+                        <article class="calendar__slide news-preview swiper-slide">
+                           <div class="news-preview__image"><img src="img/news/news-3.png" alt=""></div>
+                           <div class="news-preview__info">
+                              <div class="news-preview__time">
+                                 <svg>
+                                    <use xlink:href="#icon-clock"></use>
+                                 </svg>
+                                 3h ago
+                              </div>
+                              <a href="" class="news-preview__title">DOGE chief Musk polls X users if staffer who quit
+                                 over racist tweets should be rehired</a>
+                              <p class="news-preview__text">Musk sparked controversy by letting users decide the fate of
+                                 a former X employee who resigned amid a racism scandal.</p>
+                              <a href="" class="news-preview__link">
+                                 Read more
+                                 <svg>
+                                    <use xlink:href="#icon-chevron-right"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                        </article>
+                        <article class="calendar__slide news-preview swiper-slide">
+                           <div class="news-preview__image"><img src="img/news/news-3.png" alt=""></div>
+                           <div class="news-preview__info">
+                              <div class="news-preview__time">
+                                 <svg>
+                                    <use xlink:href="#icon-clock"></use>
+                                 </svg>
+                                 3h ago
+                              </div>
+                              <a href="" class="news-preview__title">Bitcoin raises and then falls back after Trump’s
+                                 latest press conference. What should we wait next?</a>
+                              <p class="news-preview__text">Federal Crypto Reserve — is this a real thing that Trump
+                                 gonna pull out? We’ve asked the experts what they think.</p>
+                              <a href="" class="news-preview__link">
+                                 Read more
+                                 <svg>
+                                    <use xlink:href="#icon-chevron-right"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                        </article>
+                        <article class="calendar__slide news-preview swiper-slide">
+                           <div class="news-preview__image"><img src="img/news/news-1.png" alt=""></div>
+                           <div class="news-preview__info">
+                              <div class="news-preview__time">
+                                 <svg>
+                                    <use xlink:href="#icon-clock"></use>
+                                 </svg>
+                                 2h ago
+                              </div>
+                              <a href="" class="news-preview__title">
+                                 Softbank set to invest $40 billion in OpenAI at $260 billion valuation, sources say
+                              </a>
+                              <p class="news-preview__text">
+                                 The Japanese tech giant is reportedly in talks to back OpenAI, marking one of the
+                                 biggest AI investments to date.</p>
+                              <a href="" class="news-preview__link">
+                                 Read more
+                                 <svg>
+                                    <use xlink:href="#icon-chevron-right"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                        </article>
+                        <article class="calendar__slide news-preview swiper-slide">
+                           <div class="news-preview__image"><img src="img/news/news-2.png" alt=""></div>
+                           <div class="news-preview__info">
+                              <div class="news-preview__time">
+                                 <svg>
+                                    <use xlink:href="#icon-clock"></use>
+                                 </svg>
+                                 2,5h ago
+                              </div>
+                              <a href="" class="news-preview__title">European markets nudge lower as investors assess
+                                 U.S. jobs data L’Oreal down 4%</a>
+                              <p class="news-preview__text">
+                                 European stocks slipped as traders analyzed U.S. employment figures, while L’Oréal
+                                 shares tumbled after
+                                 weaker-than-expected earnings.</p>
+                              <a href="" class="news-preview__link">
+                                 Read more
+                                 <svg>
+                                    <use xlink:href="#icon-chevron-right"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                        </article>
+                        <article class="calendar__slide news-preview swiper-slide">
+                           <div class="news-preview__image"><img src="img/news/news-3.png" alt=""></div>
+                           <div class="news-preview__info">
+                              <div class="news-preview__time">
+                                 <svg>
+                                    <use xlink:href="#icon-clock"></use>
+                                 </svg>
+                                 3h ago
+                              </div>
+                              <a href="" class="news-preview__title">DOGE chief Musk polls X users if staffer who quit
+                                 over racist tweets should be rehired</a>
+                              <p class="news-preview__text">Musk sparked controversy by letting users decide the fate of
+                                 a former X employee who resigned amid a racism scandal.</p>
+                              <a href="" class="news-preview__link">
+                                 Read more
+                                 <svg>
+                                    <use xlink:href="#icon-chevron-right"></use>
+                                 </svg>
+                              </a>
+                           </div>
+                        </article>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="start">
+            <div class="start__body container">
+               <h2 class="start__title title-xl">
+                  Getting Started in <span class="title-line">Just 3</span> Steps
+               </h2>
+               <div class="start__subtitle subtitle">Simple explanations of complex topics. Get expert insights and stay
+                  informed.</div>
+               <div class="start__items">
+                  <div class="start__item">
+                     <div class="start__item-image">
+                        <img src="img/home-page/step-1.png" alt="">
+                     </div>
+                     <p class="start__item-title">
+                        Register an account
+                     </p>
+                     <p class="start__item-description">
+                        It’s free and takes less than a minute
+                     </p>
+                  </div>
+                  <div class="start__item">
+                     <div class="start__item-image">
+                        <img src="img/home-page/step-2.png" alt="">
+                     </div>
+                     <p class="start__item-title">
+                        Practice on demo
+                     </p>
+                     <p class="start__item-description">
+                        Use $10k virtual coins to stress-test your strategies
+                     </p>
+                  </div>
+                  <div class="start__item">
+                     <div class="start__item-image">
+                        <img src="img/home-page/step-3.png" alt="">
+                     </div>
+                     <p class="start__item-title">
+                        Deposit and trade
+                     </p>
+                     <p class="start__item-description">
+                        Deposit from $10 and open your first trade from $1
+                     </p>
+                  </div>
+               </div>
+               <div class="start__button">
+                  <a href="" class="button-orange">
+                     Start trading
+                     <svg>
+                        <use xlink:href="#icon-chevron-right"></use>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+         </section>
+         <section class="get-in-touch">
+            <div class="get-in-touch__body container">
+               <h2 class="get-in-touch__title title">Need Help? Get in Touch Today!</h2>
+               <div class="get-in-touch__subtitle subtitle">
+                  Reach out to us, and we'll get back to you quickly with the answers you need to make your trading
+                  experience smooth and
+                  seamless.
+               </div>
+               <div class="get-in-touch__link">
+                  <a href="" class="button-orange">
+                     Contact us
+                     <svg>
+                        <use xlink:href="#icon-chevron-right"></use>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer class="footer">
+   <div class="footer__body container">
+      <div class="footer__main">
+         <div class="footer__col">
+            <div class="footer__logo">
+               <img src="img/logo-brand.svg" alt="">
+            </div>
+            <nav class="footer__menu">
+               <ul class="footer__menu-list">
+                  <li class="footer__menu-item">
+                     <a href="" class="footer__menu-link footer__menu-add">
+                        Markets
+                        <svg>
+                           <use xlink:href="#icon-chevron"></use>
+                        </svg>
+                     </a>
+                     <ul class="footer__sublist">
+                        <li class="footer__subitem">
+                           <a href="" class="footer__sublink footer__sublink-add">Forex
+                              <svg>
+                                 <use xlink:href="#icon-chevron"></use>
+                              </svg>
+                           </a>
+                           <ul class="footer__subsublist">
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">EUR/USD</a></li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">GBP/JPY</a></li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">USD/JPY</a></li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">GBP/USD</a></li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">AUD/USD</a></li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">All Pairs</a></li>
+                           </ul>
+                        </li>
+                        <li class="footer__subitem">
+                           <a href="" class="footer__sublink footer__sublink-add">Crypto
+                              <svg>
+                                 <use xlink:href="#icon-chevron"></use>
+                              </svg>
+                           </a>
+                           <ul class="footer__subsublist">
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Bitcoin (BTC)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Ethereum (ETH)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Ripple (XRP)</a></li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Litecoin (LTC)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Dogecoin (DOGE)</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="footer__subitem">
+                           <a href="" class="footer__sublink footer__sublink-add">Stocks
+                              <svg>
+                                 <use xlink:href="#icon-chevron"></use>
+                              </svg>
+                           </a>
+                           <ul class="footer__subsublist">
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Apple (AAPL)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Tesla (TSLA)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Amazon (AMZN)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Microsoft (MSFT)</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="footer__subitem">
+                           <a href="" class="footer__sublink footer__sublink-add">Options
+                              <svg>
+                                 <use xlink:href="#icon-chevron"></use>
+                              </svg>
+                           </a>
+                           <ul class="footer__subsublist">
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Binary</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Digital</a>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="footer__menu-item">
+                     <a href="" class="footer__menu-link footer__menu-add">
+                        For traders
+                        <svg>
+                           <use xlink:href="#icon-chevron"></use>
+                        </svg>
+                     </a>
+                     <ul class="footer__sublist">
+                        <li class="footer__subitem">
+                           <a href="" class="footer__sublink footer__sublink-add">Forex
+                              <svg>
+                                 <use xlink:href="#icon-chevron"></use>
+                              </svg>
+                           </a>
+                           <ul class="footer__subsublist">
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">EUR/USD</a></li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">GBP/JPY</a></li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">USD/JPY</a></li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">GBP/USD</a></li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">AUD/USD</a></li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">All Pairs</a></li>
+                           </ul>
+                        </li>
+                        <li class="footer__subitem">
+                           <a href="" class="footer__sublink footer__sublink-add">Crypto
+                              <svg>
+                                 <use xlink:href="#icon-chevron"></use>
+                              </svg>
+                           </a>
+                           <ul class="footer__subsublist">
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Bitcoin (BTC)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Ethereum (ETH)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Ripple (XRP)</a></li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Litecoin (LTC)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Dogecoin (DOGE)</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="footer__subitem">
+                           <a href="" class="footer__sublink footer__sublink-add">Stocks
+                              <svg>
+                                 <use xlink:href="#icon-chevron"></use>
+                              </svg>
+                           </a>
+                           <ul class="footer__subsublist">
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Apple (AAPL)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Tesla (TSLA)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Amazon (AMZN)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Microsoft (MSFT)</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="footer__subitem">
+                           <a href="" class="footer__sublink footer__sublink-add">Options
+                              <svg>
+                                 <use xlink:href="#icon-chevron"></use>
+                              </svg>
+                           </a>
+                           <ul class="footer__subsublist">
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Binary</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Digital</a>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="footer__menu-item">
+                     <a href="" class="footer__menu-link footer__menu-add">
+                        Download app
+                        <svg>
+                           <use xlink:href="#icon-chevron"></use>
+                        </svg>
+                     </a>
+                     <ul class="footer__sublist">
+                        <li class="footer__subitem">
+                           <a href="" class="footer__sublink">
+                              Mac
+                              <svg>
+                                 <use xlink:href="#icon-desktop"></use>
+                              </svg>
+                           </a>
+                        </li>
+                        <li class="footer__subitem">
+                           <a href="" class="footer__sublink">
+                              Windows
+                              <svg>
+                                 <use xlink:href="#icon-computer"></use>
+                              </svg>
+                           </a>
+                        </li>
+                        <li class="footer__subitem">
+                           <a href="" class="footer__sublink">
+                              Android
+                              <svg>
+                                 <use xlink:href="#icon-android"></use>
+                              </svg>
+                           </a>
+                        </li>
+                        <li class="footer__subitem">
+                           <a href="" class="footer__sublink">
+                              iOS
+                              <svg>
+                                 <use xlink:href="#icon-ios"></use>
+                              </svg>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="footer__menu-item">
+                     <a href="" class="footer__menu-link">Company</a>
+                  </li>
+                  <li class="footer__menu-item">
+                     <a href="" class="footer__menu-link">Blog</a>
+                  </li>
+                  <li class="footer__menu-item">
+                     <a href="" class="footer__menu-link">Affiliate Program</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+         <nav class="footer__col">
+            <div class="footer__col-item">
+               <div class="footer__col-name">Privacy and Data</div>
+               <a href="" class="footer__link">Privacy Policy</a>
+               <a href="" class="footer__link">Cookies</a>
+            </div>
+            <div class="footer__col-item">
+               <div class="footer__col-name">Financial Transactions</div>
+               <a href="" class="footer__link">Payment Policy</a>
+               <a href="" class="footer__link">Withdrawal Policy</a>
+               <a href="" class="footer__link">General Fees</a>
+            </div>
+            <div class="footer__col-item">
+               <div class="footer__col-name">Legal and Regulatory</div>
+               <a href="" class="footer__link">Terms & Conditions</a>
+               <a href="" class="footer__link">AML (Anti-Money Laundering)</a>
+               <a href="" class="footer__link">Risk Disclosure</a>
+               <a href="" class="footer__link">Terms for South Africa</a>
+            </div>
+         </nav>
+         <div class="footer__lang">
+            <div class="footer__lang-active">
+               English
+               <svg>
+                  <use xlink:href="#icon-chevron"></use>
+               </svg>
+            </div>
+            <ul class="footer__lang-list">
+               <li><a href="">Deutsch</a></li>
+               <li><a href="">Français</a></li>
+               <li><a href="">Русский</a></li>
+            </ul>
+         </div>
+      </div>
+      <div class="footer__text">
+         <p>
+            Payment transactions are managed by: <br>
+            CYBER FINANCE SOLUTIONS LTD
+            Address: 14 Nikolaos Kyriakides Street, 1096 Nicosia, Cyprus
+            Company business number: HE 450321
+         </p>
+
+         <p>
+            Finance Global LLC. <br>
+            Address: 8 Ocean View Street, Suite 3, Horizon Tower, Limassol, Cyprus
+         </p>
+
+         <p>
+            Risk <Disclaimer:br></Disclaimer:br>
+            The financial products offered by the company carry a high level of risk and can result in the loss of all
+            your funds.
+            You should never invest money that you cannot afford to lose.
+         </p>
+      </div>
+   </div>
+</footer>
+   </div>
+
+   <script src="js/swiper-bundle.min.js"></script>
+   <script src="js/gsap.min.js"></script>
+   <script src="js/splitText.js"></script>
+   <script src="js/scrollTrigger.min.js"></script>
+   <script src="js/app.js"></script>
+   <script src="js/animation.js"></script>
+
+   <!--SVG sprive-->
+   <?xml version="1.0" encoding="utf-8"?><svg viewBox="0 0 125 77" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
+      <style>
+         :root>svg {
+            display: none
+         }
+
+         :root>svg:target {
+            display: block
+         }
+      </style><svg fill="none" viewBox="0 0 20 20" id="icon-android" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M6.74047 3.82836C6.90767 3.71616 7.13647 3.7609 7.2494 3.92957L7.86173 4.84549C8.2504 4.67683 8.66546 4.55584 9.10767 4.51696C9.80273 4.45662 10.5021 4.56401 11.1471 4.8301L11.7469 3.9303C11.8584 3.76089 12.0857 3.71616 12.2551 3.82836C12.4238 3.94057 12.4693 4.16863 12.3571 4.33656L11.8005 5.17183C11.9904 5.29429 12.173 5.42776 12.3402 5.58103C13.1095 6.28576 13.5333 7.2259 13.5333 8.22763V12.9943C13.5333 13.567 13.0398 14.0334 12.4333 14.0334H11.3333V16.2334H10.6V14.0334H8.4V16.2334H7.66666V14.0334H6.56667C5.96021 14.0334 5.46667 13.567 5.46667 12.9943V8.37209C5.46667 7.07043 6.16334 5.90296 7.21494 5.19749L6.64 4.3373C6.52706 4.16936 6.57254 3.9413 6.74047 3.82836ZM9.49633 5.23343C9.38853 5.23343 9.28 5.23856 9.17147 5.2481C7.50533 5.39403 6.2 6.76609 6.2 8.37209V12.9943C6.2 13.1622 6.36427 13.3001 6.56667 13.3001H12.4333C12.6357 13.3001 12.8 13.1622 12.8 12.9943V8.22763C12.8 7.43343 12.4612 6.68543 11.8445 6.12149C11.2204 5.54877 10.3785 5.23343 9.49633 5.23343ZM4 12.2001H4.73334V8.53343H4V12.2001ZM14.2667 12.2001H15V8.53343H14.2667V12.2001ZM8.03333 6.84691C7.7092 6.84691 7.44667 7.10944 7.44667 7.43358C7.44667 7.75698 7.7092 8.02024 8.03333 8.02024C8.35747 8.02024 8.62 7.75698 8.62 7.43358C8.62 7.10944 8.35747 6.84691 8.03333 6.84691ZM10.9667 6.84691C10.6425 6.84691 10.38 7.10944 10.38 7.43358C10.38 7.75698 10.6425 8.02024 10.9667 8.02024C11.2908 8.02024 11.5533 7.75698 11.5533 7.43358C11.5533 7.10944 11.2908 6.84691 10.9667 6.84691Z"
+            fill="currentColor" />
+      </svg><svg fill="none" viewBox="0 0 36 36" id="icon-circle-check" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M7.66406 28.3359C6.37031 27.0422 7.22813 24.3281 6.56719 22.7391C5.90625 21.15 3.375 19.7578 3.375 18C3.375 16.2422 5.87813 14.9063 6.56719 13.2609C7.25625 11.6156 6.37031 8.95781 7.66406 7.66406C8.95781 6.37031 11.6719 7.22813 13.2609 6.56719C14.85 5.90625 16.2422 3.375 18 3.375C19.7578 3.375 21.0937 5.87813 22.7391 6.56719C24.3844 7.25625 27.0422 6.37031 28.3359 7.66406C29.6297 8.95781 28.7719 11.6719 29.4328 13.2609C30.0938 14.85 32.625 16.2422 32.625 18C32.625 19.7578 30.1219 21.0937 29.4328 22.7391C28.7438 24.3844 29.6297 27.0422 28.3359 28.3359C27.0422 29.6297 24.3281 28.7719 22.7391 29.4328C21.15 30.0938 19.7578 32.625 18 32.625C16.2422 32.625 14.9063 30.1219 13.2609 29.4328C11.6156 28.7438 8.95781 29.6297 7.66406 28.3359Z"
+            stroke="#00916D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+         <path d="M24.1875 14.625L15.9328 22.5L11.8125 18.5625" stroke="#00916D" stroke-width="3" stroke-linecap="round"
+            stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 20 20" id="icon-ios" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M3.06431 7.91729V12.8872H4.22477V7.91729H3.06431ZM8.08036 7.04088C9.27017 7.04088 10.0345 7.99953 10.0345 9.49953C10.0345 11.0113 9.27017 11.9699 8.08036 11.9699C6.8789 11.9699 6.12017 11.0113 6.12017 9.49953C6.12017 7.99953 6.87843 7.04088 8.08036 7.04088ZM14.4037 6.01175C12.9454 6.01175 11.9071 6.82331 11.9071 8.02914C11.9071 8.98778 12.4961 9.58788 13.733 9.87594L14.6022 10.0879C15.4481 10.282 15.792 10.5644 15.792 11.0526C15.792 11.6175 15.2262 12.0174 14.4214 12.0174C13.5988 12.0174 12.9804 11.6114 12.9165 10.9883H11.75C11.7966 12.2354 12.8117 13 14.3515 13C15.9789 13 17 12.1941 17 10.9121C17 9.90649 16.4165 9.336 15.0636 9.02397L14.2876 8.84727C13.465 8.64709 13.1267 8.38252 13.1267 7.93562C13.1267 7.37077 13.6398 6.99436 14.3985 6.99436C15.1628 6.99436 15.6876 7.37688 15.7459 8.00611H16.8891C16.8597 6.81814 15.8857 6.01222 14.4041 6.01222L14.4037 6.01175ZM8.08036 6.01175C6.12064 6.01175 4.89541 7.35855 4.89541 9.49953C4.89541 11.6584 6.12017 12.9991 8.08036 12.9991C10.0289 12.9991 11.2593 11.6579 11.2593 9.49953C11.2593 7.35855 10.0284 6.01175 8.07989 6.01175H8.08036ZM3.64128 6C3.63802 6 3.63382 6 3.63009 6C3.28196 6 3 6.2843 3 6.63534C3 6.98637 3.28196 7.27068 3.63009 7.27068C3.63429 7.27068 3.63802 7.27068 3.64221 7.27068C3.64734 7.27068 3.65293 7.27115 3.65899 7.27115C4.00712 7.27115 4.28908 6.98684 4.28908 6.63581C4.28908 6.28477 4.00712 6.00047 3.65899 6.00047C3.65293 6.00047 3.64687 6.00047 3.64081 6.00094H3.64174L3.64128 6Z"
+            fill="currentColor" />
+      </svg><svg fill="none" viewBox="0 0 20 20" id="icon-smartphone" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M9.99984 14.5834H10.0082M6.83317 18.3334H13.1665C14.0999 18.3334 14.5666 18.3334 14.9232 18.1518C15.2368 17.992 15.4917 17.737 15.6515 17.4234C15.8332 17.0669 15.8332 16.6002 15.8332 15.6667V4.33341C15.8332 3.39999 15.8332 2.93328 15.6515 2.57676C15.4917 2.26316 15.2368 2.00819 14.9232 1.8484C14.5666 1.66675 14.0999 1.66675 13.1665 1.66675H6.83317C5.89975 1.66675 5.43304 1.66675 5.07652 1.8484C4.76292 2.00819 4.50795 2.26316 4.34816 2.57676C4.1665 2.93328 4.1665 3.39999 4.1665 4.33342V15.6667C4.1665 16.6002 4.1665 17.0669 4.34816 17.4234C4.50795 17.737 4.76292 17.992 5.07652 18.1518C5.43304 18.3334 5.89975 18.3334 6.83317 18.3334ZM10.4165 14.5834C10.4165 14.8135 10.23 15.0001 9.99984 15.0001C9.76972 15.0001 9.58317 14.8135 9.58317 14.5834C9.58317 14.3533 9.76972 14.1667 9.99984 14.1667C10.23 14.1667 10.4165 14.3533 10.4165 14.5834Z"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 20 20" id="icon-computer" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M4.58317 16.6666H6.6665M14.1665 7.49992H14.1748M6.6665 4.99992H4.33317C3.39975 4.99992 2.93304 4.99992 2.57652 5.18157C2.26292 5.34136 2.00795 5.59633 1.84816 5.90993C1.6665 6.26645 1.6665 6.73316 1.6665 7.66659V10.6666C1.6665 11.6 1.6665 12.0667 1.84816 12.4232C2.00795 12.7368 2.26292 12.9918 2.57652 13.1516C2.93304 13.3333 3.39975 13.3333 4.33317 13.3333H6.6665M12.6665 16.6666H15.6665C16.5999 16.6666 17.0666 16.6666 17.4232 16.4849C17.7368 16.3251 17.9917 16.0702 18.1515 15.7566C18.3332 15.4 18.3332 14.9333 18.3332 13.9999V5.99992C18.3332 5.0665 18.3332 4.59979 18.1515 4.24327C17.9917 3.92966 17.7368 3.6747 17.4232 3.51491C17.0666 3.33325 16.5999 3.33325 15.6665 3.33325H12.6665C11.7331 3.33325 11.2664 3.33325 10.9099 3.51491C10.5963 3.6747 10.3413 3.92966 10.1815 4.24327C9.99984 4.59979 9.99984 5.0665 9.99984 5.99992V13.9999C9.99984 14.9333 9.99984 15.4 10.1815 15.7566C10.3413 16.0702 10.5963 16.3251 10.9099 16.4849C11.2664 16.6666 11.7331 16.6666 12.6665 16.6666ZM14.9998 12.4999C14.9998 12.9602 14.6267 13.3333 14.1665 13.3333C13.7063 13.3333 13.3332 12.9602 13.3332 12.4999C13.3332 12.0397 13.7063 11.6666 14.1665 11.6666C14.6267 11.6666 14.9998 12.0397 14.9998 12.4999Z"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 20 20" id="icon-desktop" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M1.6665 11.6667L18.3332 11.6667M6.6665 17.5H13.3332M5.6665 15H14.3332C15.7333 15 16.4334 15 16.9681 14.7275C17.4386 14.4878 17.821 14.1054 18.0607 13.635C18.3332 13.1002 18.3332 12.4001 18.3332 11V6.5C18.3332 5.09987 18.3332 4.3998 18.0607 3.86502C17.821 3.39462 17.4386 3.01217 16.9681 2.77248C16.4334 2.5 15.7333 2.5 14.3332 2.5H5.6665C4.26637 2.5 3.56631 2.5 3.03153 2.77248C2.56112 3.01217 2.17867 3.39462 1.93899 3.86502C1.6665 4.3998 1.6665 5.09987 1.6665 6.5V11C1.6665 12.4001 1.6665 13.1002 1.93899 13.635C2.17867 14.1054 2.56112 14.4878 3.03153 14.7275C3.56631 15 4.26637 15 5.6665 15Z"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 22 22" id="icon-lightning" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11.9588 2.31185C12.2644 2.44425 12.4461 2.76235 12.4049 3.09285L11.7243 8.55004L16.6313 8.55004C16.8214 8.55001 17.0117 8.54997 17.1668 8.56405C17.3139 8.5774 17.5887 8.61242 17.8261 8.80474C18.0992 9.02593 18.2551 9.36021 18.2499 9.71101C18.2453 10.0158 18.0968 10.249 18.0129 10.3707C17.9245 10.499 17.8027 10.6454 17.681 10.7918L10.6661 19.2295C10.4531 19.4856 10.0968 19.5706 9.7912 19.4382C9.48558 19.3058 9.3039 18.9877 9.34511 18.6572L10.0257 13.2L5.14605 13.2C5.13692 13.2 5.12779 13.2 5.11865 13.2C4.92862 13.2001 4.73828 13.2001 4.58318 13.186C4.43607 13.1727 4.16129 13.1377 3.92386 12.9453C3.65077 12.7241 3.49485 12.3899 3.50013 12.0391C3.50471 11.7343 3.65318 11.5011 3.73706 11.3794C3.82548 11.2511 3.94727 11.1046 4.069 10.9583C4.07483 10.9513 4.08066 10.9443 4.08648 10.9373L11.0839 2.52057C11.2969 2.26446 11.6532 2.17945 11.9588 2.31185ZM5.403 11.7L10.875 11.7C11.0901 11.7 11.2948 11.7924 11.4372 11.9536C11.5796 12.1148 11.6459 12.3294 11.6192 12.5429L11.1507 16.3003L16.347 10.05L10.875 10.05C10.6599 10.05 10.4552 9.9577 10.3128 9.79647C10.1704 9.63525 10.1041 9.42066 10.1308 9.20723L10.5993 5.44977L5.403 11.7Z"
+            fill="currentColor" />
+      </svg><svg fill="none" viewBox="0 0 22 22" id="icon-procente" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11 4.75C7.54822 4.75 4.75 7.54822 4.75 11C4.75 14.4517 7.54822 17.25 11 17.25C14.4517 17.25 17.25 14.4517 17.25 11C17.25 7.54822 14.4517 4.75 11 4.75ZM3.25 11C3.25 6.71979 6.71979 3.25 11 3.25C15.2802 3.25 18.75 6.71979 18.75 11C18.75 15.2802 15.2802 18.75 11 18.75C6.71979 18.75 3.25 15.2802 3.25 11ZM14.3303 7.66967C14.6232 7.96256 14.6232 8.43744 14.3303 8.73033L8.73033 14.3303C8.43744 14.6232 7.96256 14.6232 7.66967 14.3303C7.37678 14.0374 7.37678 13.5626 7.66967 13.2697L13.2697 7.66967C13.5626 7.37678 14.0374 7.37678 14.3303 7.66967ZM7.8 8.9C7.8 8.29249 8.29249 7.8 8.9 7.8C9.50751 7.8 10 8.29249 10 8.9C10 9.50751 9.50751 10 8.9 10C8.29249 10 7.8 9.50751 7.8 8.9ZM12 13.1C12 12.4925 12.4925 12 13.1 12C13.7075 12 14.2 12.4925 14.2 13.1C14.2 13.7075 13.7075 14.2 13.1 14.2C12.4925 14.2 12 13.7075 12 13.1Z"
+            fill="currentColor" />
+      </svg><svg fill="currentColor" viewBox="0 0 16 16" id="icon-dots" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+      </svg><svg fill="none" viewBox="0 0 56 56" id="icon-plus" xmlns="http://www.w3.org/2000/svg">
+         <path d="M2.72266 27.5498H28.161V2.11144" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+            stroke-linejoin="round" />
+         <path d="M53.7207 27.6709H28.2823V53.1093" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+            stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 83 82" id="icon-refresh" xmlns="http://www.w3.org/2000/svg">
+         <path d="M8.78906 17.4893V34.867H27.1891" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+            stroke-linejoin="round" />
+         <path d="M74.2115 64.5116V47.1338H55.8115" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+            stroke-linejoin="round" />
+         <path
+            d="M66.7472 32.1386C65.239 27.905 62.6758 24.12 59.2966 21.1366C55.9174 18.1533 51.8325 16.0688 47.423 15.0778C43.0135 14.0868 38.4231 14.2214 34.0801 15.4692C29.7372 16.717 25.7832 19.0373 22.5872 22.2136L8.78906 35.0924M74.2113 46.9079L60.4131 59.7867C57.2171 62.963 53.2632 65.2832 48.9202 66.531C44.5773 67.7789 39.9869 67.9135 35.5773 66.9225C31.1678 65.9314 27.0829 63.847 23.7037 60.8636C20.3246 57.8803 17.7613 54.0952 16.2531 49.8617"
+            stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 24 25" id="icon-burger" xmlns="http://www.w3.org/2000/svg">
+         <path d="M3 12.5H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+         <path d="M3 6.5H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+         <path d="M3 18.5H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 17 16" id="icon-arrow-up" xmlns="http://www.w3.org/2000/svg">
+         <path d="M8.2 12.667V3.333M3.534 8 8.2 3.333 12.867 8" stroke="currentColor" stroke-width="1.3"
+            stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 39 40" id="icon-bell" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M29.25 13.5a9.75 9.75 0 1 0-19.5 0c0 11.375-4.875 14.625-4.875 14.625h29.25S29.25 24.875 29.25 13.5ZM22.311 34.625a3.25 3.25 0 0 1-5.622 0"
+            stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 36 36" id="icon-bank" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M9.42681 23.9659V24.0659H9.52681H11.9132H12.0132V23.9659V15.6136V15.5136H11.9132H9.52681H9.42681V15.6136V23.9659ZM16.5859 23.9659V24.0659H16.6859H19.0723H19.1723V23.9659V15.6136V15.5136H19.0723H16.6859H16.5859V15.6136V23.9659ZM5.84727 28.7386V28.8386H5.94727H29.8109H29.9109V28.7386V26.3523V26.2523H29.8109H5.94727H5.84727V26.3523V28.7386ZM23.745 23.9659V24.0659H23.845H26.2314H26.3314V23.9659V15.6136V15.5136H26.2314H23.845H23.745V15.6136V23.9659ZM5.84727 13.2273V13.3273H5.94727H29.8109H29.9109V13.2273V10.8409V10.7791L29.8556 10.7515L17.9238 4.78556L17.8791 4.7632L17.8344 4.78556L5.90254 10.7515L5.84727 10.7791V10.8409V13.2273ZM24.0742 10.7409H11.684L17.8791 7.67126L24.0742 10.7409Z"
+            fill="currentColor" stroke="currentColor" stroke-width="0.2" />
+      </svg><svg fill="none" viewBox="0 0 22 23" id="icon-calendar" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M15.667 6H6.333C5.597 6 5 6.597 5 7.333v9.334C5 17.403 5.597 18 6.333 18h9.334c.736 0 1.333-.597 1.333-1.333V7.333C17 6.597 16.403 6 15.667 6ZM14 4v3M8 4v3M5 10h12"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 39 40" id="icon-chart-arrow" xmlns="http://www.w3.org/2000/svg">
+         <path d="m5 28 8.852-8.438 7.87 7.5L35 13" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+            stroke-linejoin="round" />
+         <path d="M25 12h10v9" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 22 22" id="icon-check" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M18.214 6.05a1 1 0 0 1-.014 1.414l-8.666 8.5a1 1 0 0 1-1.4 0L3.8 11.714a1 1 0 1 1 1.4-1.428l3.633 3.563L16.8 6.036a1 1 0 0 1 1.414.014Z"
+            fill="currentColor" />
+      </svg><svg fill="none" viewBox="0 0 16 16" id="icon-chevron" xmlns="http://www.w3.org/2000/svg">
+         <path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+            stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 16 16" id="icon-chevron-right" xmlns="http://www.w3.org/2000/svg">
+         <path d="M6 6L10 10L6 14" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+            stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 20 20" id="icon-clock" xmlns="http://www.w3.org/2000/svg">
+         <path d="M10 16.363a6.364 6.364 0 1 0 0-12.727 6.364 6.364 0 0 0 0 12.727Z" stroke="currentColor"
+            stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+         <path d="M10 6.364v3.409l2.727 1.136" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+            stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 22 22" id="icon-coin" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11 4.455a6.545 6.545 0 1 0 0 13.09 6.545 6.545 0 0 0 0-13.09ZM3 11a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm8-5.455c.402 0 .727.326.727.728v.363h.121a2.424 2.424 0 0 1 2.425 2.425.727.727 0 1 1-1.455 0 .97.97 0 0 0-.97-.97h-1.575a1.09 1.09 0 0 0 0 2.182h1.454a2.545 2.545 0 0 1 0 5.09v.364a.727.727 0 0 1-1.454 0v-.363h-.121a2.424 2.424 0 0 1-2.425-2.425.727.727 0 1 1 1.455 0c0 .536.434.97.97.97h1.575a1.09 1.09 0 1 0 0-2.182h-1.454a2.545 2.545 0 0 1 0-5.09v-.364c0-.402.325-.728.727-.728Z"
+            fill="currentColor" />
+      </svg><svg fill="none" viewBox="0 0 16 15" id="icon-commas" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M15.868 11.463c0 .99-.329 1.805-.987 2.445-.63.64-1.446.96-2.448.96-1.145 0-2.061-.436-2.748-1.31-.687-.901-1.031-2.095-1.031-3.58 0-1.57.4-3.143 1.202-4.714.83-1.572 2.047-3.13 3.65-4.672 2.677 2.622 1.784 2.307-.043 5.24a10.237 10.237 0 0 0-1.245 2.793l-.859-.392c.115-.059.258-.117.43-.175.2-.058.458-.087.773-.087.916 0 1.689.334 2.319 1.004.658.67.987 1.499.987 2.488ZM7.885 11.463c0 .99-.33 1.805-.988 2.445-.63.64-1.445.96-2.447.96-1.145 0-2.061-.436-2.749-1.31-.687-.901-1.03-2.095-1.03-3.58 0-1.57.4-3.143 1.202-4.714.83-1.572 2.047-3.13 3.65-4.672C8.2 3.214 7.307 2.9 5.48 5.832a10.235 10.235 0 0 0-1.245 2.793l-.859-.392a3.3 3.3 0 0 1 .43-.175c.2-.058.458-.087.773-.087a3.06 3.06 0 0 1 2.318 1.004c.659.67.988 1.499.988 2.488Z"
+            fill="currentColor" />
+      </svg><svg fill="none" viewBox="0 0 125 77" id="icon-crown" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="m96.93 31.804-.006.004c-1.466 1.403-3.649 1.846-5.592 1.294-1.677-.476-2.82-1.982-4.003-3.577L68.789 4.544l-.021-.028-.402.298.402-.298-.045-.06c-1.037-1.398-2.256-3.042-4.121-3.633a7.065 7.065 0 0 0-4.02-.061c-2.055.576-3.394 2.385-4.524 3.913l-.042.057-18.46 24.942-.019.026c-1.1 1.487-2.152 2.879-3.695 3.362-1.955.612-4.223.185-5.771-1.258L12.27 17.08c-2.305-2.149-4.532-3.244-6.44-3.201-1.973.045-3.453 1.297-4.219 3.457-.954 2.693-.253 5.609.407 8.182l6.81 26.555C12.515 66.448 25.471 76.5 40.31 76.5h43.777c14.619 0 27.439-9.76 31.328-23.852l7.413-26.853c.757-2.742 1.59-5.904.448-8.757-.403-1.005-.973-1.802-1.7-2.346-.731-.547-1.594-.82-2.543-.814-1.877.01-4.052 1.103-6.305 3.202L96.929 31.804Z"
+            fill="url(#ja)" stroke="url(#jb)" stroke-linecap="round" stroke-linejoin="round" />
+         <defs>
+            <linearGradient id="ja" x1="62.5" y1="-14.135" x2="62.5" y2="76" gradientUnits="userSpaceOnUse">
+               <stop stop-color="#F9BE08" />
+               <stop offset="1" stop-color="#F9BE08" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="jb" x1="62.5" y1="10.098" x2="62.5" y2="76" gradientUnits="userSpaceOnUse">
+               <stop stop-color="#F9BE08" />
+               <stop offset="1" stop-color="#F9BE08" stop-opacity="0" />
+            </linearGradient>
+         </defs>
+      </svg><svg fill="none" viewBox="0 0 22 23" id="icon-grid" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M5.25 9.375h12.5m-8.333 0v8.5m-.834-12.75h5.834c1.167 0 1.75 0 2.196.232.392.203.71.528.91.928.227.455.227 1.05.227 2.24v5.95c0 1.19 0 1.785-.227 2.24-.2.4-.518.725-.91.928-.446.232-1.03.232-2.196.232H8.583c-1.166 0-1.75 0-2.195-.232a2.104 2.104 0 0 1-.91-.928c-.228-.455-.228-1.05-.228-2.24v-5.95c0-1.19 0-1.785.227-2.24.2-.4.519-.725.91-.928.446-.232 1.03-.232 2.196-.232Z"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 19 19" id="icon-star" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="m9.5 0 2.133 6.91h6.902l-5.584 4.27 2.133 6.91L9.5 13.82l-5.584 4.27 2.133-6.91L.465 6.91h6.902L9.5 0Z"
+            fill="currentColor" />
+      </svg>
+   </svg>
+</body>
+
+</html>
