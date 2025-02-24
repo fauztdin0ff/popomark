@@ -3235,7 +3235,7 @@ ANIMATED BLOCK
 @media (max-width: 767px) {
   .features__block {
     flex-direction: column-reverse;
-    padding: 40px 0;
+    margin: 0;
   }
 }
 .features__block-2 {
