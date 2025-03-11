@@ -42,23 +42,15 @@
          z-index: 999;
       }
 
-      .preloader p {
-         color: #fff;
-         font-size: 14px;
-         font-weight: 400;
-         line-height: 110%;
-         letter-spacing: -0.01em;
-         text-align: center;
-
-      }
-
       .preloader svg {
          width: 80px;
          height: 80px;
+         overflow: visible;
       }
 
       .preloader svg path {
-         animation: float 1.5s ease-in-out infinite;
+         animation: float 2s ease-in-out infinite;
+         transform-origin: center;
       }
 
       .preloader svg path:nth-child(1) {
@@ -73,41 +65,21 @@
          animation-delay: 0.4s;
       }
 
-      .preloader svg path:nth-child(4) {
-         animation-delay: 0.6s;
-      }
-
-      .preloader svg path:nth-child(5) {
-         animation-delay: 0.8s;
-      }
-
-      .preloader svg path:nth-child(6) {
-         animation-delay: 1s;
-      }
-
-      .preloader svg path:nth-child(7) {
-         animation-delay: 1.2s;
-      }
-
-      .preloader svg path:nth-child(8) {
-         animation-delay: 1.4s;
-      }
-
       .preloader.hidden {
          display: none;
       }
 
       @keyframes float {
-         0% {
-            transform: translateY(0);
+
+         0%,
+         100% {
+            transform: scale(1);
+            opacity: 1;
          }
 
          50% {
-            transform: translateY(-5px);
-         }
-
-         100% {
-            transform: translateY(0);
+            transform: scale(0.9);
+            opacity: 0.3;
          }
       }
    </style>
@@ -115,7 +87,7 @@
 
 <body>
    <div class="wrapper">
-      <header class="header">
+      <header class="header @@headerClass">
    <div class="header__body container-xl">
 
       <div class="header__logo">
@@ -132,63 +104,6 @@
             <ul class="menu__list">
                <li class="menu__item">
                   <a href="#" class="menu__link">
-                     Markets
-                     <svg>
-                        <use xlink:href="#icon-chevron"></use>
-                     </svg>
-                  </a>
-                  <div class="menu__sublist">
-                     <div class="menu__sublist-body container">
-                        <div class="menu__sublist-items">
-                           <div class="menu__sublist-row">
-                              <p>Forex</p>
-                              <a href="" class="menu__sublink">EUR/USD</a>
-                              <a href="" class="menu__sublink">GBP/JPY</a>
-                              <a href="" class="menu__sublink">USD/JPY</a>
-                              <a href="" class="menu__sublink">GBP/USD</a>
-                              <a href="" class="menu__sublink">AUD/USD</a>
-                              <a href="" class="menu__sublink">All Pairs</a>
-                           </div>
-                           <div class="menu__sublist-row">
-                              <p>Crypto</p>
-                              <a href="" class="menu__sublink">Bitcoin (BTC)</a>
-                              <a href="" class="menu__sublink">Ethereum (ETH)</a>
-                              <a href="" class="menu__sublink">Ripple (XRP)</a>
-                              <a href="" class="menu__sublink">Litecoin (LTC)</a>
-                              <a href="" class="menu__sublink">Dogecoin (DOGE)</a>
-                           </div>
-                           <div class="menu__sublist-row">
-                              <p>Stocks</p>
-                              <a href="" class="menu__sublink">Apple (AAPL)</a>
-                              <a href="" class="menu__sublink">Tesla (TSLA)</a>
-                              <a href="" class="menu__sublink">Amazon (AMZN)</a>
-                              <a href="" class="menu__sublink">Microsoft (MSFT)</a>
-                           </div>
-                           <div class="menu__sublist-row">
-                              <p>Options</p>
-                              <a href="" class="menu__sublink">Binary</a>
-                              <a href="" class="menu__sublink">Digital</a>
-                           </div>
-                        </div>
-                        <div class="menu__sublist-assets">
-                           <p class="menu__sublist-assets-title">
-                              All assets for you to discover
-                           </p>
-                           <p class="menu__sublist-assets-subtitle">
-                              Any convinient device for your comfortable using
-                           </p>
-                           <a href="" class="menu__sublist-assets-link">
-                              View all assets
-                              <svg>
-                                 <use xlink:href="#icon-chevron-right"></use>
-                              </svg>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-               </li>
-               <li class="menu__item">
-                  <a href="#" class="menu__link">
                      For traders
                      <svg>
                         <use xlink:href="#icon-chevron"></use>
@@ -198,33 +113,44 @@
                      <div class="menu__sublist-body container">
                         <div class="menu__sublist-items">
                            <div class="menu__sublist-row">
-                              <p>Forex</p>
-                              <a href="" class="menu__sublink">EUR/USD</a>
-                              <a href="" class="menu__sublink">GBP/JPY</a>
-                              <a href="" class="menu__sublink">USD/JPY</a>
-                              <a href="" class="menu__sublink">GBP/USD</a>
-                              <a href="" class="menu__sublink">AUD/USD</a>
-                              <a href="" class="menu__sublink">All Pairs</a>
+                              <p><a href="forex.html">Forex</a>
+                                 <svg>
+                                    <use xlink:href="#icon-chevron"></use>
+                                 </svg>
+                              </p>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">EUR/USD</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">GBP/JPY</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">USD/JPY</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">GBP/USD</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">AUD/USD</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">All Pairs</a>
                            </div>
                            <div class="menu__sublist-row">
-                              <p>Crypto</p>
-                              <a href="" class="menu__sublink">Bitcoin (BTC)</a>
-                              <a href="" class="menu__sublink">Ethereum (ETH)</a>
-                              <a href="" class="menu__sublink">Ripple (XRP)</a>
-                              <a href="" class="menu__sublink">Litecoin (LTC)</a>
-                              <a href="" class="menu__sublink">Dogecoin (DOGE)</a>
+                              <p><a href="">Crypto</a>
+                                 <svg>
+                                    <use xlink:href="#icon-chevron"></use>
+                                 </svg>
+                              </p>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Bitcoin (BTC)</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Ethereum (ETH)</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Ripple (XRP)</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Litecoin (LTC)</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Dogecoin (DOGE)</a>
                            </div>
                            <div class="menu__sublist-row">
-                              <p>Stocks</p>
-                              <a href="" class="menu__sublink">Apple (AAPL)</a>
-                              <a href="" class="menu__sublink">Tesla (TSLA)</a>
-                              <a href="" class="menu__sublink">Amazon (AMZN)</a>
-                              <a href="" class="menu__sublink">Microsoft (MSFT)</a>
+                              <p><a href="">Stocks</a>
+                                 <svg>
+                                    <use xlink:href="#icon-chevron"></use>
+                                 </svg>
+                              </p>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Apple (AAPL)</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Tesla (TSLA)</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Amazon (AMZN)</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Microsoft
+                                 (MSFT)</a>
                            </div>
                            <div class="menu__sublist-row">
-                              <p>Options</p>
-                              <a href="" class="menu__sublink">Binary</a>
-                              <a href="" class="menu__sublink">Digital</a>
+                              <p><a href="">Options</a></p>
                            </div>
                         </div>
                         <div class="menu__sublist-assets">
@@ -234,7 +160,7 @@
                            <p class="menu__sublist-assets-subtitle">
                               Any convinient device for your comfortable using
                            </p>
-                           <a href="" class="menu__sublist-assets-link">
+                           <a href="https://trade.popomark.com/en/register" class="menu__sublist-assets-link">
                               View all assets
                               <svg>
                                  <use xlink:href="#icon-chevron-right"></use>
@@ -245,7 +171,7 @@
                   </div>
                </li>
                <li class="menu__item menu__item-add">
-                  <a href="#" class="menu__link">
+                  <a href="download.html" class="menu__link">
                      Download App
                      <svg>
                         <use xlink:href="#icon-chevron"></use>
@@ -262,37 +188,37 @@
                         </div>
 
                         <div class="menu__sublist-apps">
-                           <a href="" class="menu__sublist-app">
+                           <a href="https://trade.popomark.com/en/register" class="menu__sublist-app">
                               <svg>
                                  <use xlink:href="#icon-desktop"></use>
                               </svg>
                               <p>Download for Mac<span>38 MB · 10.1 Mac OS or higher</span></p>
                            </a>
-                           <a href="" class="menu__sublist-app">
+                           <a href="https://trade.popomark.com/en/register" class="menu__sublist-app">
                               <svg>
                                  <use xlink:href="#icon-computer"></use>
                               </svg>
                               <p>Download for Windows<span>24 MB · Windows 7, 8, 8.1, 10</span></p>
                            </a>
-                           <a href="" class="menu__sublist-app">
+                           <a href="https://trade.popomark.com/en/register" class="menu__sublist-app">
                               <svg>
                                  <use xlink:href="#icon-desktop"></use>
                               </svg>
                               <p>Download for Android<span>89 MB · Android 5.1 or later</span></p>
                            </a>
-                           <a href="" class="menu__sublist-app mob">
+                           <a href="https://trade.popomark.com/en/register" class="menu__sublist-app mob">
                               <svg>
                                  <use xlink:href="#icon-android"></use>
                               </svg>
                               <p>Download for Android<span>89 MB · Android 5.1 or later</span></p>
                            </a>
-                           <a href="" class="menu__sublist-app mob">
+                           <a href="https://trade.popomark.com/en/register" class="menu__sublist-app mob">
                               <svg>
                                  <use xlink:href="#icon-ios"></use>
                               </svg>
                               <p>Download for iOS<span>89 MB · iOS 18.1 or later</span></p>
                            </a>
-                           <a href="" class="menu__sublist-assets-link">
+                           <a href="https://trade.popomark.com/en/register" class="menu__sublist-assets-link">
                               View all options
                               <svg>
                                  <use xlink:href="#icon-chevron-right"></use>
@@ -302,9 +228,11 @@
                      </div>
                   </div>
                </li>
-               <li class="menu__item"><a href="" class="menu__link">Company</a></li>
-               <li class="menu__item"><a href="" class="menu__link">Blog</a></li>
-               <li class="menu__item"><a href="" class="menu__link">Affiliate Program</a></li>
+               <li class="menu__item"><a href="about.html" class="menu__link">Company</a>
+               </li>
+               <li class="menu__item"><a href="blog.html" class="menu__link">Blog</a></li>
+               <li class="menu__item"><a href="affiliate.html" class="menu__link">Affiliate
+                     Program</a></li>
             </ul>
 
             <div class="menu__body-mob-panel">
@@ -332,8 +260,8 @@
                </ul>
             </div>
             <div class="header__auth">
-               <button class="header__auth-btn button-white">Log in</button>
-               <button class="header__auth-btn button-orange">Sign up</button>
+               <a href="https://trade.popomark.com/en/login" class="header__auth-btn button-white">Log in</a>
+               <a href="https://trade.popomark.com/en/register" class="header__auth-btn button-orange">Sign up</a>
             </div>
          </div>
       </div>
@@ -342,24 +270,55 @@
 </header>
       <main>
          <div class="preloader" id="preloader">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#f9be08" xmlns:xlink="http://www.w3.org/1999/xlink"
-               version="1.1" viewBox="0 0 120 125" style="enable-background:new 0 0 120 125;" xml:space="preserve">
-               <path d="M10,63.2h-1.8v-7.6h-1v7.6h-1.8c-0.9,0-1.6,0.7-1.6,1.6v19.1c0,0.9,0.7,1.6,1.6,1.6h1.8v7.6h1v-7.6h1.8 
-                          c0.9,0,1.6-0.7,1.6-1.6V64.8C11.6,63.9,10.9,63.2,10,63.2z" />
-               <path d="M28,14.6h-1.8v-4.3h-1v4.3h-1.8c-0.9,0-1.6,0.7-1.6,1.6v48.2c0,0.9,0.7,1.6,1.6,1.6h1.8v22.7h1V66h1.8 
-                          c0.9,0,1.6-0.7,1.6-1.6V16.2C29.6,15.3,28.9,14.6,28,14.6z" />
-               <path d="M46,32.5h-1.8V19.8h-1v12.8h-1.8c-0.9,0-1.6,0.7-1.6,1.6v8.5c0,0.9,0.7,1.6,1.6,1.6h1.8v34.7h1V44.2H46 
-                          c0.9,0,1.6-0.7,1.6-1.6v-8.5C47.6,33.2,46.9,32.5,46,32.5z" />
-               <path d="M64.5,47.4h-1.8V6.8h-1v40.6h-1.8c-0.9,0-1.6,0.7-1.6,1.6v33.9c0,0.9,0.7,1.6,1.6,1.6h1.8v8.1h1v-8.1h1.8 
-                          c0.9,0,1.6-0.7,1.6-1.6V49C66,48.1,65.3,47.4,64.5,47.4z" />
-               <path d="M83,17h-1.8V6.1h-1V17h-1.8c-0.9,0-1.6,0.7-1.6,1.6v19.1c0,0.9,0.7,1.6,1.6,1.6h1.8v10.9h1V39.3h1.8 
-                          c0.9,0,1.6-0.7,1.6-1.6V18.6C84.6,17.7,83.9,17,83,17z" />
-               <path d="M100,50h-1.8V30h-1v20h-1.8c-0.9,0-1.6,0.7-1.6,1.6v30c0,0.9,0.7,1.6,1.6,1.6h1.8v10h1v-10h1.8 
-                          c0.9,0,1.6-0.7,1.6-1.6v-30C101.6,50.7,100.9,50,100,50z" />
-               <path d="M115,25h-1.8V10h-1v15h-1.8c-0.9,0-1.6,0.7-1.6,1.6v15c0,0.9,0.7,1.6,1.6,1.6h1.8v10h1v-10h1.8 
-                          c0.9,0,1.6-0.7,1.6-1.6v-15C116.6,25.7,115.9,25,115,25z" />
+            <svg width="115" height="124" viewBox="0 0 115 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path
+                  d="M73.3953 67.2348C77.4887 64.3239 84.7984 57.8524 87.7482 47.2486C88.7748 43.571 93.2191 24.7738 80.1137 15.8203C71.602 10.0051 61.6284 12.6301 57.7364 14.027L57.0737 14.2674L28.4459 30.8035L15.4964 38.1976V34.494L46.8532 16.3726C46.8532 16.3726 46.8792 16.3596 46.8922 16.3596L55.4363 11.4281L55.6897 11.2786L55.9691 11.1812L56.6319 10.9407C59.1854 10.0246 63.2073 8.93303 67.8725 8.93303C68.0869 8.93303 68.3013 8.93303 68.5092 8.94603C66.573 6.29506 63.935 3.8845 60.3354 2.16268C51.8497 -1.89174 43.572 0.752726 40.4077 2.08471L39.9464 2.27963L4.01543 23.039L4.0869 23.156L2.33259 24.1696C0.890152 25.0013 0.00649746 26.5412 0.00649746 28.211V65.0711L36.2363 44.3962L63.6231 28.5749C65.7543 27.9186 69.2564 27.3663 71.2902 28.7568C74.6948 31.0829 73.6942 39.3931 72.6741 43.0512C71.0822 48.7625 67.0733 52.4595 64.6238 54.2593L24.255 77.2149V105.394L33.6569 110.833L39.9204 114.452V86.3243L73.0834 67.4622L73.4083 67.2348H73.3953Z"
+                  fill="url(#paint0_linear_116_34916)" />
+               <path
+                  d="M68.4248 43.7464C69.7568 41.1669 70.1726 38.6329 70.1726 38.6329C70.374 37.3984 70.3675 36.5342 70.348 35.4557C70.3025 32.6748 69.6528 31.6157 69.4254 31.4597C69.3539 31.4077 68.9446 31.1673 67.8465 31.1673C66.9758 31.1673 65.9232 31.3233 64.9096 31.6027L49.7056 40.3872C49.2313 40.7186 48.744 41.037 48.2307 41.3424L0 69.3919V88.6829C0 90.3462 0.890152 91.8926 2.32609 92.7243L15.4899 100.339V78.5079C29.0631 70.6134 42.6428 62.7255 56.216 54.8311C62.72 51.0366 66.9109 46.6703 68.4183 43.7594L68.4248 43.7464Z"
+                  fill="url(#paint1_linear_116_34916)" />
+               <path
+                  d="M113.582 11.2266L102.381 0.161457C100.542 7.25669 98.6965 14.3519 96.8577 21.4536C90.7566 44.8445 84.6489 68.2354 78.5478 91.6262L59.1724 80.1062C58.88 79.9373 58.5876 79.7684 58.2952 79.5994C56.7878 80.4766 55.2804 81.3472 53.773 82.2244L49.1143 84.8754V119.793L54.5982 122.963C55.3194 123.379 56.1251 123.587 56.9243 123.587C57.7235 123.587 58.5291 123.379 59.2504 122.963L64.7732 119.767V101.593L80.2502 110.794C82.4138 109.54 84.584 108.279 86.7476 107.025C88.411 106.064 90.0743 105.095 91.7377 104.134L94.1807 94.758C95.0644 91.4443 95.9545 88.1371 96.8382 84.8234L98.2741 79.307L109.599 35.8195L111.815 27.3014C107.299 47.8658 102.783 68.4303 98.2741 88.9948V100.398L111.555 92.7178C112.997 91.8861 113.881 90.3462 113.881 88.6764V28.211C113.881 26.931 113.355 25.729 112.458 24.8648C113.257 21.8565 114.056 18.8482 114.856 15.8463C115.284 14.1895 114.804 12.4287 113.589 11.2331L113.582 11.2266Z"
+                  fill="url(#paint2_linear_116_34916)" />
+               <defs>
+                  <linearGradient id="paint0_linear_116_34916" x1="-35.3332" y1="-27.1474" x2="157.739" y2="165.918"
+                     gradientUnits="userSpaceOnUse">
+                     <stop stop-color="#FAE09F" />
+                     <stop offset="0.21" stop-color="#B68A3D" />
+                     <stop offset="0.36" stop-color="#DEBC76" />
+                     <stop offset="0.48" stop-color="#FAE09F" />
+                     <stop offset="0.49" stop-color="#F6DB9A" />
+                     <stop offset="0.64" stop-color="#C89C5B" />
+                     <stop offset="0.71" stop-color="#B78443" />
+                     <stop offset="0.9" stop-color="#E0BD7C" />
+                     <stop offset="1" stop-color="#FAE09F" />
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_116_34916" x1="-44.4037" y1="-18.0834" x2="148.668" y2="174.989"
+                     gradientUnits="userSpaceOnUse">
+                     <stop stop-color="#FAE09F" />
+                     <stop offset="0.21" stop-color="#B68A3D" />
+                     <stop offset="0.36" stop-color="#DEBC76" />
+                     <stop offset="0.48" stop-color="#FAE09F" />
+                     <stop offset="0.49" stop-color="#F6DB9A" />
+                     <stop offset="0.64" stop-color="#C89C5B" />
+                     <stop offset="0.71" stop-color="#B78443" />
+                     <stop offset="0.9" stop-color="#E0BD7C" />
+                     <stop offset="1" stop-color="#FAE09F" />
+                  </linearGradient>
+                  <linearGradient id="paint2_linear_116_34916" x1="-23.3194" y1="-39.1612" x2="169.746" y2="153.911"
+                     gradientUnits="userSpaceOnUse">
+                     <stop stop-color="#FAE09F" />
+                     <stop offset="0.21" stop-color="#B68A3D" />
+                     <stop offset="0.36" stop-color="#DEBC76" />
+                     <stop offset="0.48" stop-color="#FAE09F" />
+                     <stop offset="0.49" stop-color="#F6DB9A" />
+                     <stop offset="0.64" stop-color="#C89C5B" />
+                     <stop offset="0.71" stop-color="#B78443" />
+                     <stop offset="0.9" stop-color="#E0BD7C" />
+                     <stop offset="1" stop-color="#FAE09F" />
+                  </linearGradient>
+               </defs>
             </svg>
-            <p>loading</p>
          </div>
          <section class="intro">
             <div class="intro__body container">
@@ -371,19 +330,14 @@
                      Trade crypto, forex, stocks and more all in one seamless platform
                   </p>
                   <div class="intro__buttons">
-                     <a href="" class="button-orange">Get started</a>
-                     <a href="" class="button-white">Learn more</a>
+                     <a href="#get-started" class="button-orange">Get started</a>
+                     <a href="about.html" class="button-white">Learn more</a>
                   </div>
                   <div class="intro__rules">
-                     <span class="intro__rules-name">up to</span>
                      <div class="intro__rules-items">
                         <div class="intro__rule">
                            <span class="intro__rule-value">$<span>10</span></span>
                            Minimal deposit
-                        </div>
-                        <div class="intro__rule">
-                           <span class="intro__rule-value">$<span>200</span></span>
-                           Deposit bonus
                         </div>
                         <div class="intro__rule">
                            <span class="intro__rule-value"><span>40</span>+</span>
@@ -393,8 +347,7 @@
                   </div>
                </div>
                <div class="intro__video">
-                  <video autoplay muted loop playsinline webkit-playsinline ismuted="true" preload="auto"
-                     id="intro-video" class="video-item">
+                  <video autoplay muted loop playsinline preload="auto" id="intro-video" class="video-item">
                      <source src="files/intro.mp4" type="video/mp4" media="(min-width: 767px)">
                      <source src="files/intro-mob.mp4" type="video/mp4" media="(max-width: 766px)">
                   </video>
@@ -464,7 +417,7 @@
                   </div>
                </div>
             </div>
-            <video autoplay muted loop playsinline webkit-playsinline ismuted="true" preload="auto" id="intro-video-bg">
+            <video autoplay muted loop playsinline preload="auto" id="intro-video-bg">
                <source src="files/candles-bg.mp4" type="video/mp4" media="(min-width: 767px)">
                <source src="files/candles-bg-mob.mp4" type="video/mp4" media="(max-width: 766px)">
             </video>
@@ -832,7 +785,7 @@
                               </div>
                               <div class="steps__card-link" data-swiper-parallax-y="-200"
                                  data-swiper-parallax-duration="1600">
-                                 <a href="" class="button-orange">
+                                 <a href="blog.html" class="button-orange">
                                     Latest articles
                                     <svg>
                                        <use xlink:href="#icon-chevron-right"></use>
@@ -852,7 +805,7 @@
                               </div>
                               <div class="steps__card-link" data-swiper-parallax-y="-200"
                                  data-swiper-parallax-duration="1600">
-                                 <a href="" class="button-orange">
+                                 <a href="https://trade.popomark.com/en/register" class="button-orange">
                                     Request demo
                                     <svg>
                                        <use xlink:href="#icon-chevron-right"></use>
@@ -870,7 +823,7 @@
                                  develop a strategy based on historical data and market behavior.</div>
                               <div class="steps__card-link" data-swiper-parallax-y="-200"
                                  data-swiper-parallax-duration="1600">
-                                 <a href="" class="button-orange">
+                                 <a href="https://trade.popomark.com/en/register" class="button-orange">
                                     Learn more
                                     <svg>
                                        <use xlink:href="#icon-chevron-right"></use>
@@ -888,7 +841,7 @@
                                  you've made a profit, <b>you can withdraw your funds immediately!</b></div>
                               <div class="steps__card-link" data-swiper-parallax-y="-200"
                                  data-swiper-parallax-duration="1600">
-                                 <a href="" class="button-orange">
+                                 <a href="https://trade.popomark.com/en/register" class="button-orange">
                                     Get a free account
                                     <svg>
                                        <use xlink:href="#icon-chevron-right"></use>
@@ -906,7 +859,7 @@
                                  the device of your choice.</div>
                               <div class="steps__card-link" data-swiper-parallax="-200"
                                  data-swiper-parallax-duration="1600">
-                                 <a href="" class="button-orange">
+                                 <a href="https://trade.popomark.com/en/register" class="button-orange">
                                     Start trading
                                     <svg>
                                        <use xlink:href="#icon-chevron-right"></use>
@@ -922,7 +875,7 @@
          </section>
          <section class="features">
             <div class="features__body container">
-               <div class="features__title title">Features</div>
+               <h2 class="features__title title">Features</h2>
                <div class="features__content">
                   <div class="features__block features__block-1">
                      <div class="features__text">
@@ -937,7 +890,7 @@
                               financial markets with our customizable price alerts.
                            </p>
                         </div>
-                        <a href="" class="features__text-link button">
+                        <a href="https://trade.popomark.com/en/register" class="features__text-link button">
                            Learn more
                            <svg>
                               <use xlink:href="#icon-chevron-right"></use>
@@ -1081,7 +1034,7 @@
                            <b>you can manage your losses
                               and profits at the levels you set.</b>
                         </div>
-                        <a href="" class="features__text-link button">
+                        <a href="https://trade.popomark.com/en/register" class="features__text-link button">
                            Check all features
                            <svg>
                               <use xlink:href="#icon-chevron-right"></use>
@@ -1214,7 +1167,7 @@
                            </p>
                            <p>Trade with confidence – <b>start now and never miss an opportunity.</b></p>
                         </div>
-                        <a href="" class="features__text-link button">
+                        <a href="https://trade.popomark.com/en/register" class="features__text-link button">
                            Get a free account now
                            <svg>
                               <use xlink:href="#icon-chevron-right"></use>
@@ -1355,7 +1308,7 @@
                            <p>Deep liquidity, tight spreads, and ultra-fast execution. A single account for diversified
                               trading opportunities.</p>
                         </div>
-                        <a href="" class="features__text-link button">
+                        <a href="https://trade.popomark.com/en/register" class="features__text-link button">
                            Start trading
                            <svg>
                               <use xlink:href="#icon-chevron-right"></use>
@@ -1517,9 +1470,9 @@
          </section>
          <section class="testimonials">
             <div class="testimonials__body container">
-               <div class="testimonials__title title-xl">
+               <h2 class="testimonials__title title-xl">
                   What our traders say about <span class="text-gradient-brown">PoPoMark</span>
-               </div>
+               </h2>
                <div class="testimonials__subtitle subtitle">
                   At PoPoMark, we deliver a seamless trading experience. Hear from real <b>traders who have elevated
                      their
@@ -1697,9 +1650,9 @@
          <section class="calendar">
             <div class="calendar__body container">
                <div class="calendar__att">News & Economic Calendar</div>
-               <div class="calendar__title title-xl">
+               <h2 class="calendar__title title-xl">
                   Stay <span class="title-line">Ahead</span> of the Market
-               </div>
+               </h2>
                <div class="calendar__subtitle">
                   <p>
                      <svg>
@@ -1707,7 +1660,7 @@
                      </svg>
                      Upcoming economic events
                   </p>
-                  <a href="" class="calendar__subtitle-link">
+                  <a href="https://trade.popomark.com/en/register" class="calendar__subtitle-link">
                      View full calendar
                      <svg>
                         <use xlink:href="#icon-chevron-right"></use>
@@ -1832,7 +1785,7 @@
                      </svg>
                      Latest news
                   </p>
-                  <a href="" class="calendar__subtitle-link">
+                  <a href="https://trade.popomark.com/en/register" class="calendar__subtitle-link">
                      Read all news
                      <svg>
                         <use xlink:href="#icon-chevron-right"></use>
@@ -1845,15 +1798,17 @@
                         <article class="calendar__slide news-preview swiper-slide">
                            <div class="news-preview__image"><img src="img/news/news-1.png" alt=""></div>
                            <div class="news-preview__info">
-                              <div class="news-preview__time">
+                              <time datetime="2023-10-01" class="news-preview__time">
                                  <svg>
                                     <use xlink:href="#icon-clock"></use>
                                  </svg>
                                  2h ago
-                              </div>
-                              <a href="" class="news-preview__title">
-                                 Softbank set to invest $40 billion in OpenAI at $260 billion valuation, sources say
-                              </a>
+                              </time>
+                              <h3>
+                                 <a href="" class="news-preview__title">
+                                    Softbank set to invest $40 billion in OpenAI at $260 billion valuation, sources say
+                                 </a>
+                              </h3>
                               <p class="news-preview__text">
                                  The Japanese tech giant is reportedly in talks to back OpenAI, marking one of the
                                  biggest AI investments to date.</p>
@@ -1868,14 +1823,16 @@
                         <article class="calendar__slide news-preview swiper-slide">
                            <div class="news-preview__image"><img src="img/news/news-2.png" alt=""></div>
                            <div class="news-preview__info">
-                              <div class="news-preview__time">
+                              <time datetime="2023-10-01" class="news-preview__time">
                                  <svg>
                                     <use xlink:href="#icon-clock"></use>
                                  </svg>
                                  2,5h ago
-                              </div>
-                              <a href="" class="news-preview__title">European markets nudge lower as investors assess
-                                 U.S. jobs data L’Oreal down 4%</a>
+                              </time>
+                              <h3>
+                                 <a href="" class="news-preview__title">European markets nudge lower as investors assess
+                                    U.S. jobs data L’Oreal down 4%</a>
+                              </h3>
                               <p class="news-preview__text">
                                  European stocks slipped as traders analyzed U.S. employment figures, while L’Oréal
                                  shares tumbled after
@@ -1891,14 +1848,17 @@
                         <article class="calendar__slide news-preview swiper-slide">
                            <div class="news-preview__image"><img src="img/news/news-3.png" alt=""></div>
                            <div class="news-preview__info">
-                              <div class="news-preview__time">
+                              <time datetime="2023-10-01" class="news-preview__time">
                                  <svg>
                                     <use xlink:href="#icon-clock"></use>
                                  </svg>
                                  3h ago
-                              </div>
-                              <a href="" class="news-preview__title">DOGE chief Musk polls X users if staffer who quit
-                                 over racist tweets should be rehired</a>
+                              </time>
+                              <h3>
+                                 <a href="" class="news-preview__title">DOGE chief Musk polls X users if staffer who
+                                    quit
+                                    over racist tweets should be rehired</a>
+                              </h3>
                               <p class="news-preview__text">Musk sparked controversy by letting users decide the fate of
                                  a former X employee who resigned amid a racism scandal.</p>
                               <a href="" class="news-preview__link">
@@ -1912,14 +1872,16 @@
                         <article class="calendar__slide news-preview swiper-slide">
                            <div class="news-preview__image"><img src="img/news/news-3.png" alt=""></div>
                            <div class="news-preview__info">
-                              <div class="news-preview__time">
+                              <time datetime="2023-10-01" class="news-preview__time">
                                  <svg>
                                     <use xlink:href="#icon-clock"></use>
                                  </svg>
                                  3h ago
-                              </div>
-                              <a href="" class="news-preview__title">Bitcoin raises and then falls back after Trump’s
-                                 latest press conference. What should we wait next?</a>
+                              </time>
+                              <h3>
+                                 <a href="" class="news-preview__title">Bitcoin raises and then falls back after Trump’s
+                                    latest press conference. What should we wait next?</a>
+                              </h3>
                               <p class="news-preview__text">Federal Crypto Reserve — is this a real thing that Trump
                                  gonna pull out? We’ve asked the experts what they think.</p>
                               <a href="" class="news-preview__link">
@@ -1933,15 +1895,17 @@
                         <article class="calendar__slide news-preview swiper-slide">
                            <div class="news-preview__image"><img src="img/news/news-1.png" alt=""></div>
                            <div class="news-preview__info">
-                              <div class="news-preview__time">
+                              <time datetime="2023-10-01" class="news-preview__time">
                                  <svg>
                                     <use xlink:href="#icon-clock"></use>
                                  </svg>
                                  2h ago
-                              </div>
-                              <a href="" class="news-preview__title">
-                                 Softbank set to invest $40 billion in OpenAI at $260 billion valuation, sources say
-                              </a>
+                              </time>
+                              <h3>
+                                 <a href="" class="news-preview__title">
+                                    Softbank set to invest $40 billion in OpenAI at $260 billion valuation, sources say
+                                 </a>
+                              </h3>
                               <p class="news-preview__text">
                                  The Japanese tech giant is reportedly in talks to back OpenAI, marking one of the
                                  biggest AI investments to date.</p>
@@ -1956,14 +1920,16 @@
                         <article class="calendar__slide news-preview swiper-slide">
                            <div class="news-preview__image"><img src="img/news/news-2.png" alt=""></div>
                            <div class="news-preview__info">
-                              <div class="news-preview__time">
+                              <time datetime="2023-10-01" class="news-preview__time">
                                  <svg>
                                     <use xlink:href="#icon-clock"></use>
                                  </svg>
                                  2,5h ago
-                              </div>
-                              <a href="" class="news-preview__title">European markets nudge lower as investors assess
-                                 U.S. jobs data L’Oreal down 4%</a>
+                              </time>
+                              <h3>
+                                 <a href="" class="news-preview__title">European markets nudge lower as investors assess
+                                    U.S. jobs data L’Oreal down 4%</a>
+                              </h3>
                               <p class="news-preview__text">
                                  European stocks slipped as traders analyzed U.S. employment figures, while L’Oréal
                                  shares tumbled after
@@ -1979,14 +1945,17 @@
                         <article class="calendar__slide news-preview swiper-slide">
                            <div class="news-preview__image"><img src="img/news/news-3.png" alt=""></div>
                            <div class="news-preview__info">
-                              <div class="news-preview__time">
+                              <time datetime="2023-10-01" class="news-preview__time">
                                  <svg>
                                     <use xlink:href="#icon-clock"></use>
                                  </svg>
                                  3h ago
-                              </div>
-                              <a href="" class="news-preview__title">DOGE chief Musk polls X users if staffer who quit
-                                 over racist tweets should be rehired</a>
+                              </time>
+                              <h3>
+                                 <a href="" class="news-preview__title">DOGE chief Musk polls X users if staffer who
+                                    quit
+                                    over racist tweets should be rehired</a>
+                              </h3>
                               <p class="news-preview__text">Musk sparked controversy by letting users decide the fate of
                                  a former X employee who resigned amid a racism scandal.</p>
                               <a href="" class="news-preview__link">
@@ -2002,7 +1971,7 @@
                </div>
             </div>
          </section>
-         <section class="start">
+         <section class="start" id="get-started">
             <div class="start__body container">
                <h2 class="start__title title-xl">
                   Getting Started in <span class="title-line">Just 3</span> Steps
@@ -2045,7 +2014,7 @@
                   </div>
                </div>
                <div class="start__button">
-                  <a href="" class="button-orange">
+                  <a href="https://trade.popomark.com/en/register" class="button-orange">
                      Start trading
                      <svg>
                         <use xlink:href="#icon-chevron-right"></use>
@@ -2063,7 +2032,7 @@
                   seamless.
                </div>
                <div class="get-in-touch__link">
-                  <a href="" class="button-orange">
+                  <a href="https://trade.popomark.com/en/register" class="button-orange">
                      Contact us
                      <svg>
                         <use xlink:href="#icon-chevron-right"></use>
@@ -2084,79 +2053,6 @@
                <ul class="footer__menu-list">
                   <li class="footer__menu-item">
                      <a href="" class="footer__menu-link footer__menu-add">
-                        Markets
-                        <svg>
-                           <use xlink:href="#icon-chevron"></use>
-                        </svg>
-                     </a>
-                     <ul class="footer__sublist">
-                        <li class="footer__subitem">
-                           <a href="" class="footer__sublink footer__sublink-add">Forex
-                              <svg>
-                                 <use xlink:href="#icon-chevron"></use>
-                              </svg>
-                           </a>
-                           <ul class="footer__subsublist">
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">EUR/USD</a></li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">GBP/JPY</a></li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">USD/JPY</a></li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">GBP/USD</a></li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">AUD/USD</a></li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">All Pairs</a></li>
-                           </ul>
-                        </li>
-                        <li class="footer__subitem">
-                           <a href="" class="footer__sublink footer__sublink-add">Crypto
-                              <svg>
-                                 <use xlink:href="#icon-chevron"></use>
-                              </svg>
-                           </a>
-                           <ul class="footer__subsublist">
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Bitcoin (BTC)</a>
-                              </li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Ethereum (ETH)</a>
-                              </li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Ripple (XRP)</a></li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Litecoin (LTC)</a>
-                              </li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Dogecoin (DOGE)</a>
-                              </li>
-                           </ul>
-                        </li>
-                        <li class="footer__subitem">
-                           <a href="" class="footer__sublink footer__sublink-add">Stocks
-                              <svg>
-                                 <use xlink:href="#icon-chevron"></use>
-                              </svg>
-                           </a>
-                           <ul class="footer__subsublist">
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Apple (AAPL)</a>
-                              </li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Tesla (TSLA)</a>
-                              </li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Amazon (AMZN)</a>
-                              </li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Microsoft (MSFT)</a>
-                              </li>
-                           </ul>
-                        </li>
-                        <li class="footer__subitem">
-                           <a href="" class="footer__sublink footer__sublink-add">Options
-                              <svg>
-                                 <use xlink:href="#icon-chevron"></use>
-                              </svg>
-                           </a>
-                           <ul class="footer__subsublist">
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Binary</a>
-                              </li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Digital</a>
-                              </li>
-                           </ul>
-                        </li>
-                     </ul>
-                  </li>
-                  <li class="footer__menu-item">
-                     <a href="" class="footer__menu-link footer__menu-add">
                         For traders
                         <svg>
                            <use xlink:href="#icon-chevron"></use>
@@ -2164,18 +2060,24 @@
                      </a>
                      <ul class="footer__sublist">
                         <li class="footer__subitem">
-                           <a href="" class="footer__sublink footer__sublink-add">Forex
+                           <a href="forex.html" class="footer__sublink footer__sublink-add">Forex
                               <svg>
                                  <use xlink:href="#icon-chevron"></use>
                               </svg>
                            </a>
                            <ul class="footer__subsublist">
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">EUR/USD</a></li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">GBP/JPY</a></li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">USD/JPY</a></li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">GBP/USD</a></li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">AUD/USD</a></li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">All Pairs</a></li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">EUR/USD</a></li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">GBP/JPY</a></li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">USD/JPY</a></li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">GBP/USD</a></li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">AUD/USD</a></li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">All Pairs</a></li>
                            </ul>
                         </li>
                         <li class="footer__subitem">
@@ -2185,14 +2087,19 @@
                               </svg>
                            </a>
                            <ul class="footer__subsublist">
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Bitcoin (BTC)</a>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Bitcoin (BTC)</a>
                               </li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Ethereum (ETH)</a>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Ethereum (ETH)</a>
                               </li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Ripple (XRP)</a></li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Litecoin (LTC)</a>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Ripple (XRP)</a></li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Litecoin (LTC)</a>
                               </li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Dogecoin (DOGE)</a>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Dogecoin (DOGE)</a>
                               </li>
                            </ul>
                         </li>
@@ -2203,33 +2110,27 @@
                               </svg>
                            </a>
                            <ul class="footer__subsublist">
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Apple (AAPL)</a>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Apple (AAPL)</a>
                               </li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Tesla (TSLA)</a>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Tesla (TSLA)</a>
                               </li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Amazon (AMZN)</a>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Amazon (AMZN)</a>
                               </li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Microsoft (MSFT)</a>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Microsoft (MSFT)</a>
                               </li>
                            </ul>
                         </li>
                         <li class="footer__subitem">
-                           <a href="" class="footer__sublink footer__sublink-add">Options
-                              <svg>
-                                 <use xlink:href="#icon-chevron"></use>
-                              </svg>
-                           </a>
-                           <ul class="footer__subsublist">
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Binary</a>
-                              </li>
-                              <li class="footer__subsubitem"><a href="" class="footer__subsublink">Digital</a>
-                              </li>
-                           </ul>
+                           <a href="" class="footer__sublink footer__sublink-add">Options</a>
                         </li>
                      </ul>
                   </li>
                   <li class="footer__menu-item">
-                     <a href="" class="footer__menu-link footer__menu-add">
+                     <a href="download.html" class="footer__menu-link footer__menu-add">
                         Download app
                         <svg>
                            <use xlink:href="#icon-chevron"></use>
@@ -2237,7 +2138,7 @@
                      </a>
                      <ul class="footer__sublist">
                         <li class="footer__subitem">
-                           <a href="" class="footer__sublink">
+                           <a href="https://trade.popomark.com/en/register" class="footer__sublink">
                               Mac
                               <svg>
                                  <use xlink:href="#icon-desktop"></use>
@@ -2245,7 +2146,7 @@
                            </a>
                         </li>
                         <li class="footer__subitem">
-                           <a href="" class="footer__sublink">
+                           <a href="https://trade.popomark.com/en/register" class="footer__sublink">
                               Windows
                               <svg>
                                  <use xlink:href="#icon-computer"></use>
@@ -2253,7 +2154,7 @@
                            </a>
                         </li>
                         <li class="footer__subitem">
-                           <a href="" class="footer__sublink">
+                           <a href="https://trade.popomark.com/en/register" class="footer__sublink">
                               Android
                               <svg>
                                  <use xlink:href="#icon-android"></use>
@@ -2261,7 +2162,7 @@
                            </a>
                         </li>
                         <li class="footer__subitem">
-                           <a href="" class="footer__sublink">
+                           <a href="https://trade.popomark.com/en/register" class="footer__sublink">
                               iOS
                               <svg>
                                  <use xlink:href="#icon-ios"></use>
@@ -2271,13 +2172,13 @@
                      </ul>
                   </li>
                   <li class="footer__menu-item">
-                     <a href="" class="footer__menu-link">Company</a>
+                     <a href="about.html" class="footer__menu-link">Company</a>
                   </li>
                   <li class="footer__menu-item">
-                     <a href="" class="footer__menu-link">Blog</a>
+                     <a href="blog.html" class="footer__menu-link">Blog</a>
                   </li>
                   <li class="footer__menu-item">
-                     <a href="" class="footer__menu-link">Affiliate Program</a>
+                     <a href="affiliate.html" class="footer__menu-link">Affiliate Program</a>
                   </li>
                </ul>
             </nav>
@@ -2285,21 +2186,24 @@
          <nav class="footer__col">
             <div class="footer__col-item">
                <div class="footer__col-name">Privacy and Data</div>
-               <a href="" class="footer__link">Privacy Policy</a>
-               <a href="" class="footer__link">Cookies</a>
+               <a href="privacy-policy.html" class="footer__link">Privacy Policy</a>
+               <a href="cookies.html" class="footer__link">Cookies</a>
             </div>
             <div class="footer__col-item">
                <div class="footer__col-name">Financial Transactions</div>
-               <a href="" class="footer__link">Payment Policy</a>
-               <a href="" class="footer__link">Withdrawal Policy</a>
-               <a href="" class="footer__link">General Fees</a>
+               <a href="payment-policy.html" class="footer__link">Payment Policy</a>
+               <a href="withdrawal-policy.html" class="footer__link">Withdrawal Policy</a>
+               <a href="refund-policy.html" class="footer__link">Refund Policy</a>
+               <a href="general-fees.html" class="footer__link">General Fees</a>
+               <a href="order-execution-policy.html" class="footer__link">Order Execution Policy</a>
             </div>
             <div class="footer__col-item">
                <div class="footer__col-name">Legal and Regulatory</div>
-               <a href="" class="footer__link">Terms & Conditions</a>
-               <a href="" class="footer__link">AML (Anti-Money Laundering)</a>
-               <a href="" class="footer__link">Risk Disclosure</a>
-               <a href="" class="footer__link">Terms for South Africa</a>
+               <a href="terms.html" class="footer__link">Terms & Conditions</a>
+               <a href="aml.html" class="footer__link">AML (Anti-Money Laundering)</a>
+               <a href="risk-disclosure.html" class="footer__link">Risk Disclosure</a>
+               <a href="margin-trading.html" class="footer__link">Margin Trading</a>
+               <a href="demo-accounts.html" class="footer__link">Demo Accounts</a>
             </div>
          </nav>
          <div class="footer__lang">
@@ -2319,18 +2223,19 @@
       <div class="footer__text">
          <p>
             Payment transactions are managed by: <br>
-            CYBER FINANCE SOLUTIONS LTD
-            Address: 14 Nikolaos Kyriakides Street, 1096 Nicosia, Cyprus
-            Company business number: HE 450321
+            S.W. SUN WAVE CY LTD <br>
+            Address: Lighthouse Trust Nevis Ltd, Suite 1, A.L. Evelyn Ltd Building, Main Street, Charlestown, Nevis
+            Company business number:
+            L 22402
+         </p>
+         <p>Company business number: HE 450991</p>
+         <p>
+            Sun Wave LLC <br>
+            Address: 6 Koutsoventi street, 4101 Agios Athanasios Limassol, Cyprus
          </p>
 
          <p>
-            Finance Global LLC. <br>
-            Address: 8 Ocean View Street, Suite 3, Horizon Tower, Limassol, Cyprus
-         </p>
-
-         <p>
-            Risk <Disclaimer:br></Disclaimer:br>
+            Risk Disclaimer: <br>
             The financial products offered by the company carry a high level of risk and can result in the loss of all
             your funds.
             You should never invest money that you cannot afford to lose.
@@ -2348,17 +2253,22 @@
    <script src="js/animation.js"></script>
 
    <!--SVG sprive-->
-   <?xml version="1.0" encoding="utf-8"?><svg viewBox="0 0 125 77" xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
-      <style>
-         :root>svg {
-            display: none
-         }
-
-         :root>svg:target {
-            display: block
-         }
-      </style><svg fill="none" viewBox="0 0 20 20" id="icon-android" xmlns="http://www.w3.org/2000/svg">
+   <svg viewBox="0 0 125 77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      style="display: none;"><svg fill="none" viewBox="0 0 20 21" id="icon-link" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M8.49162 11.255C8.81553 11.6885 9.22878 12.0472 9.70335 12.3067C10.1779 12.5663 10.7027 12.7206 11.2421 12.7593C11.7815 12.7979 12.3229 12.72 12.8295 12.5308C13.3362 12.3416 13.7963 12.0456 14.1786 11.6627L16.4414 9.39768C17.1283 8.68569 17.5085 7.7321 17.4999 6.74228C17.4913 5.75247 17.0946 4.80563 16.3954 4.1057C15.6962 3.40577 14.7503 3.00874 13.7615 3.00014C12.7727 2.99154 11.8201 3.37205 11.1089 4.05971L9.81155 5.35079M11.5084 9.74498C11.1845 9.3115 10.7712 8.95283 10.2966 8.69328C9.82208 8.43374 9.2973 8.2794 8.75791 8.24073C8.21852 8.20206 7.67712 8.27997 7.17045 8.46916C6.66378 8.65836 6.20368 8.95442 5.82137 9.33727L3.55863 11.6023C2.87167 12.3143 2.49155 13.2679 2.50014 14.2577C2.50874 15.2475 2.90535 16.1944 3.60457 16.8943C4.30378 17.5942 5.24966 17.9913 6.23846 17.9999C7.22727 18.0085 8.17989 17.628 8.89115 16.9403L10.1809 15.6492"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 16 17" id="icon-share" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M4 8.5V12.5C4 12.7652 4.10536 13.0196 4.29289 13.2071C4.48043 13.3946 4.73478 13.5 5 13.5H11C11.2652 13.5 11.5196 13.3946 11.7071 13.2071C11.8946 13.0196 12 12.7652 12 12.5V8.5M10 5.5L8 3.5M8 3.5L6 5.5M8 3.5V10"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 16 17" id="icon-eye" xmlns="http://www.w3.org/2000/svg">
+         <path d="M2 9C2 9 4.18182 4.5 8 4.5C11.8182 4.5 14 9 14 9C14 9 11.8182 13.5 8 13.5C4.18182 13.5 2 9 2 9Z"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+         <path
+            d="M8 10.6875C8.90374 10.6875 9.63636 9.93198 9.63636 9C9.63636 8.06802 8.90374 7.3125 8 7.3125C7.09626 7.3125 6.36364 8.06802 6.36364 9C6.36364 9.93198 7.09626 10.6875 8 10.6875Z"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 20 20" id="icon-android" xmlns="http://www.w3.org/2000/svg">
          <path fill-rule="evenodd" clip-rule="evenodd"
             d="M6.74047 3.82836C6.90767 3.71616 7.13647 3.7609 7.2494 3.92957L7.86173 4.84549C8.2504 4.67683 8.66546 4.55584 9.10767 4.51696C9.80273 4.45662 10.5021 4.56401 11.1471 4.8301L11.7469 3.9303C11.8584 3.76089 12.0857 3.71616 12.2551 3.82836C12.4238 3.94057 12.4693 4.16863 12.3571 4.33656L11.8005 5.17183C11.9904 5.29429 12.173 5.42776 12.3402 5.58103C13.1095 6.28576 13.5333 7.2259 13.5333 8.22763V12.9943C13.5333 13.567 13.0398 14.0334 12.4333 14.0334H11.3333V16.2334H10.6V14.0334H8.4V16.2334H7.66666V14.0334H6.56667C5.96021 14.0334 5.46667 13.567 5.46667 12.9943V8.37209C5.46667 7.07043 6.16334 5.90296 7.21494 5.19749L6.64 4.3373C6.52706 4.16936 6.57254 3.9413 6.74047 3.82836ZM9.49633 5.23343C9.38853 5.23343 9.28 5.23856 9.17147 5.2481C7.50533 5.39403 6.2 6.76609 6.2 8.37209V12.9943C6.2 13.1622 6.36427 13.3001 6.56667 13.3001H12.4333C12.6357 13.3001 12.8 13.1622 12.8 12.9943V8.22763C12.8 7.43343 12.4612 6.68543 11.8445 6.12149C11.2204 5.54877 10.3785 5.23343 9.49633 5.23343ZM4 12.2001H4.73334V8.53343H4V12.2001ZM14.2667 12.2001H15V8.53343H14.2667V12.2001ZM8.03333 6.84691C7.7092 6.84691 7.44667 7.10944 7.44667 7.43358C7.44667 7.75698 7.7092 8.02024 8.03333 8.02024C8.35747 8.02024 8.62 7.75698 8.62 7.43358C8.62 7.10944 8.35747 6.84691 8.03333 6.84691ZM10.9667 6.84691C10.6425 6.84691 10.38 7.10944 10.38 7.43358C10.38 7.75698 10.6425 8.02024 10.9667 8.02024C11.2908 8.02024 11.5533 7.75698 11.5533 7.43358C11.5533 7.10944 11.2908 6.84691 10.9667 6.84691Z"
             fill="currentColor" />
@@ -2395,6 +2305,10 @@
       </svg><svg fill="currentColor" viewBox="0 0 16 16" id="icon-dots" xmlns="http://www.w3.org/2000/svg">
          <path
             d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+      </svg><svg fill="none" viewBox="0 0 14 15" id="icon-download" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M13 9.5V12.1667C13 12.5203 12.8595 12.8594 12.6095 13.1095C12.3594 13.3595 12.0203 13.5 11.6667 13.5H2.33333C1.97971 13.5 1.64057 13.3595 1.39052 13.1095C1.14048 12.8594 1 12.5203 1 12.1667V9.5M3.66667 6.16667L7 9.5M7 9.5L10.3333 6.16667M7 9.5V1.5"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
       </svg><svg fill="none" viewBox="0 0 56 56" id="icon-plus" xmlns="http://www.w3.org/2000/svg">
          <path d="M2.72266 27.5498H28.161V2.11144" stroke="currentColor" stroke-width="4" stroke-linecap="round"
             stroke-linejoin="round" />
@@ -2408,6 +2322,10 @@
          <path
             d="M66.7472 32.1386C65.239 27.905 62.6758 24.12 59.2966 21.1366C55.9174 18.1533 51.8325 16.0688 47.423 15.0778C43.0135 14.0868 38.4231 14.2214 34.0801 15.4692C29.7372 16.717 25.7832 19.0373 22.5872 22.2136L8.78906 35.0924M74.2113 46.9079L60.4131 59.7867C57.2171 62.963 53.2632 65.2832 48.9202 66.531C44.5773 67.7789 39.9869 67.9135 35.5773 66.9225C31.1678 65.9314 27.0829 63.847 23.7037 60.8636C20.3246 57.8803 17.7613 54.0952 16.2531 49.8617"
             stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 16 25" id="icon-home" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M6.33333 18.0556V12.5H9.66667V18.0556M3 10.8333L8 6.94444L13 10.8333V16.9444C13 17.2391 12.8829 17.5217 12.6746 17.7301C12.4662 17.9385 12.1836 18.0556 11.8889 18.0556H4.11111C3.81643 18.0556 3.53381 17.9385 3.32544 17.7301C3.11706 17.5217 3 17.2391 3 16.9444V10.8333Z"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
       </svg><svg fill="none" viewBox="0 0 24 25" id="icon-burger" xmlns="http://www.w3.org/2000/svg">
          <path d="M3 12.5H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
          <path d="M3 6.5H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -2460,11 +2378,11 @@
             fill="url(#ja)" stroke="url(#jb)" stroke-linecap="round" stroke-linejoin="round" />
          <defs>
             <linearGradient id="ja" x1="62.5" y1="-14.135" x2="62.5" y2="76" gradientUnits="userSpaceOnUse">
-               <stop stop-color="#F9BE08" />
+               <stop stop-color="#F9BE08" offset="1" />
                <stop offset="1" stop-color="#F9BE08" stop-opacity="0" />
             </linearGradient>
             <linearGradient id="jb" x1="62.5" y1="10.098" x2="62.5" y2="76" gradientUnits="userSpaceOnUse">
-               <stop stop-color="#F9BE08" />
+               <stop stop-color="#F9BE08" offset="1" />
                <stop offset="1" stop-color="#F9BE08" stop-opacity="0" />
             </linearGradient>
          </defs>

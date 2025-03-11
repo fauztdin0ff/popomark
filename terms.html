@@ -1,0 +1,2700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Favicon -->
+   <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="img/fav/android-chrome-192x192.png">
+   <link rel="icon" type="image/png" sizes="512x512" href="img/fav/android-chrome-512x512.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+   <link rel="icon" type="image/x-icon" href="img/fav/favicon.ico">
+   <link rel="icon" type="image/svg+xml" href="img/fav/favicon.svg">
+
+   <!-- Meta Description -->
+   <meta name="description" content="Trading made simple">
+
+   <!-- Open Graph (для соцсетей) -->
+   <meta property="og:title" content="PoPoMark">
+   <meta property="og:description" content="Trading made simple">
+   <meta property="og:image" content="img/fav/og-image.jpg">
+   <meta property="og:url" content="https://popomark.com">
+   <meta property="og:type" content="website">
+
+   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+   <link rel="stylesheet" href="css/style.min.css">
+   <title>PoPoMark</title>
+   <style>
+      .preloader {
+         position: fixed;
+         top: 0;
+         left: 0;
+         inset: 0;
+         width: 100%;
+         height: 100%;
+         background: #181818;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         z-index: 999;
+      }
+
+      .preloader svg {
+         width: 80px;
+         height: 80px;
+         overflow: visible;
+      }
+
+      .preloader svg path {
+         animation: float 2s ease-in-out infinite;
+         transform-origin: center;
+      }
+
+      .preloader svg path:nth-child(1) {
+         animation-delay: 0s;
+      }
+
+      .preloader svg path:nth-child(2) {
+         animation-delay: 0.2s;
+      }
+
+      .preloader svg path:nth-child(3) {
+         animation-delay: 0.4s;
+      }
+
+      .preloader.hidden {
+         display: none;
+      }
+
+      @keyframes float {
+
+         0%,
+         100% {
+            transform: scale(1);
+            opacity: 1;
+         }
+
+         50% {
+            transform: scale(0.9);
+            opacity: 0.3;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header header-white">
+   <div class="header__body container-xl">
+
+      <div class="header__logo">
+         <a href="index.html" aria-label="Home"><img src="img/logo-brand.svg" alt="PopoMark"></a>
+      </div>
+
+      <div class="header__menu menu">
+         <div class="menu__icon">
+            <svg>
+               <use xlink:href="#icon-burger"></use>
+            </svg>
+         </div>
+         <nav class="menu__body">
+            <ul class="menu__list">
+               <li class="menu__item">
+                  <a href="#" class="menu__link">
+                     For traders
+                     <svg>
+                        <use xlink:href="#icon-chevron"></use>
+                     </svg>
+                  </a>
+                  <div class="menu__sublist">
+                     <div class="menu__sublist-body container">
+                        <div class="menu__sublist-items">
+                           <div class="menu__sublist-row">
+                              <p><a href="forex.html">Forex</a>
+                                 <svg>
+                                    <use xlink:href="#icon-chevron"></use>
+                                 </svg>
+                              </p>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">EUR/USD</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">GBP/JPY</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">USD/JPY</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">GBP/USD</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">AUD/USD</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">All Pairs</a>
+                           </div>
+                           <div class="menu__sublist-row">
+                              <p><a href="">Crypto</a>
+                                 <svg>
+                                    <use xlink:href="#icon-chevron"></use>
+                                 </svg>
+                              </p>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Bitcoin (BTC)</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Ethereum (ETH)</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Ripple (XRP)</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Litecoin (LTC)</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Dogecoin (DOGE)</a>
+                           </div>
+                           <div class="menu__sublist-row">
+                              <p><a href="">Stocks</a>
+                                 <svg>
+                                    <use xlink:href="#icon-chevron"></use>
+                                 </svg>
+                              </p>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Apple (AAPL)</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Tesla (TSLA)</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Amazon (AMZN)</a>
+                              <a href="https://trade.popomark.com/en/register" class="menu__sublink">Microsoft
+                                 (MSFT)</a>
+                           </div>
+                           <div class="menu__sublist-row">
+                              <p><a href="">Options</a></p>
+                           </div>
+                        </div>
+                        <div class="menu__sublist-assets">
+                           <p class="menu__sublist-assets-title">
+                              All assets for you to discover
+                           </p>
+                           <p class="menu__sublist-assets-subtitle">
+                              Any convinient device for your comfortable using
+                           </p>
+                           <a href="https://trade.popomark.com/en/register" class="menu__sublist-assets-link">
+                              View all assets
+                              <svg>
+                                 <use xlink:href="#icon-chevron-right"></use>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <li class="menu__item menu__item-add">
+                  <a href="download.html" class="menu__link">
+                     Download App
+                     <svg>
+                        <use xlink:href="#icon-chevron"></use>
+                     </svg>
+                  </a>
+                  <div class="menu__sublist">
+                     <div class="menu__sublist-body container">
+
+                        <div class="menu__sublist-assets">
+                           <p class="menu__sublist-assets-title">All in one place</p>
+                           <p class="menu__sublist-assets-subtitle">
+                              Any convinient device for your comfortable using
+                           </p>
+                        </div>
+
+                        <div class="menu__sublist-apps">
+                           <a href="https://trade.popomark.com/en/register" class="menu__sublist-app">
+                              <svg>
+                                 <use xlink:href="#icon-desktop"></use>
+                              </svg>
+                              <p>Download for Mac<span>38 MB · 10.1 Mac OS or higher</span></p>
+                           </a>
+                           <a href="https://trade.popomark.com/en/register" class="menu__sublist-app">
+                              <svg>
+                                 <use xlink:href="#icon-computer"></use>
+                              </svg>
+                              <p>Download for Windows<span>24 MB · Windows 7, 8, 8.1, 10</span></p>
+                           </a>
+                           <a href="https://trade.popomark.com/en/register" class="menu__sublist-app">
+                              <svg>
+                                 <use xlink:href="#icon-desktop"></use>
+                              </svg>
+                              <p>Download for Android<span>89 MB · Android 5.1 or later</span></p>
+                           </a>
+                           <a href="https://trade.popomark.com/en/register" class="menu__sublist-app mob">
+                              <svg>
+                                 <use xlink:href="#icon-android"></use>
+                              </svg>
+                              <p>Download for Android<span>89 MB · Android 5.1 or later</span></p>
+                           </a>
+                           <a href="https://trade.popomark.com/en/register" class="menu__sublist-app mob">
+                              <svg>
+                                 <use xlink:href="#icon-ios"></use>
+                              </svg>
+                              <p>Download for iOS<span>89 MB · iOS 18.1 or later</span></p>
+                           </a>
+                           <a href="https://trade.popomark.com/en/register" class="menu__sublist-assets-link">
+                              View all options
+                              <svg>
+                                 <use xlink:href="#icon-chevron-right"></use>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <li class="menu__item"><a href="about.html" class="menu__link">Company</a>
+               </li>
+               <li class="menu__item"><a href="blog.html" class="menu__link">Blog</a></li>
+               <li class="menu__item"><a href="affiliate.html" class="menu__link">Affiliate
+                     Program</a></li>
+            </ul>
+
+            <div class="menu__body-mob-panel">
+               <img src="img/logo-brand.svg" alt="" class="menu__body-logo">
+               <div class="menu__body-close">
+                  <img src="img/icons/close.svg" alt="">
+               </div>
+            </div>
+         </nav>
+      </div>
+
+      <div class="header__controls-wrap">
+         <div class="header__controls">
+            <div class="header__lang">
+               <div class="header__lang-active">
+                  English
+                  <svg>
+                     <use xlink:href="#icon-chevron"></use>
+                  </svg>
+               </div>
+               <ul class="header__lang-list">
+                  <li><a href="">Deutsch</a></li>
+                  <li><a href="">Français</a></li>
+                  <li><a href="">Русский</a></li>
+               </ul>
+            </div>
+            <div class="header__auth">
+               <a href="https://trade.popomark.com/en/login" class="header__auth-btn button-white">Log in</a>
+               <a href="https://trade.popomark.com/en/register" class="header__auth-btn button-orange">Sign up</a>
+            </div>
+         </div>
+      </div>
+
+   </div>
+</header>
+      <main>
+         <div class="policy">
+            <div class="policy__body container-xl">
+               <div class="policy__menu">
+                  <ul class="policy__menu-list">
+                     <a href="privacy-policy.html" class="policy__menu-link ">Privacy Policy</a>
+                     <a href="cookies.html" class="policy__menu-link ">Cookies</a>
+                     <a href="payment-policy.html" class="policy__menu-link">Payment Policy</a>
+                     <a href="withdrawal-policy.html" class="policy__menu-link">Withdrawal Policy</a>
+                     <a href="refund-policy.html" class="policy__menu-link">Refund Policy</a>
+                     <a href="general-fees.html" class="policy__menu-link">General Fees</a>
+                     <a href="order-execution-policy.html" class="policy__menu-link">Order Execution Policy</a>
+                     <a href="terms.html" class="policy__menu-link active">Terms & Conditions</a>
+                     <a href="aml.html" class="policy__menu-link">AML</a>
+                     <a href="risk-disclosure.html" class="policy__menu-link">Risk Disclosure</a>
+                     <a href="margin-trading.html" class="policy__menu-link">Margin Trading</a>
+                     <a href="demo-accounts.html" class="policy__menu-link">Demo Accounts</a>
+                  </ul>
+               </div>
+               <section class="policy__document">
+                  <div class="policy__date">Updated: 11 Dec 2024</div>
+                  <h1 class="policy__title title">Terms & Conditions</h1>
+                  <div class="policy__download">
+                     <a href="" download="Terms & Conditions. PopoMark.pdf">
+                        <img src="img/icons/document.svg" alt="">
+                        Terms & Conditions.pdf
+                     </a>
+                  </div>
+                  <div class="policy__text">
+                     <p>
+                        These Terms & Conditions (hereinafter referred to as the <b>“Agreement”</b>) shall regulate the
+                        legal relationship between Sun
+                        Wave LLC operating the global brand PoPoMark with company No. L 22402 and registered at the
+                        Lighthouse Trust Nevis Ltd,
+                        Suite 1, A.L. Evelyn Ltd Building, Main Street, Charlestown, Nevis (hereinafter referred to as
+                        the <b>“Company”</b>), and the
+                        user (a natural or legal entity) (hereinafter referred to as the <b>“Client”</b>) of
+                        popomark.com (hereinafter referred as the
+                        <b>“Website”</b>).
+                     </p>
+                     <ol class="pl-50 my-30">
+                        <li>
+                           The Client confirms that he/she has read, understood and accepted all information, conditions
+                           and terms set out on the
+                           Website which are open to be reviewed and can be examined by the public and which include
+                           important legal Information.
+                        </li>
+                        <li>
+                           By accepting this Agreement, the Client agrees and irrevocably accepts the terms and
+                           conditions contained in this
+                           Agreement, its annexes and/or appendices as well as other documentation/information published
+                           on the Website, including
+                           without limitation the Privacy Policy, Payment Policy, Withdrawal Policy, Code of Conduct,
+                           Order Execution Policy and
+                           Anti-Money Laundering Policy. The Client accepts this Agreement by registering an Account on
+                           the Website and depositing
+                           funds. By accepting the Agreement, and subject to the Company’s final approval, the Client
+                           enters into a legal and
+                           binding agreement with the Company.
+                        </li>
+                        <li>
+                           The terms of this Agreement shall be considered accepted unconditionally by the Client upon
+                           the Company’s receipt of an
+                           advance payment made by the Client. As soon as the Company receives the Client's advance
+                           payment, every operation made
+                           by the Client on the Trading Platform shall be subject to the terms of this Agreement and
+                           other
+                           documentation/information on the Website.
+                        </li>
+                        <li>
+                           The Client hereby acknowledges that each and any Operation, activity, transaction, order
+                           and/or communication performed
+                           by him/her on the Trading Platform, including without limitation through the Account, and the
+                           Website, shall be governed
+                           by and/or must be executed in accordance with the terms and conditions of this Agreement and
+                           other
+                           documentation/information on the Website.
+                        </li>
+                        <li>
+                           By accepting this current agreement, the Client confirms that he/she is able to receive
+                           information, including
+                           amendments to the present Agreement, either via email or through the Website.
+                        </li>
+                     </ol>
+                     <h2>1. Terms</h2>
+                     <ol class="pl-50">
+                        <li>
+                           <b>Account</b> – means a unique personified account registered in the name of the Client and
+                           which contains all the Client’s
+                           transactions/ operations on the Trading Platform (as defined below) of the Company.
+                        </li>
+                        <li><b>Ask</b> – means the higher price in a quote. The price the Client may buy at.</li>
+                        <li><b>Bid</b> – means the lower price in a quote. The price the Client may sell at.</li>
+                        <li>
+                           <b>Binary Options and/or All or Nothing Options and/or Turbo Options</b> – means financial
+                           instruments where a prediction is
+                           made on the direction of the price movement of an asset at a certain period of the day. The
+                           payout is pre-determined as
+                           a fixed amount whether the option expires in the money or if the option expires out of the
+                           money.
+                        </li>
+                        <li>
+                           <b>CFD (contract for difference)</b> – means a tradable contract entered into between the
+                           Client and the Company, who exchange
+                           the difference in the value of an Instrument, as specified on the Trading Platform at the
+                           time of opening a Transaction,
+                           and the value of that Instrument at the contract’s end.
+                        </li>
+                        <li>
+                           <b>Digital Option Contract</b> – means a type of derivative instrument where the Client earns
+                           a payout if they correctly
+                           predict the price movement of the underlying asset at the time of the option’s expiry. The
+                           prediction can be made as to
+                           whether the value of the underlying asset will fall above or below the strike price at the
+                           time of expiration. Should
+                           the option expire at the selected strike price, it will be considered to expire out-of-the
+                           money and will result in the
+                           loss of the invested amount.
+                        </li>
+                        <li>
+                           <b>Execution</b> – means the execution of Client order(s) by the Company acting as the
+                           Client's counterparty as per the terms
+                           of the present agreement.
+                        </li>
+                        <li>
+                           <b>Financial Instruments</b> – means the Financial Instruments as per paragraph 2.4 below
+                           that are available on the Company’s
+                           Trading Platform.
+                        </li>
+                        <li>
+                           <b>KYC documents</b> – means the documents to be provided by the Client, including without
+                           limitation a copy of the passport or
+                           ID and utility bill of the Client, in case it is a natural person and/or certificates showing
+                           the management and
+                           ownership going all the way up to the ultimate beneficial owner, in case it is a legal
+                           entity, and any other documents
+                           the Company may request upon its sole discretion.
+                        </li>
+                        <li>
+                           <b>Market</b> – means the market on which the Financial Instruments are subject to and/or
+                           traded on, whether this market is
+                           organized / regulated or not and whether it is in the relevant jurisdiction or abroad.
+                        </li>
+                        <li><b>Market Maker</b> – means a company which provides BID and ASK prices for financial
+                           instruments.</li>
+                        <li>
+                           <b>Operations</b> – means actions performed at the Client’s Account, following an order
+                           placed by the Client, connected with
+                           but not limited to crediting of funds, return of funds, opening and closing of trade
+                           transactions/positions and/or that
+                           relate to financial instruments.
+                        </li>
+                        <li>
+                           <b>Prices</b> – means the prices offered to the Client for each transaction, which may be
+                           changed without prior notice. Where
+                           this is relevant, the “Prices” given through the Trading Platform include the Spread (see
+                           definition below).
+                        </li>
+                        <li><b>Services</b> – means the services described in section 2 of this Agreement through the
+                           Trading Platform.</li>
+                        <li>
+                           <b>Spread</b> – means the difference between the purchase price Ask (rate) and the sale price
+                           Bid (rate) at the same moment.
+                           For avoidance of doubt, a predefined spread is for the purposes of this Agreement assimilated
+                           commission.
+                        </li>
+                        <li>
+                           <b>Trading Platform</b> – means an electronic system on the internet that consists of all
+                           programs and technology that present
+                           quotes in real-time, allow the placement/modification/deletion of orders and calculate all
+                           mutual obligations of the
+                           Client and the Company.
+                        </li>
+                        <li>
+                           <b>Introducing Broker</b> – means any person (natural person or a legal entity) who wishes to
+                           refer Clients to the Company and
+                           has entered into an Introducing Broker Agreement and has successfully opened an IB Account
+                           (as defined in the
+                           Introducing Broker Agreement).
+                        </li>
+                        <li><b>Serviced Countries</b> - means any country available for registration on the Company's
+                           Website</li>
+                     </ol>
+
+                     <h2>2. Subject of the Agreement and Services</h2>
+                     <ol class="pl-50">
+                        <li>
+                           The subject of the Agreement shall be the provision of Services to the Client by the Company
+                           under the Agreement and
+                           through the Trading Platform.
+                        </li>
+                        <li>
+                           The Company shall carry out all transactions as provided in this Agreement on an
+                           execution-only basis, neither managing
+                           the account nor advising the Client. The Company is entitled to execute transactions
+                           requested by the Client as provided
+                           in this Agreement, even if the transaction is not beneficial for the Client. The Company is
+                           under no obligation, unless
+                           otherwise agreed in this Agreement and/or other documentation/information on the Website, to
+                           monitor or advise the
+                           Client on the status of any transaction, to make margin calls, or to close out any of the
+                           Client’s open positions.
+                           Unless otherwise specifically agreed, the Company is not obligated to make an attempt to
+                           execute the Client’s order
+                           using quotes more favorable than those offered through the Trading Platform.
+                        </li>
+                        <li>
+                           The Investment and Ancillary Services which the Company should provide under the terms of the
+                           Agreement are stated
+                           below, and the Company will provide them in its capacity as a market maker under the terms of
+                           this Agreement. In
+                           addition, the Company may, at its sole discretion without providing prior notice to the
+                           Client, decide to transmit
+                           orders and/or be an intermediary for Clients’ transactions. The Services that the Company
+                           provides in relation to one or
+                           more Financial Instruments are the following (the list below shall not be regarded as
+                           exhaustive):
+                           <ol>
+                              <li>
+                                 <p><b>Investment services:</b></p>
+                                 <p>i. Reception and transmission of orders in relation to one or more Financial
+                                    Instruments.</p>
+                                 <p>ii. Execution of the orders on behalf of the Clients.</p>
+                                 <p>iii. Dealing on Own Account.</p>
+                              </li>
+                              <li>
+                                 <p><b>Ancillary Services:</b></p>
+                                 <p>
+                                    i. Safekeeping and administration of the Financial Instruments for the Client’s
+                                    Trading Account, including custodianship
+                                    and related services such as cash/collateral management.
+                                 </p>
+                                 <p>
+                                    ii. Granting credits or loans to one or more financial instruments, where the firm
+                                    granting the credit or loan is
+                                    involved in the transaction.
+                                 </p>
+                                 <p>
+                                    iii. Foreign exchange services where these are connected to the provision of the
+                                    Investment Services.
+                                    The Company does not provide investment, tax or trading advice unless specified as
+                                    such between the Client and the
+                                    Company in a separate agreement. Our services include ‘execution only’ meaning that
+                                    the Company will act on your
+                                    instructions and will not advise you on any transaction, nor will we monitor your
+                                    trading decisions to determine if they
+                                    are appropriate for you or to help you avoid losses. You should obtain your own
+                                    financial, legal, taxation and other
+                                    professional advice.
+                                 </p>
+                              </li>
+                              <li>
+                                 <p><b>Financial Instruments (the list below shall not be regarded as exhaustive):</b>
+                                 </p>
+                                 <p>i. Option contracts (i.e. Digital Options and/or Binary Options) in stocks,
+                                    commodities, indices and currency pairs;</p>
+                                 <p>
+                                    ii. Financial Contracts for Difference (CFDs) in stocks, currency pairs (FX),
+                                    commodities, ETFs, indices and CFDs in
+                                    cryptocurrencies;
+                                 </p>
+                                 <p class="pl-50">Trading in CFDs and other derivatives does not give you any right,
+                                    voting right,
+                                    title or interest in the underlying
+                                    instrument of the Transaction. You understand that you are not entitled to take
+                                    delivery and are not entitled to
+                                    ownership of any underlying instrument. CFDs and other derivatives are not traded on
+                                    a regulated exchange and are not
+                                    cleared on a central clearinghouse. These exchange and clearinghouse rules and
+                                    protections do not apply. The Company
+                                    reserves the right to, at its sole discretion and for all CFD products, impose the
+                                    following expiration times:
+                                    daily/weekly/monthly and/or no expiration at all.</p>
+                              </li>
+                           </ol>
+                        </li>
+                     </ol>
+
+                     <h2>3. General Provisions</h2>
+                     <ol class="pl-50">
+                        <li>
+                           <p>
+                              Subject to the provisions of this Agreement, the Company agrees to provide the Client with
+                              the Services subject to the
+                              Client:
+                           </p>
+                           <p class="pl-50">
+                              a. Being of age of maturity in accordance with the jurisdiction he/she resides in or is a
+                              resident of, is of legal
+                              competence and of sound mind.
+                           </p>
+                           <p class="pl-50">
+                              b. Not residing in any country where distribution or provision of the financial products
+                              or services offered by the
+                              Company would be contrary to local laws or regulations. It is the Client’s responsibility
+                              to ascertain the terms of and
+                              comply with any local laws or regulations to which they are subject.
+                           </p>
+                           <p class="pl-50">
+                              c. Not being a citizen of USA/territories of the US, North Korea, Palestine, Vatican
+                              and/or a resident of either the
+                              USA/territories of the US, Canada, Afghanistan, Australia, Belarus, Belgium, Bouvet
+                              Island, Comoros, Cuba, Democratic
+                              Republic of the Congo, Eritrea, Ethiopia, Gibraltar, Guam, Iran, Israel, Japan, Mali,
+                              Myanmar, North Korea, Palestine,
+                              South Sudan, Sudan, Syria, the Russian Federation, the United Kingdom, Ukraine, Vatican,
+                              any country of the European
+                              Economic Area and/or other non-serviced countries.
+                           </p>
+                        </li>
+                        <li>
+                           The Company will offer Services to the Client at the absolute discretion of the Company,
+                           subject to the provisions of
+                           this Agreement.
+                        </li>
+                        <li>
+                           The Client is prohibited and shall not, under no circumstances, be allowed to execute any
+                           transactions/Operations on the
+                           Trading Platform, Website and/or through his/her Account, that would, as a result, exceed the
+                           total balance and/or
+                           amount of money deposited/maintained with his/her Account. Such deposited amounts shall be
+                           considered to have been
+                           provided as collateral, either in the form of a lien or otherwise, to the Company by the
+                           Client by which the obligation
+                           of the Client to pay any money to the Company is secured.
+                        </li>
+                        <li>
+                           The Company shall facilitate the execution of trade activities/orders and/or transactions of
+                           the Client, but the Client
+                           hereby acknowledges and accepts that the Company shall not at any time provide any trust
+                           services and/or trading
+                           consultation or advisory services to the Client.
+                        </li>
+                        <li>The Company shall process all transactions/Operations of the Client in accordance with the
+                           terms and conditions of this
+                           Agreement and on an execution-only basis. The Company shall not manage the Client’s Account
+                           nor advise the Client in any way.
+                        </li>
+
+                        <li>
+                           The Company shall process the orders/transactions requested by the Client under this
+                           Agreement,
+                           irrespective of whether
+                           such orders/transactions may result in not being beneficial for the Client. The Company is
+                           under
+                           no obligation, unless
+                           otherwise agreed in this Agreement and/or other documentation/information on the Website, to
+                           monitor or advise the
+                           Client on the status of any transaction/order, to make margin calls to the Client, or to
+                           close
+                           out any of the Client’s
+                           open positions. Unless otherwise specifically agreed, the Company is not obligated to process
+                           or
+                           attempt to process the
+                           Client’s order/transaction using quotes more favorable than those offered through the Trading
+                           Platform.
+                        </li>
+                        <li>
+                           The Company shall not be financially liable for any operations conducted by the Client
+                           through
+                           the Account and/or on the
+                           Trading Platform.
+                        </li>
+                        <li>
+                           Each Client shall be the only authorized user of the Company’s services and of the
+                           corresponding
+                           Account. The Client is
+                           granted an exclusive and non-assignable right to the use of and to access the Account, and it
+                           is
+                           his/her responsibility
+                           to ensure that no other third party, including, without limitation, to any next of kin and/or
+                           to
+                           members of his/her
+                           immediate family, shall gain access to and/or trade through the Account assigned to her/him.
+                        </li>
+                        <li>
+                           The Client shall be liable for all orders given through his security information, and any
+                           orders
+                           received in this manner
+                           by the Company shall be considered to have been given by the Client. So long as any order is
+                           submitted through the
+                           Account of a Client, the Company shall reasonably assume that such orders are submitted by
+                           the
+                           Client and the Company
+                           shall not be under any obligation to investigate further into the matter. The Company shall
+                           not
+                           be liable to and/or does
+                           not maintain any legal relations with any third party other than the Client.
+                        </li>
+                        <li>
+                           If the Client acts on behalf of any third party and/or on behalf of any third party’s name,
+                           the
+                           Company shall not accept
+                           this person as a Client and shall not be liable before this person, regardless if such person
+                           was identified or not.
+                        </li>
+                        <li>
+                           The Client has the right to cancel his order given to the Company within 3 seconds after the
+                           moment of giving such order to the Company (hereinafter referred to as the “Cancellation”).
+                           The client agrees and
+                           understands that the three seconds cancellation option offered by the Company is applicable
+                           and available for the client as long as the price remains unchanged. Three seconds from the
+                           moment of giving the order to the Company by the Client via the platform, the Company may
+                           (but is not obliged to) offer to buyout the option from the Client and the Client has the
+                           right to agree to such offer (hereinafter referred to as the “Buyout”). The Client is
+                           entitled to use such Cancellation or Buyout option subject to the conditions specified on the
+                           platform. Such conditions can also include the fee charged by the Company.
+                           Such a fee is specified on the platform. The Company is obliged to provide all necessary
+                           information as to the conditions of Cancellation and Buyout, their cost, etc. The Client
+                           acknowledges and agrees
+                           that the provision of such information on the platform is sufficient. The Client acknowledges
+                           and agrees that the use of Cancellation or Buyout is very risky to the Client as long as the
+                           cost of Cancellation and/or Buyout depends on the market situation. The Client acknowledges
+                           and agrees that he bears all the risks associated with the use of Cancellation and/or Buyout.
+                        </li>
+                        <li>
+                           The Client is entitled to use such Cancellation or Buyout option subject to the conditions
+                           specified on the Trading Platform/Website, including without limitation to any fee to be
+                           charged by the Company. The
+                           Company shall be obliged to provide all necessary information as to the conditions of
+                           Cancellation and Buyout, including any applicable costs, etc. The Client acknowledges,
+                           accepts and agrees that the provision of such information on the Trading Platform is
+                           sufficient. The Client acknowledges, accepts and agrees that the use of Cancellation or
+                           Buyout option entails large risks for the Client, especially in the case where the costs
+                           associated with Cancellation and/or Buyout, depend on the market situation. The Client
+                           acknowledges, accepts and agrees that he/she shall bear all risks associated with the use of
+                           the Cancellation and/or Buyout option.
+                        </li>
+                        <li>
+                           It is understood and agreed by the Client that the Company may from time to time, at its sole
+                           discretion, utilize a
+                           third party to hold the Client’s funds and/or for the purpose of receiving payment execution
+                           services. These funds will
+                           be held in segregated accounts from such third party’s own funds and will not affect the
+                           rights
+                           of the Client to such
+                           funds.
+                        </li>
+                        <li>
+                           Provision of investment advice shall only be carried out by the Company subject to a separate
+                           written agreement with the
+                           Client and after assessing the Client’s personal circumstances. Unless such written agreement
+                           has been entered into
+                           between the Client and the Company, the provision of reports, news, opinions, price movement
+                           alerts as displayed in the
+                           Company’s trading platform and any other information by the Company to the Client does not
+                           constitute investment advice
+                           or investment research.
+                        </li>
+                     </ol>
+
+                     <h2>4. Execution of Orders / Electronic Trading</h2>
+                     <ol class="pl-50">
+                        <li>
+                           By accepting this Agreement, the Client accepts that he has read and understood all the
+                           provisions of this Agreement and
+                           related information on the Website. The Client accepts and understands that some orders shall
+                           be executed by the Company
+                           as the counterparty of the transaction in its capacity of Market Maker and shall act as a
+                           principal and not as an agent
+                           on the Client’s behalf for the purpose of the Execution of orders. The Client is informed
+                           that Conflicts of Interest may
+                           arise because of this model. Moreover, the Client further accepts that the Company may
+                           transmit some orders and act as
+                           an intermediary for Clients’ transactions. Reception of the order by the Company shall not
+                           constitute acceptance, and
+                           acceptance shall only be constituted by the execution of the order by the Company.
+                        </li>
+                        <li>The Company shall be obliged to execute the Client's orders sequentially and promptly.</li>
+                        <li>
+                           The Client acknowledges and accepts a) the risk of mistakes or misinterpretations in the
+                           orders sent through the Trading
+                           Platform due to technical or mechanical failures of such electronic means, b) the risk of any
+                           delays or other problems
+                           as well as c) the risk that the orders may be placed by persons unauthorized to use and/or
+                           access the Account, and the
+                           Client agrees to indemnify the Company in full for any loss incurred as a result of acting in
+                           accordance with such
+                           orders.
+                        </li>
+                        <li>
+                           The Client accepts that during the reception and transmission of his/her order, the Company
+                           shall have no responsibility
+                           as to its content and/or to the identity of the person placing the order, except where there
+                           is gross negligence,
+                           willful default or fraud by the Company.
+                        </li>
+                        <li>
+                           The Client acknowledges that the Company will not take action based on the orders transmitted
+                           to the Company for
+                           execution by electronic means other than those orders transmitted using the predetermined
+                           electronic means such as the
+                           Trading Platform, and the Company shall have no liability towards the Client for failing to
+                           take action based on such
+                           orders.
+                        </li>
+                        <li>
+                           The Client acknowledges and agrees that the Company shall bear no responsibility for any
+                           financial losses and/or
+                           technical issues which may arise in the event that an external trading bot is used when
+                           trading; the Client shall use
+                           the bot at their own risk;
+                        </li>
+                        <li>
+                           The client acknowledges and agrees that any products or services that may be offered by the
+                           Company may not always be
+                           available for purchasing or use for trading purposes, and it is in the Company's absolute
+                           discretion whether it will
+                           make these products available or not to the clients at any time. The Company shall bear no
+                           liability, monetary or
+                           otherwise, in relation to this section, including without limitation to not making available
+                           any product at any given
+                           time.
+                        </li>
+                        <li>
+                           <p>
+                              The client agrees and understands the following in consideration of the below corporate
+                              actions:
+                           </p>
+                           <p class="pl-50">
+                              a. Where it is publicly available that a specific Company has filled and/or is in the
+                              process of filing for Chapter 11
+                              under US bankruptcy law and/or an equivalent to Chapter 11 corporate action related to
+                              bankruptcy and/or bankruptcy law
+                              under any national legislation/regulations, the Company reserves the right to close any
+                              and all relevant positions in
+                              regard to the asset(s) of such Company and suspend the related asset(s); the client’s
+                              position(s) held in the referred
+                              asset(s) will be closed by the Company with the last available price on the platform and
+                              the client will receive a prior
+                              notice on this matter. It should be noted that the Company will9. not be held liable for
+                              any losses incurred to the
+                              client in relation to the aforesaid closure of the position(s) and/or the suspension of
+                              the asset(s).
+                           </p>
+                           <p class="pl-50">
+                              b. In circumstances where the underlying asset offered by the Company might be subject to
+                              split and/or reverse split,
+                              the Company may decide to close the client’s position(s) held in the referred asset with
+                              the last available price on the
+                              platform prior to the occurrence of the split and/or reverse split event and the client
+                              will receive a notification in
+                              this regard.
+                           </p>
+                        </li>
+                        <li>
+                           <p>The Client acknowledges that the Company will have the right, at any time and for any
+                              reason and without justification,
+                              at its sole discretion, to refuse to execute orders, including, without limitation, in the
+                              following circumstances:</p>
+                           <p class="pl-50">
+                              a. If the execution of the order aims or may aim to manipulate the market price of the
+                              financial instruments (market
+                              manipulation);
+                           </p>
+                           <p class="pl-50">
+                              b. If the execution of the order constitutes or may constitute abusive exploitation of
+                              confidential information (insider
+                              trading);
+                           </p>
+                           <p class="pl-50">
+                              c. If the execution of the order contributes or may contribute to the legalization of the
+                              proceeds of illegal activities
+                              (money laundering);
+                           </p>
+                           <p class="pl-50">
+                              d. If the Client has insufficient funds to cover the purchase of financial instruments or
+                              if there is an insufficient
+                              number of financial instruments to cover their sale;
+                           </p>
+                           <p class="pl-50">e. If the Client fails to fulfill any of his/her obligations towards the
+                              Company under this Agreement;</p>
+                           <p class="pl-50">
+                              f. The Company’s own exposure levels as set out in the Company’s internal policies have
+                              been reached in respect of the
+                              Financial Instrument or the underlying asset of the Financial Instrument the Client wishes
+                              to buy/sell. In this event,
+                              the Company reserves the right to limit the size of trades and/or transactions;
+                           </p>
+                           <p class="pl-50">
+                              g. If the Client is currently, or at any time becomes, a U.S. Reportable Person, a citizen
+                              of North Korea, Palestine, or
+                              Vatican City, or a resident of the United States, its territories, or any of the following
+                              countries or regions: Canada,
+                              Afghanistan, Australia, Belarus, Belgium, Bouvet Island, Comoros, Cuba, Democratic
+                              Republic of the Congo, Eritrea,
+                              Ethiopia, Gibraltar, Guam, Iran, Israel, Japan, Mali, Myanmar, North Korea, Palestine,
+                              South Sudan, Sudan, Syria, the
+                              Russian Federation, the United Kingdom, Ukraine, Vatican City, any member country of the
+                              European Economic Area (EEA),
+                              or any other jurisdiction deemed non-serviced.
+                           </p>
+                           <p>The Client acknowledges that, at its own discretion, under certain market conditions
+                              and/or depending on the
+                              availability of the underlying asset on the relevant market, the Company may have to close
+                              all or a part of the Client’s
+                              positions. Including but not limited to positions where it has reached or surpassed
+                              internal exposure levels and/or
+                              where for any reason the underlying asset is unavailable on the relevant market. The
+                              Company undertakes to provide prior
+                              notification to the Client in case a position will be liquidated by the Company.</p>
+                        </li>
+                        <li>
+                           Any such refusal by the Company shall not affect any obligation, which the Client may have
+                           towards the Company.
+                        </li>
+                     </ol>
+
+                     <h2>5. Limitation of Liability</h2>
+                     <ol class="pl-50">
+                        <li>
+                           The Company does not guarantee uninterrupted service, safe and errors-free, and immunity from
+                           unauthorized access to the
+                           trading sites' servers nor disruptions caused from damages, malfunctions or failures in
+                           hardware, software,
+                           communications and systems in the Client's computers and in the Company's suppliers.
+                        </li>
+                        <li>
+                           Supplying services by the Company depends, inter alia, on third parties and the Company bears
+                           no responsibility for any
+                           actions or omissions of third parties and bears no responsibility for any damage and/or loss
+                           and/or expense caused to
+                           the Client and/or third party as a result of and/or in relation to any aforesaid action or
+                           omission.
+                        </li>
+                        <li>
+                           The Company will bear no responsibility for any damage of any kind allegedly caused to the
+                           Client, which involves force
+                           majeure or any such event that the Company has no control of and which has influenced the
+                           accessibility of its trading
+                           site.
+                        </li>
+                        <li>
+                           <p>
+                              Under no circumstances will the Company or its Agent(s) hold responsibility for direct or
+                              indirect damages of any kind,
+                              even if the Company or its Agent(s) had been notified of the possibility of aforesaid
+                              damages.</p>
+
+                        </li>
+                        <li>
+                           <p>In case a Client registers an Account through an Introducing Broker, referring agents, or
+                              other third parties, it is
+                              hereby agreed as follows:</p>
+                           <ul>
+                              <li>
+                                 The Company shall not be responsible or liable for any agreement or arrangement that
+                                 may exist between the Client and
+                                 these persons, or for any additional costs that may arise as a result of such
+                                 agreement;
+                              </li>
+                              <li>
+                                 The Introducing Broker and/or referring agents are not representatives or agents of the
+                                 Company, and they do not act on
+                                 behalf of the Company. In this respect, they are not authorized to provide any
+                                 guarantees or any promises regarding the
+                                 Company or its services nor provide advice or personal recommendations to the Client
+                                 regarding the Client’s Account
+                                 and/or transactions and the Company shall accept no responsibility whatsoever for any
+                                 such advice or recommendations.
+                              </li>
+                           </ul>
+                        </li>
+                     </ol>
+
+                     <h2>6. Settlement of Transactions</h2>
+                     <ol class="pl-50">
+                        <li>The Company shall proceed to a settlement of all transactions upon execution of such
+                           transactions.
+                        </li>
+                        <li>An online statement of Account will be available for printing to the Client on the Trading
+                           Platform of the Company, at
+                           all times.</li>
+                     </ol>
+
+                     <h2>7. Rights, Obligations and Guarantees of the Parties</h2>
+                     <ol class="pl-50">
+                        <li>
+                           <p>The Client shall be entitled to:</p>
+                           <p class="pl-50">
+                              a. Submit with the Company any order requesting the execution of a transaction/Operation
+                              on the Website in accordance
+                              with and subject to the terms and conditions of this Agreement;
+                           </p>
+                           <p class="pl-50">
+                              b. Request withdrawal of any amounts subject and in accordance with the Withdrawal Policy,
+                              and provided that the Company
+                              has no claims against the Client and/or the Client does not have any outstanding debts to
+                              the Company;
+                           </p>
+                           <p class="pl-50">
+                              c. In the event that the Client has any alleged complaint against the Company and/or there
+                              is any dispute between the
+                              Client and the Company, then the Client can submit his/her complaint, to include all
+                              relevant particulars and details,
+                              to the Company at complaints@popomark.com. The Company shall acknowledge receipt of any
+                              such complaint, initiate an
+                              internal investigation of the matter and shall respond to the Client within a reasonable
+                              amount of time (i.e. within 3
+                              months from the date of acknowledging receipt of the complaint). The Company may extend
+                              this timeframe if deemed
+                              necessary, and in such case, the Company shall notify the Client accordingly.
+                           </p>
+                           <p class="pl-50">
+                              d. Unilaterally terminate the Agreement provided that there is no debt outstanding from
+                              the Client to the Company and
+                              such termination is made in accordance with section 16 herein.
+                           </p>
+                        </li>
+                        <li>
+                           <p>The Client:</p>
+                           <p class="pl-50">a. Acknowledges that the Account shall be activated upon the deposit of
+                              funds/advance
+                              payment into the Account.</p>
+                           <p class="pl-50">
+                              b. Warrants that he/she shall at all times be compliant with and honor all terms and
+                              conditions of this Agreement.
+                           </p>
+                           <p class="pl-50">
+                              c. Warrants that he/she shall ensure that at all times the username and password issued by
+                              the Company in relation to
+                              the use of the Service(s) and the Account, will only be used by him/her and will not be
+                              disclosed to any other person;
+                           </p>
+                           <p class="pl-50">
+                              d. Shall be liable for all orders submitted through his/her security information, and any
+                              orders received in this manner
+                              by the Company shall be considered to have been given by the Client;
+                           </p>
+                           <div class="pl-50">
+                              e. Hereby accepts the risk of orders placed by unauthorized persons and/or trading account
+                              used by someone without the
+                              client’s permission (hereinafter collectively referred to as ‘’unauthorized access’’ or
+                              “hacked account”) and agrees to
+                              indemnify the Company in full for any and all losses, costs and expenses derived as a
+                              result.
+                              In this case, the client
+                              further agrees and accepts the following:
+                              <p class="pl-80">i. The client shall notify the Company immediately regarding unauthorized
+                                 access to
+                                 his/her trading account;</p>
+                              <p class="pl-80">
+                                 ii. The Company shall be entitled to block immediately the client’s trading account and
+                                 increase the processing time
+                                 and/or cancel withdraw requests without prior notification to the Client, and the
+                                 client
+                                 will
+                                 not be entitled to any
+                                 profits made during the time the account was unauthorized accessed;
+                              </p>
+                              <p class="pl-80">
+                                 iii. The client shall provide the Company with any information and/or documents deemed
+                                 necessary in order to unblock the
+                                 trading account.
+                              </p>
+
+                              <p class="pl-80">i. The client shall notify the Company immediately regarding unauthorized
+                                 access to his/her trading account;</p>
+                              <p class="pl-80">
+                                 ii. The Company shall be entitled to block immediately the client’s trading account and
+                                 increase the processing time
+                                 and/or cancel withdraw requests without prior notification to the Client, and the
+                                 client
+                                 will not be entitled to any
+                                 profits made during the time the account was unauthorized accessed;
+                              </p>
+                              <p class="pl-80">
+                                 iii. The client shall provide the Company with any information and/or documents deemed
+                                 necessary in order to unblock the
+                                 trading account.
+                              </p>
+                           </div>
+
+                           <p class="pl-50">
+                              f. Hereby acknowledges that frequent access and logins to the Account via different IP
+                              addresses from different
+                              countries and/or via the use of VPN is an indication that shall reasonably lead the
+                              Company to believe that section
+                              15.4.XI has been breached.
+                           </p>
+                           <p class="pl-50">
+                              g. Confirms that any trading strategies and/or investment decisions and/or any activities
+                              performed by him/her through
+                              his/her Account and on the Trading Platform are made having in mind/considered/being aware
+                              of all risks involved and
+                              solely on the basis of his/her knowledge and upon his/her sole discretion.
+                           </p>
+                           <p class="pl-50">
+                              h. Warrants that he/she shall take all necessary steps and action in order not to disclose
+                              any confidential information
+                              of the Company, which the Company shall disclose to and/or make available to the Client
+                              from time to time.
+                           </p>
+                           <p class="pl-50">
+                              i. Accepts any risk, including without limitation any risk of financial loss, that arises
+                              from unauthorized access to
+                              and operation of his/her Account by third and/or unauthorized parties.
+                           </p>
+                           <p class="pl-50">
+                              j. Shall notify the Company of any changes of his/her contact details and any other
+                              changes of the personal data he/she
+                              provided to the Company, within 7 (seven) calendar days since such changes came into
+                              effect.
+                           </p>
+                           <p class="pl-50">
+                              k. Shall register only 1 (one) Account with the Company. In case that the Client owns
+                              multiple accounts, any
+                              transactions/Operations made via such multiple accounts and corresponding financial
+                              results of such
+                              transactions/Operations, can be canceled at the absolute discretion of the Company. All
+                              such multiple accounts can be
+                              blocked at the Company’s absolute discretion, and the Company shall be entitled to
+                              terminate this Agreement immediately,
+                              close the account and all open positions.
+                           </p>
+                           <p class="pl-50">
+                              l. Shall indemnify and hold harmless the Company of any claims and/or legal actions
+                              instigated against the Company as a
+                              result of disclosure of the Client’s personal data.
+                           </p>
+                           <p class="pl-50">
+                              m. Irrevocably accept full responsibility for his/her actions according to current tax
+                              legislation valid at the place of
+                              residence/living of the Client regarding any performed transactions/Operations, including
+                              but not limited to
+                              revenue/income tax.
+                           </p>
+                           <p class="pl-50">
+                              n. Acknowledges that the provision of the Service(s) may involve information being
+                              transported over an open network.
+                              Information is therefore transmitted regularly and without control across borders. The
+                              Company shall take reasonable
+                              steps to avoid information being intercepted and read by third parties by utilizing
+                              techniques such as encryption,
+                              however it is not always possible to avoid third party unauthorized access to/view of the
+                              Client’s information/personal
+                              data. The Client hereby acknowledges this risk and accepts and consents to this, so long
+                              as he/she is reasonably
+                              satisfied that any such unauthorized access/disclosure was not made intentionally and that
+                              the Company took all
+                              reasonable measures and actions in order to prevent such unauthorized access/disclosure.o.
+                              Acknowledges and agrees that
+                              the Company has the right to close any transaction, at its sole and absolute discretion
+                              without providing prior notice
+                              to the Client if the underlying asset or contract on which the transaction is based
+                              settles on an expiry date as
+                              determined by the relevant financial market, on which the said asset is traded (such time
+                              referred to as 'Closing Time'
+                              and the relevant expiring transaction referred to as an 'Expiring Transaction'). The
+                              Company shall not be obligated to
+                              take actions to roll over an open position in an Expiring Transaction.
+                           </p>
+                           <p class="pl-50">
+                              p. Acknowledges that the Company prohibits third-party or anonymous payments into the
+                              Client’s Account. Only funds sent
+                              from an account held in the Client’s name and belonging to the Client are acceptable. The
+                              Company reserves the right, at
+                              its discretion, if it has identified a third-party or anonymous deposit, to block the
+                              Account. The Client should note
+                              that any remaining funds will be returned to the third-party source via the same payment
+                              method, and any profits
+                              accumulated by the Client using third-party or anonymous funds will not be made available
+                              to the Client.
+                           </p>
+                           <p class="pl-50">
+                              q. Agrees that in case the Company carries out a transaction/Operation on his/her behalf
+                              which is not covered by the
+                              balance of his/her Account, the Company shall have the right to liquidate his/her assets
+                              and use the proceeds to cover
+                              part or the total difference.
+                           </p>
+                           <p class="pl-50">
+                              r. Irrevocably accepts that he/she is solely responsible for any technical deficiencies
+                              that may occur in Client’s
+                              connection to the Trading Platform, in Client's equipment used for receiving the services
+                              (including, but not limited
+                              to, personal computer, laptop, mobile phone etc.), and confirms that he/she shall have no
+                              claims whatsoever against the
+                              Company for any direct and/or indirect damages the Client may suffer due to such
+                              deficiencies.
+                           </p>
+                           <p class="pl-50">
+                              s. Acknowledges that the Company has the right to refuse to execute any
+                              transaction/Operation requested by the Client
+                              and/or any other action required, under this Agreement, for as long as it maintains any
+                              claims against the Client,
+                              whether these are due, future or contingent and regardless of whether these arise from the
+                              same transaction/Operation
+                              from which such obligations arise.
+                           </p>
+                           <p class="pl-50">
+                              t. Acknowledges that the Company has the right to refuse to execute any
+                              transaction/Operation, place restrictions and/or
+                              close the client’s trading accounts operated by the Company under this brand and any other
+                              associated brands. The
+                              Company may exercise this right for reasons including, but not limited to, fraudulent
+                              activities and/or other violations
+                              of the Company’s terms and conditions. Clients acknowledge and agree that such actions by
+                              the Company shall not give
+                              rise to any claims or liabilities against the Company.
+                           </p>
+                           <p class="pl-50">
+                              u. Acknowledges and accepts that this Agreement and/or any materials made available on the
+                              Website may be amended
+                              unilaterally, from time to time, by the Company, and that he/she shall be responsible to
+                              check on the Website frequently
+                              in order to ensure that he/she has made himself/herself aware of any changes effected in
+                              such manner. Upon the
+                              submission of a request by the Client of any transaction/Operation, any changes effected
+                              to this Agreement and/or to3.
+                              any materials made available on the Website shall be deemed as acknowledged and accepted
+                              by the Client.
+                           </p>
+                           <p class="pl-50">
+                              v. If the Company deems that the amendments are material, such amendments will take effect
+                              on the date specified in the
+                              notice to the Client and if no date is specified, then on the date of receipt of the
+                              notice.
+                           </p>
+                           <p class="pl-50">
+                              w. The Client understands and agrees that her/his consent is not necessary for any change
+                              to be effective. Whether the
+                              Client does not respond and/or disagrees with the content of the amendments implemented in
+                              the Company’s Terms and
+                              Conditions, this will be considered as an acceptance by the Client of the contents of the
+                              amendment and of the amended
+                              Terms and Conditions. Further, any order of the Client to execute a transaction(s)
+                              following the receipt of the notice
+                              and/or login into his Account, shall be deemed as acceptance by the Client of the contents
+                              of the amendment and of the
+                              Agreement as amended.
+                           </p>
+                           <p class="pl-50">
+                              x. The Client understands that it is his/her sole responsibility to remain up-to-date with
+                              all changes. The applicable
+                              version shall be the latest version uploaded on the Company’s website, and in the event of
+                              a dispute, the latest version
+                              shall prevail.
+                           </p>
+                           <p class="pl-50">
+                              y. In case the Client does not agree with the amendments, the Client shall be entitled to
+                              terminate this Agreement in
+                              accordance with the Duration and Termination of the Agreement section herein included.
+                           </p>
+                        </li>
+                        <li>
+                           <p>The Client hereby warrants and represents to the Company that he/she:</p>
+                           <p class="pl-50">
+                              a. Is not residing in any country where distribution or provision of financial products or
+                              services offered by the
+                              Company would be contrary to local law or regulations.
+                           </p>
+                           <p class="pl-50">
+                              b. Is responsible for ascertaining the terms of, and shall comply with, any and all
+                              applicable local laws and/or
+                              regulations to which he/she is subject to.
+                           </p>
+                           <p class="pl-50">
+                              c. Has the legal capacity/competence, is of sound mind and has reached the age of maturity
+                              in the country which he is
+                              resident or citizen;
+                           </p>
+                           <p class="pl-50">
+                              d. Is not a citizen of the USA/territories of the US, North Korea, Palestine, Vatican
+                              and/or a resident of either the
+                              USA/territories of the US, Canada, Afghanistan, Australia, Belarus, Belgium, Bouvet
+                              Island, Comoros, Cuba, Democratic
+                              Republic of the Congo, Eritrea, Ethiopia, Gibraltar, Guam, Iran, Israel, Japan, Mali,
+                              Myanmar, North Korea, Palestine,
+                              South Sudan, Sudan, Syria, the Russian Federation, the United Kingdom, Ukraine, Vatican,
+                              any country of the European
+                              Economic Area and/or other non-serviced countries.
+                           </p>
+                           <p class="pl-50">
+                              e. Is not under any legal disability with respect to, and is not subject to any laws or
+                              regulations which prevents
+                              his/her performance of this Agreement or any contract or transaction contemplated by this
+                              Agreement.
+                           </p>
+                           <p class="pl-50">f. The Client acts as principal and not as an authorized representative /
+                              attorney or trustee of any third party.</p>
+                           <p class="pl-50">
+                              g. The monetary funds and/or financial instruments and other assets delivered for any
+                              purpose by the Client to the
+                              Company are not connected directly or indirectly to any illegal and/or criminal activities
+                              and/or terrorism.
+                           </p>
+                           <p class="pl-50">
+                              h. The monetary funds and/or financial instruments and other assets delivered for any
+                              purpose by the Client to the
+                              Company, shall belong exclusively to the Client4. and at all times be free from any
+                              charge, lien, pledge or encumbrance,
+                              unless the Client has otherwise disclosed to the Company in writing.
+                           </p>
+                           <p class="pl-50">
+                              i. The financial instruments, information and/or legal documents, which the Client
+                              delivers to the Company are
+                              authentic, valid and free of any defect, and they shall have the legal effect which they
+                              contend to have.
+                           </p>
+                           <p class="pl-50">
+                              j. The Client certifies that he has provided accurate, complete and true information about
+                              himself upon registration and
+                              will maintain the accuracy of the provided information by promptly updating any
+                              registration information that may have
+                              changed. Failure to do so may result in Account closure, Account limitations and/or
+                              voiding of any transactions.
+                           </p>
+                           <p class="pl-50">
+                              k. The Client will provide KYC documents to the Company within a period not exceeding 7
+                              days from the moment of
+                              depositing funds.
+                           </p>
+                           <p class="pl-50">
+                              l. The Client confirms that the purpose and reason for registering and operating an
+                              Account is to trade, on his/her
+                              personal/own behalf, in any financial instruments and to take advantage of the Services
+                              offered by the Company. The
+                              Client warrants that should the reason for operating an Account change, he/she will inform
+                              the Company immediately.
+                           </p>
+                           <p class="pl-50">
+                              m. The Client warrants and/or shall repeat the above warranties at all times, including,
+                              without limitation, during
+                              and/or upon the execution of any transaction/Operation and/or trade, through the Account
+                              and the provision of the
+                              Services.
+                           </p>
+                        </li>
+                        <li>
+                           <p>The Company shall be entitled to:</p>
+                           <p class="pl-50">
+                              a. Modify the size of the value of the Company’s financial obligations to the Client with
+                              changes of the appropriate
+                              entry of the trade operations register in case of violation of one or several provisions
+                              of the Agreement herein by the
+                              Client.
+                           </p>
+                           <p class="pl-50">
+                              b. The Company reserves the right to change, add or set as default the option payments
+                              rate, return rate, the
+                              possibility of adjusting the return rate, the possibility of acquiring the option type,
+                              the minimum and/or the maximum
+                              option amount, the possible expiration periods for one, several or all of the assets. The
+                              company shall be entitled to
+                              limit the maximum amount of purchased options for 1 (one) minute, 1 (one) hour, 1 (one)
+                              calendar day.
+                           </p>
+                           <p class="pl-50">
+                              c. Contact the Client with any question concerning the Agreement herein, including, in
+                              order to clarify the Client's
+                              intentions regarding his/her actions through the Account.
+                           </p>
+                           <p class="pl-50">
+                              d. Unilaterally modify and/or amend and/or restate the terms and conditions of this
+                              Agreement and/or the material made
+                              available on the Website. The Company shall notify the Client of any such changes through
+                              the Website and/or by the
+                              delivery of an email to the Client.
+                           </p>
+                           <p class="pl-50">
+                              e. Modify the size of the value of the Company’s financial obligations to the Client, if
+                              fulfillment of Operations on
+                              the Trading Platform does not comply with conditions of the Agreement herein.
+                           </p>
+                           <p class="pl-50">
+                              f. Engage third parties with a view to cooperating in order to facilitate and/or enhance
+                              any and/or the provision of the
+                              Services under this Agreement.g. With regard to any matters and/or obligations that are
+                              not covered by this Agreement,
+                              the Company shall act accordingly upon its own discretion, but at all times in accordance
+                              with business custom and
+                              existing practices within the line of the Services.
+                           </p>
+                           <p class="pl-50">
+                              h. The Company reserves the right to request additional supporting documents and/or
+                              information during the verification
+                              of the Client’s Trading Account and on an ongoing basis during the business relationship
+                              if such information is
+                              necessary so as the Company may efficiently offer its services to the Client. In case the
+                              Client fails to provide the
+                              Company with any additional supporting documents including, inter alia, up-to-date
+                              verification documents, within the
+                              specified timeframe, the Company shall be entitled to terminate this Agreement
+                              immediately, close the account and all
+                              open positions.
+                           </p>
+                        </li>
+                        <li>
+                           <p>Obligations of the Company:</p>
+                           <p class="pl-50">
+                              a. Subject to the provisions of this Agreement and the Company being reasonably satisfied
+                              that the Client is compliant
+                              with the terms and conditions of this Agreement and/or has not in any way breached any
+                              terms of this Agreement, the
+                              Company shall offer the Services through the Website;
+                           </p>
+                           <p class="pl-50">b. To fulfill the provisions of the Agreement herein.</p>
+                        </li>
+                     </ol>
+
+                     <h2>8. Indemnity and Liability</h2>
+                     <ol class="pl-50">
+                        <li>
+                           The Client shall indemnify and keep indemnified the Company and its directors, officers,
+                           employees or representatives
+                           against all direct or indirect liabilities (including without limitation all losses, damages,
+                           claims, costs or
+                           expenses), incurred by the Company or any other third party in respect to any act or omission
+                           by the Client in the
+                           performance of his/her obligations under this Agreement and/or the liquidation of any
+                           financial instruments of the
+                           Client in settlement of any claims with the Company, unless such liabilities result from
+                           gross negligence, willful
+                           default or fraud by the Company. This indemnity shall survive termination of this Agreement.
+                        </li>
+                        <li>
+                           The Company shall not be liable for any direct and/or indirect loss, expense, cost or
+                           liability incurred by the Client
+                           in relation to this Agreement, unless such loss, expense, cost or liability is a result of
+                           gross negligence, willful
+                           default or fraud by the Company. Notwithstanding the provisions of section 8.1 above, the
+                           Company shall have no
+                           liability to the Client whether in tort (including negligence), breach of statutory duty, or
+                           otherwise, for any loss of
+                           profit, or for any indirect or consequential loss arising under and/or in connection with the
+                           Agreement.
+                        </li>
+                        <li>
+                           The Company shall not be liable for any loss of opportunity as a result of which the value of
+                           the financial instruments
+                           of the Client could have been increased or for any decrease in the value of the financial
+                           instruments of the Client,
+                           regardless of the cause, unless such loss is directly due to gross negligence, willful
+                           default or fraud on the part of
+                           the Company.
+                        </li>
+                        <li>
+                           The Company shall not be liable for any loss which is the result of misrepresentation of
+                           facts, error in judgment or any
+                           act done or which the Company has omitted to do,whenever caused, unless such act or omission
+                           resulted from gross
+                           negligence, willful default or fraud by the Company.
+                        </li>
+                        <li>
+                           The Company shall not be liable for any act or omission or for the insolvency of any
+                           counterparty, bank, custodian or
+                           other third party which acts on behalf of the Client or with or through whom transactions on
+                           behalf of the Client are
+                           carried out.
+                        </li>
+                        <li>
+                           <p>
+                              In the event that the Company acts as an intermediary to Clients transactions, the Client
+                              hereby agrees and acknowledges
+                              that:
+                           </p>
+                           <ol class="pl-50">
+                              <li>Under certain market conditions at the time of execution and/or depending on the risk
+                                 management framework of the
+                                 third-party market maker, the Company may have to cancel the Client’s trade(s) and/or
+                                 transaction(s) and return the
+                                 relevant invested funds to the Client’s trading account balance. The Company undertakes
+                                 to provide adequate notification
+                                 to the Client in such a case.</li>
+                              <li>
+                                 Should the aforementioned occur, the Client will have no right, claim or demand from
+                                 the Company and undertakes to
+                                 indemnify the Company for any damage caused by the Company's aforesaid action.
+                              </li>
+                           </ol>
+                        </li>
+                     </ol>
+
+                     <h2>9. Personal Data</h2>
+                     <ol class="pl-50">
+                        <li>
+                           By accepting the terms and conditions of this Agreement, the Client irrevocably consents to
+                           the collection and
+                           processing of his/her personal data/information by the Company without the use of automatic
+                           controls, as the same are
+                           provided by him/her to the Company. The term personal data for the purposes of this Agreement
+                           shall mean: the Name,
+                           Surname, Patronymic, gender, address, phone number, e-mail, IP address of the Client, Cookies
+                           and information that
+                           relate to the provision of Services to the Client (for example, the Client’s trading story).
+                        </li>
+                        <li>
+                           The Client shall be obliged to provide correct, accurate and complete personal
+                           data/information as requested by the
+                           Company.
+                        </li>
+                        <li>
+                           The purpose of collecting and processing the personal data is to comply with applicable
+                           regulating legislation
+                           requirements, including without limitation anti-money laundering regulations, as well as for
+                           any and all purposes in
+                           relation to this Agreement, including without limitation to enable the Company to discharge
+                           its obligations towards the
+                           Client.
+                        </li>
+                        <li>
+                           The Client acknowledges and consents to that, for the purposes described in the section
+                           directly above, the Company
+                           shall be entitled to collect, record, systematize, accumulate, store, adjust (update,
+                           change), extract, use, transfer
+                           (disseminate, provide, access), anonymize, block, delete, destroy such personal data and/or
+                           perform any other actions
+                           according to the current regulating legislation.
+                        </li>
+                        <li>
+                           The Client acknowledges and consents to the Company storing, maintaining and processing
+                           his/her personal data in the
+                           manner as described in this Agreement during the term of the Agreement and for a minimum of 7
+                           years following any
+                           termination of the Agreement.
+                        </li>
+                        <li>
+                           The Client hereby acknowledges, accepts, agrees and consents to the disclosure of personal
+                           data by the Company to third
+                           parties and their representatives, solely for the purposes of the Agreement, including
+                           without limitation in order to
+                           facilitate processing/execution of the Client’s orders/Operations, provided that at all times
+                           (i) the amount of personal
+                           data to be disclosed to any such third party is proportionate and/or limited solely to
+                           facilitate to the actions as
+                           described above, and (ii) the Company shall ensure that such third party shall treat the
+                           personal data in accordance
+                           with applicable laws and regulations.
+                        </li>
+                        <li>
+                           The Company shall not be entitled to make available the personal data in public and/or
+                           disclose such personal data for
+                           any other purposes, subject to isclosure required under applicable laws and regulations.
+                        </li>
+                        <li>
+                           During processing of the personal data, the Company shall take necessary legal,
+                           organizational and technical measures to
+                           protect such personal data from unauthorized or accidental access, destruction, change,
+                           blocking, copying, provision,
+                           and dissemination as well as from any other illegal actions.
+                        </li>
+                     </ol>
+
+                     <h2>10. Assignment</h2>
+                     <ol class="pl-50">
+                        <li>
+                           The Agreement shall be personal to the Client, and the Client shall not be entitled to assign
+                           or transfer any of his/her
+                           rights or obligations under this Agreement.
+                        </li>
+                        <li>
+                           The Company may at any time assign or transfer any of its rights or obligations under this
+                           Agreement to a third party.
+                           The Company shall notify the Client of any such assignment.
+                        </li>
+                     </ol>
+
+                     <h2>11. Risk Statement</h2>
+                     <p>
+                        The Client hereby confirms to have read, understood and hereby accepts the risk statement
+                        relating to the use of
+                        Services on the Website, as the same is available electronically via the Website.
+                     </p>
+                     <p>
+                        By accepting this Agreement, the Client accepts that the Client has read and understood the
+                        information contained in
+                        this Agreement and the Company’s general description of the nature and risks of different
+                        Financial Instruments and/or
+                        Service(s) which can be found in our Risk Disclosure.
+                     </p>
+
+                     <h2>12. One-Click Trading Terms and Conditions</h2>
+                     <ol class="pl-50">
+                        <li>
+                           One-Click Trading mode allows you to perform trading operations on the platform with only one
+                           click on the Buy/Call or
+                           Sell/Put buttons, without any additional confirmations.
+                        </li>
+                        <li>
+                           Opting in for the One-Click Trading mode means that you acknowledge that you have read and
+                           understood the following
+                           terms and conditions, and you agree to be bound hereby.
+                        </li>
+                        <li>
+                           <p>
+                              Your current version of the platform enables you to choose between the following modes for
+                              order submission. You agree
+                              that you will be bound by the procedures and conditions specified herein with respect to
+                              each
+                              such mode.
+                           </p>
+                           <ul class="pl-50">
+                              <li>
+                                 There are several steps you have to follow when using the default mode for the
+                                 submission of orders. Using the default
+                                 mode, you first invoke the instruments menu and choose the assets you want to trade.
+                                 Then you select all parameters
+                                 depending on the instrument you have chosen and confirm your order submission by
+                                 clicking either Buy/Call or Sell/Put
+                                 buttons depending on the particular order type selected and your trading intentions.
+                                 Using the default mode, a
+                                 confirmation window will appear, and you will have to confirm your intentions and the
+                                 trade details in order to confirm
+                                 the transaction. Your order will not be submitted until you have completed the
+                                 aforementioned procedure.
+                              </li>
+                              <li>
+                                 The One-Click Trading mode for order submission (“One-click trading”) is a one-step
+                                 process. You will be submitting
+                                 orders when you single-click either Buy/Call or Sell/Put buttons.
+                              </li>
+                           </ul>
+                        </li>
+                        <li>
+                           There will be no subsequent confirmation prompt for you to click; hence you should ensure
+                           beforehand that all parameters
+                           are set based on your trading intentions. You will not be able to withdraw your order once
+                           you click the Buy/Call or
+                           Sell/Put buttons (with the exemption of a 3-second cancellation period for binary options)
+                           and only certain parameters
+                           such as stop loss and take profit orders for CFDs can be modified after having opened a
+                           trade. Under normal market
+                           conditions and system performance, a market order will be promptly filled after submission,
+                           and you will have entered
+                           into a binding transaction.
+                        </li>
+                        <li>
+                           You can activate or deactivate One-Click Trading mode in the settings of the platform.
+                           One-Click Trading can be
+                           activated or deactivated for one or several instruments in the settings.
+                        </li>
+                        <li>
+                           By selecting the One-Click Trading mode, you understand that your orders will be submitted by
+                           clicking the Buy/Call or
+                           Sell/Put button, without any further order confirmation. You agree to accept all risks
+                           associated with the use of the
+                           order submission mode you have chosen, including, without limitation, the risk of errors,
+                           omissions or mistakes made in
+                           submitting any order.
+                        </li>
+                        <li>
+                           You agree to fully indemnify and hold harmless the Company from any and all losses, costs and
+                           expenses that may incur as
+                           a result of any such errors, omissions or mistakes by you or any other person trading on your
+                           behalf.
+                        </li>
+                        <li>
+                           If you accept the One-Click Trading terms and conditions, tick the “buy in one click” option
+                           when opening trades on the
+                           platform. If you do not accept the conditions, do not tick the box and do not use the
+                           One-Click Trading function.
+                        </li>
+                     </ol>
+
+                     <h2>13. Governing Law</h2>
+                     <ol class="pl-50">
+                        <li>
+                           The terms and conditions of this Agreement as well as any matters pertaining to this
+                           agreement, including without
+                           limitation to matters of interpretation and/or disputes, shall be governed by the laws of
+                           Saint Kitts and Nevis.
+                        </li>
+                        <li>The Company and the Clients irrevocably submit to the jurisdiction of the courts of Saint
+                           Kitts and Nevis.</li>
+                        <li>
+                           The Company shall be entitled to use the interpreter's services during the court trial in
+                           case of dealing with a
+                           disputable situation according to the legislation of Saint Kitts and Nevis.
+                        </li>
+                     </ol>
+
+                     <h2>14. Duration and Termination of the Agreement</h2>
+                     <ol class="pl-50">
+                        <li>The Agreement herein shall be concluded for an indefinite term.</li>
+                        <li>
+                           The Agreement herein shall come into force when the Client accepts the Agreement and makes an
+                           advance payment to the
+                           Company.
+                        </li>
+                        <li>
+                           In case of any discrepancies between the text of the Agreement in English and its translation
+                           in any other language, the
+                           text of the Agreement in English as a whole shall prevail, as well as the English
+                           version/text of any other
+                           documentation/information published on the Website.
+                        </li>
+                        <li>
+                           <p>The Agreement may be terminated in any of the following circumstances:</p>
+                           <p class="pl-50">
+                              A. Each Party shall be entitled to terminate this Agreement at any time by giving to the
+                              other Party 15 (fifteen) days
+                              written notice. During the 15 days notice, the Company may limit the services available to
+                              the Client; however, access
+                              will be granted in order for the Client to withdraw any remaining balance.
+                           </p>
+                           <p class="pl-50">
+                              B. The Company shall be entitled to terminate this Agreement immediately, close all open
+                              positions, block the Client’s
+                              account, and return any remaining funds (if applicable) and without giving prior notice
+                              under the following
+                              circumstances:
+                           </p>
+                           <p class="pl-50">i. Death or legal incompetence of the Client.</p>
+                           <p class="pl-50">
+                              ii. If any application is made or any order is issued, or a meeting is convened, or a
+                              resolution is approved, or any
+                              measures of bankruptcy or winding up of the Client are taken.
+                           </p>
+                           <p class="pl-50">
+                              iii. The Client violates, or the Company has reasonable grounds to believe that the Client
+                              violated, any of the Client’s
+                              obligations under and/or terms of, this Agreement and/or is in breach of any of the
+                              warranties and representations made
+                              by her/him in this Agreement.
+                           </p>
+                           <p class="pl-50">
+                              iv. If it comes to the Company’s attention and/or the Company has reasonable grounds to
+                              believe that the Client has not
+                              reached the age of maturity in the country in which he is resident or citizen, as
+                              applicable.
+                           </p>
+                           <p class="pl-50">
+                              v. If it comes to the Company’s attention and/or the Company has reasonable grounds to
+                              believe that the Client became a
+                              citizen of the USA/territories of the US, North Korea, Palestine, Vatican and/or a
+                              resident of either the
+                              USA/territories of the US, Canada, Afghanistan, Australia, Belarus, Belgium, Bouvet
+                              Island, Comoros, Cuba, Democratic
+                              Republic of the Congo, Eritrea, Ethiopia, Gibraltar, Guam, Iran, Israel, Japan, Mali,
+                              Myanmar, North Korea, Palestine,
+                              South Sudan, Sudan, Syria, the Russian Federation, the United Kingdom, Ukraine, Vatican,
+                              any country of the European
+                              Economic Area and/or other non-serviced countries.
+                           </p>
+                           <div class="pl-50">vi. The Company has suspicion based on available information that the
+                              Client:
+                              <p class="pl-50">
+                                 a. Is and/or has been using fraudulent means or was involved in a fraudulent scheme in
+                                 relation to the performance of
+                                 this Agreement;
+                              </p>
+                              <p class="pl-50">
+                                 b. Has illegally and/or improperly and/or unfairly and/or otherwise gained an unfair
+                                 advantage, over and/or to the
+                                 detriment of (i) other clients of the Company and/or (ii) the Company;
+                              </p>
+                              <p class="pl-50">
+                                 c. Has unjustly enriched by using information which was intentionally and/or
+                                 negligently
+                                 and/or otherwise concealed
+                                 and/or not disclosed in advance by the Client to the Company and/or for which the
+                                 Company
+                                 had known in advance, it would
+                                 have not consented and/or it would not have authorized the use of such information by
+                                 the
+                                 Client for the purposes of
+                                 this Agreement; and/or
+                              </p>
+                              <p class="pl-50">
+                                 d. Has performed acts with the intention and/or effect of manipulating and/or abusing
+                                 the
+                                 market and/or the Company’s
+                                 trading systems and/or deceiving the Company and/or defrauding the Company; and/or
+                              </p>
+                              <p class="pl-50">e. Has acted in bad faith during the performance of his obligations under
+                                 the Agreement.</p>
+                           </div>
+                           <p class="pl-50">
+                              vii. The Client being guilty, or the Company has suspicions that the Client is guilty of
+                              malicious conduct or gross
+                              negligence or fraud or of using fraudulent means or was involved in a fraud scheme in
+                              relation to the performance of
+                              this Agreement.
+                           </p>
+                           <p class="pl-50">
+                              viii. The termination is required under applicable law.
+                              ix. In case the Client receives 2 warnings regarding verbal abuse against employees of the
+                              Company.
+                              x. If the Client didn’t provide to the Company his KYC documents within 14 days from the
+                              moment of acceptance of this
+                              Agreement, constituting, thus, his/her Account as an unverified Account.
+                           </p>
+                           <p class="pl-50">
+                              xi. In case the Client uses and/or there are indications that lead the Company to
+                              reasonably believe that the Client
+                              uses different IP addresses from different countries and/or VPN and/or VPS during the
+                              course of executing any
+                              transactions and/or trades through the Trading Account and/or the provision of the
+                              Services. Whether the Client has
+                              provided notice to the Company for any change to its IP address and/or of the use of VPN
+                              and/or VPS is irrelevant.
+                           </p>
+                           <p class="pl-50">
+                              xii. The Client has initiated a chargeback in relation to the funds held in the Client’s
+                              Account. In case the Company
+                              identifies that the Client created any additional trading account(s) following the
+                              chargeback dispute, the Company shall
+                              be entitled to, without giving prior notice, terminate the Agreement immediately, close
+                              all open positions, block the
+                              account(s), and return any remaining own funds (if applicable) excluding profits.
+                           </p>
+                           <p class="pl-50">
+                              xiii. Where the Company identifies that the Client is involved and/or is using a
+                              high-frequency trading software with
+                              the purpose of manipulating the Company’s systems and/or trading platform and/or has
+                              illegally and/or improperly and/or
+                              maliciously and/or knowingly gained an unfair advantage over and/or to the detriment of
+                              other clients of the Company
+                              and/or the Company and/or this high-frequency trading software is designed to abuse the
+                              Company’s systems and/or trading
+                              platform.
+                           </p>
+                           <p class="pl-50">
+                              xiv. Where the Company identifies that the Client’s funds and/or payment account(s) have
+                              been used to fund a third-party
+                              account, and it has reasonable suspicion that the Client and/or third party is
+                              circumventing any of the clauses of the
+                              present Agreement by doing so and/or is acting in collaboration with a third party
+                              circumventing any of the clauses of
+                              this Agreement.
+                           </p>
+                           <p class="pl-50">
+                              xv. The client is and/or has been convicted of a criminal offence and/or is cautioned
+                              and/or charged by the police or
+                              other competent authority with a criminal offence.
+                           </p>
+                        </li>
+                        <li>
+                           In case of termination of this Agreement for a reason indicated in clause 15.4.B, of this
+                           Agreement, the Company shall
+                           have no liability towards the Client and no obligation to pay any of the profits generated by
+                           trading (if any);
+                           Furthermore, it is up to the Company’s sole discretion to decide if any deposited funds will
+                           be paid to the Client.
+                        </li>
+                        <li>
+                           In case of termination of this Agreement for a reason indicated in sections 15.4.A of this
+                           Agreement, the Company shall
+                           have either to wire to the Client the remaining balance or to give to the Client the
+                           opportunity to withdraw his/her
+                           remaining balance.
+                        </li>
+                     </ol>
+
+                     <h2>15. Terms and Conditions for 1-Click Service</h2>
+                     <ol class="pl-50">
+                        <li>
+                           The Client shall agree to make a deposit to his/her Account to use the Company Services or
+                           any other additional services
+                           ordered by the Client on the Website as well as all additional expenses (if necessary),
+                           including but not limited to any
+                           taxes, duties, etc. The Client shall be completely responsible for timely depositing the
+                           funds into his/her Account.
+                           Provider of payment services shall ensure only fulfillment of payment in the amount defined
+                           by the Site and shall not be
+                           liable for payment of the above-mentioned additional amounts by the Website’s Client.
+                        </li>
+                        <li>
+                           The payment is considered to be processed and cannot be returned after clicking the “Payment”
+                           button. By clicking the
+                           “Payment” button, the Client shall agree that he/she cannot return the payment or require its
+                           recall. Additionally, by
+                           accepting the terms and conditions herein contained, the Client as the owner of the payment
+                           card confirms that he/she
+                           shall be entitled to use the Services offered on the Website.
+                        </li>
+                        <li>
+                           By accepting the terms and conditions of this Agreement and depositing funds to the Account,
+                           the Client agrees to use
+                           the Website’s Services and accepts that the processing of any of the Client’s payment shall
+                           be executed by a provider of
+                           payment services, being a third party to this Agreement (the “Provider”), and the Client
+                           further acknowledges and
+                           accepts that no legal right exists for return of already purchased Services or other options
+                           of payment cancellation. In
+                           case if the Client is willing to refuse from using the 1-Click service for the next purchase
+                           of the Service, the Client
+                           can refuse from 1-Click service using the Account on the Website.
+                        </li>
+                        <li>
+                           Note that 1-click deposits (recurring payments) are not processed as 3-D secure transactions,
+                           the client needs to enable
+                           the 3-D secure function if he would like the payments to be processed as 3-D secure.
+                        </li>
+                        <li>
+                           The Provider shall not be in any case liable for the refusal/impossibility to process the
+                           data connected with the
+                           payment card of the Client, or for the refusal connected with failure to obtain permission
+                           from the issue bank to
+                           process payment using the payment card of the Client. The Provider shall not be in any case
+                           liable for the quality,
+                           amount, and price of any service, offered to the Client or purchased by the Client of the
+                           Website using the payment card
+                           of the Client. Paying for any Services of the Website, the Client first of all shall be
+                           obliged to fulfill the rules of
+                           using the Website. We are asking to consider that only the Client as the owner of the payment
+                           card shall be liable for
+                           timely payment of any service ordered via the Website and for all additional expenses/fees
+                           connected with this payment.
+                           The Provider shall only be the performer of payment in the amount specified by the Website
+                           and shall not be in any case
+                           liable for any pricing, general prices and/or total sums.
+                        </li>
+                        <li>
+                           In case of the situation connected with the Client’s dissent with the terms mentioned above
+                           and/or any other reasons, we
+                           are asking the Client to promptly refuse from making a payment and to directly address the
+                           administrator/support of the
+                           Website if necessary.
+                        </li>
+                     </ol>
+                     <h3>Annex 1 – General Terms</h3>
+                     <h3>Technical Regulation</h3>
+                     <h3>The Client’s Responsibility</h3>
+                     <ol class="pl-50">
+                        <li>The Client acknowledges that these General Terms are an integral part of this Agreement.
+                        </li>
+                        <li>
+                           It is the Client's responsibility to verify that all transactions and Service(s) received are
+                           not contradictory to any
+                           applicable law and to undertake any other legal duty emanating from the use of the Website at
+                           the Client’s sole option,
+                           discretion and risk, and the Client is solely responsible for ascertaining whether it is
+                           legal in the Client's
+                           jurisdiction and/or place of residence. The Client holds sole liability for all transactions
+                           in his Trading Account,
+                           including all card transactions or other means of deposit and withdrawal transactions (as
+                           stated below). The Client
+                           acknowledges that the Company reserves the right to accept or decline any deposit and/or
+                           funding and/or withdrawal
+                           request by the Client depending on the payment method that the Client chooses (which includes
+                           but is not limited to the
+                           third party financial institution from which the Client wishes to deposit/withdraw funds with
+                           the Company (Third-Party
+                           Institutions)), and the Company may suggest to the Client an alternative for its request. It
+                           is important to note that
+                           the Company does not have and cannot in any way have any, control over such Third-Party
+                           Institutions and any
+                           transactions made by the Client through the Platform using such institutions, and it is
+                           hereby acknowledged and agreed
+                           that the Company shall bear no liability, monetary or otherwise, in relation to any loss of
+                           funds incurred by the Client
+                           pursuant to any actions or omissions of Third-Party Institutions.
+                        </li>
+                        <li>
+                           The Client is responsible for securing his/her Username and Password for his Trading Account.
+                           The Client holds sole
+                           responsibility for any damage caused due to any act or omission of the Client causing
+                           inappropriate or irregular use of
+                           the Client Trading Account.
+                        </li>
+                        <li>
+                           It is clearly stated and agreed by the Client that the Client bears sole responsibility for
+                           any decision made and/or to
+                           be made by the Client relying on the content of the Website and no claim and/or suit of any
+                           kind will arise to that
+                           effect against the Company and/or its directors and/or employees and/or functionaries and/or
+                           Agents (the Company and/or
+                           its Agents). The Company and/or its Agents will hold no responsibility for loss of profits
+                           due to and/or related to the
+                           Website, Transactions carried out by the Client, Services and the General Terms of use or any
+                           other damages, including
+                           special damages and/or indirect damages or circumstantial damages caused, except in the event
+                           of malicious acts made by
+                           the Company.
+                        </li>
+                        <li>
+                           Without limitation of the aforesaid and only in the event of definitive judgment by court or
+                           other authorized legal
+                           institution resolving that the Company and/or its Agent(s) hold liability towards the Client
+                           or third party, the
+                           Company's liability, in any event, will be limited to the amount of money deposited and/or
+                           transferred by the Client to
+                           the Trading Account in respect of the transaction which caused the liability of the Company
+                           and/or its Agent(s) (if such
+                           was caused).
+                        </li>
+                        <li>
+                           No Trading Account will be approved without the completion of the Company’s compliance
+                           procedures, including the
+                           identification and verification of the Account.
+                        </li>
+                     </ol>
+
+                     <h2>2. Risks</h2>
+                     <ol class="pl-50">
+                        <li>
+                           The value of the Financial Instruments offered by the Company may increase or decrease. The
+                           Client acknowledges that
+                           they fully understand the risks involved in trading CFDs (and other similar products),
+                           including, but not limited to,
+                           the risk of loss of all funds.
+                        </li>
+                        <li>
+                           CFD Trading does not give you any right to the underlying instrument of the Transaction. This
+                           means that you do not have
+                           any interests in, or the right to purchase, any underlying shares in relation to such
+                           instruments because the CFDs
+                           represent a notional value only.
+                        </li>
+                        <li>
+                           Virtual currencies are complex and high-risk products, and their prices fluctuate widely; as
+                           such, they entail the risk
+                           of losing the entire invested capital. Trading cryptocurrencies may result in significant
+                           loss over a short period of
+                           time. Clients should not trade in virtual currencies in case they do not have the necessary
+                           knowledge and expertise in
+                           these products.
+                        </li>
+                        <li>
+                           The Client acknowledges that he has read, understood and accepted the Company’s risk
+                           disclosure information found on the
+                           Company’s Website.
+                        </li>
+                     </ol>
+
+                     <h2>3. Financial Information</h2>
+                     <ol class="pl-50">
+                        <li>
+                           The Company should not be held responsible for any losses that the Client may incur (or to a
+                           third party) due to
+                           reliance on inaccurate or erroneous financial information on the Website.
+                        </li>
+                        <li>
+                           The Client should verify the accuracy and reliability of the information on the Website and
+                           its appropriateness in
+                           comparison with other dependable information sources. The Company will not be held
+                           responsible for any allegedly caused
+                           claim, cost, loss or damage of any kind as a result of information offered on the Website or
+                           due to information sources
+                           used by the Website.
+                        </li>
+                        <li>
+                           The Client approves and accepts that any oral information given to him/her in respect of his
+                           Trading Account might be
+                           partial and unverified. The Client accepts sole risk and responsibility for any reliance on
+                           the aforementioned
+                           information. The Company does not give any warranty that pricing or other information
+                           supplied by it through its trading
+                           software or any other form is correct or that it reflects current market conditions.
+                        </li>
+                     </ol>
+
+                     <h2>4. Processing of Trade Requests and Orders</h2>
+                     <div class="pl-50">
+                        <p>A. The processing of a Client’s request and/or order shall be carried out as follows:</p>
+                        <ol class="pl-50">
+                           <li>Following submission of a request/order, such request/order shall undergo a correctness
+                              test on the Trading Platform;</li>
+                           <li>The request/order shall be sent from the Trading Platform to the server;</li>
+                           <li>The request/order shall undergo a correctness test by the server;</li>
+                           <li>The server shall then forward the results of the correctness test to the Trading
+                              Platform;</li>
+                           <li>
+                              In case that the connection between the trading platform and the server is correct, the
+                              trading platform will receive
+                              the results of processing of the Client request or order by the Company.
+                           </li>
+                        </ol>
+                        <p>B. The time of the process may vary and depends on the quality of the communication between
+                           the Trading Platform and the
+                           server of the Company, as well as on the market. conditions. In normal market conditions, the
+                           time of the process
+                           usually varies between 0–4 seconds. In market conditions that differ from normal, the time of
+                           Client request/order
+                           processing can be higher than that.</p>
+                        <p>C. The server of the Company may refuse the Client’s request/order in the following cases:
+                        </p>
+                        <ol class="pl-50">
+                           <li>If the Client sends the request before the first quote on the Trading Platform on the
+                              market opening.</li>
+                           <li>If there is not enough funds in the Client’s account for opening a new position;</li>
+                           <li>If the Client sends the request/order before the opening of the trading session;</li>
+                           <li>
+                              When market conditions differ from normal, such as there is significant volatility or
+                              instability in the markets, or the
+                              industry as a whole, preventing us from providing our services in an orderly manner,
+                              including any instances where we
+                              are unable to receive data and/or we receive incorrect data from our service providers.
+                           </li>
+                           <li>
+                              When using the trading platform, it is allowed to use only one tab of the browser. In case
+                              of using several tabs of the
+                              browser, the results of trade can be corrected and/or canceled.
+                           </li>
+                        </ol>
+                     </div>
+                     <h2>5. Quotes</h2>
+                     <ol class="pl-50">
+                        <li>
+                           The Client acknowledges that the only reliable source of quote flow information is the
+                           main server for customer
+                           requests. The quotes on the Trading Platform cannot serve as a reliable source of
+                           information about the real quotes
+                           flow, as in the case of unstable connection between the Trading Platform and the server
+                           part of the quotes from the flow
+                           may not reach the Trading Platform.
+                        </li>
+                        <li>
+                           The graphs displayed on the Trading Platform are indicative. Thus, the Company does not
+                           guarantee that the transaction
+                           will be made at the same prices specified on the graphs in the Trading Platform at the
+                           time of submission of the other
+                           customer transactions.
+                        </li>
+                        <li>
+                           The price displayed on the Trading Platform is formed by the formula (Bid+Ask)/2.
+                           Non-market quote – the price on the Trading Platform which does not correspond to the
+                           price on the market at this moment
+                           of time (hereinafter referred to as the <b>“Non-market price”</b>).
+                        </li>
+                        <li>
+                           <p>
+                              In case that the Company executed the Client’s request/order for Non-market quote, the
+                              following shall be imposed on the
+                              Company’s duty:
+                           </p>
+                           <p class="pl-50">
+                              a. In case of position closing – correction of the financial result between incorrect
+                              closing of the position and
+                              closing according to real market price corresponding to the closing moment of
+                              transaction according to Non-market price.
+                           </p>
+                           <p class="pl-50">b. In case of position opening – the Company reserves the right to cancel
+                              the financial result regarding such position.</p>
+                        </li>
+                     </ol>
+
+                     <h2>6. Copyright</h2>
+                     <ol class="pl-50">
+                        <li>
+                           PoPoMark is a global brand, which in your jurisdiction is operated by Sun Wave LLC a
+                           company registered at Lighthouse
+                           Trust Nevis Ltd, Suite 1, A.L. Evelyn Ltd Building, Main Street, Charlestown, Nevi
+                           (hereinafter “We” or “Company”). We
+                           are the controller and responsible for the data of the Client disclosed to us in order to
+                           register for a Trading
+                           Account, Demo Account and/or to make use of any other services offered by us through the
+                           website (hereinafter “Website”)
+                           (this term shall at all times include Website’s desktop and mobile versions).
+                        </li>
+                        <li>
+                           The Company is the owner of all intellectual property rights on and throughout the Website
+                           as well as the material on
+                           it, including any copyright, database rights and trademarks. Any such right not belonging
+                           to the Company belongs to
+                           third parties and is protected by copyright laws and treaties around the world. All such
+                           rights are reserved.
+                        </li>
+                        <li>
+                           All copyright, database rights, trademarks and any other intellectual property rights in
+                           the content of and/or
+                           throughout the Website, belong to the Company or a third party, including without
+                           limitation to licensors and vendors of
+                           the Company. The material and content on the Website (in whatever form it exists), may or
+                           may not be identified by a
+                           symbol, and they include, but are not limited to designs, photographs, graphics, drawings,
+                           text, etc. The lack of any
+                           such symbol should not be understood as meaning that the name, term or data is not the
+                           intellectual property of either
+                           the Company or any third party or any licensor of the Company.
+                        </li>
+                        <li>PoPoMark (in word or stylized forms) has been registered internationally.</li>
+                        <li>
+                           The use of the word PoPoMark and/or any trademark or intellectual property rights of the
+                           Company (as referred to in this
+                           paragraph 6.1), without the Company’s express and written pre-approval, is strictly
+                           prohibited in all ways. Such
+                           prohibited acts, include but are not limited to copying, duplicating, presenting in
+                           public, altering, advertising,
+                           broadcasting, transferring, selling, or delivering trademarks or any intellectual property
+                           rights, in whole or in part
+                           to any third parties, distributing, including by publishing on the Internet, or making any
+                           commercial use of the
+                           trademarks/intellectual property rights, in whole or in part.
+                        </li>
+                        <li>
+                           Any reference, presentation and/or use on the Website of trademarks and/or any
+                           intellectual property rights which are
+                           not owned by the Company but are owned by other third parties (Third-Party IP) is fair
+                           since their usage is limited to
+                           (a) descriptive and informative purposes and at no time as part of the Company’s Services,
+                           and (b) the minimum
+                           necessary. Such Third-Party IP is on the Website only for informative purposes, to provide
+                           a simple description of the
+                           service/goods of the particular third party and of the use of such service/goods by the
+                           Company within the context and
+                           for the purpose of performing its obligations under this Agreement for the provision of
+                           the Services.
+                        </li>
+                        <li>
+                           For the sake of clarity, it is noted that the mere description of the Third-Party IP is
+                           not of a commercial nature and
+                           is only a description without which it is impossible to uniquely identify them, is not an
+                           advertisement for goods and/or
+                           services of the third parties or the Services of the Company, and does not imply a
+                           comparison between the goods and/or
+                           services of any third parties and the Company.
+                        </li>
+                        <li>
+                           The Company and the owners of the Third-Party IP (excluding official licensors, partners,
+                           vendors) are not affiliated in
+                           any way, and/or are not partners, or sponsors to each other,they are not bound by
+                           licensing, marketing, and/or any other
+                           agreements or mutual obligations, unless this is expressly stated on the Website.
+                        </li>
+                        <li>
+                           Unless explicitly stated otherwise, any material and/or message, including without
+                           limitation, idea, knowledge,
+                           technique, marketing plan, information, questions, answers, suggestions, emails and
+                           comments (hereinafter –
+                           “Information”) delivered to the Company shall not be considered the Client's confidential
+                           or proprietary right of.
+                           Consent to the Agreement will be considered as authorization to the Company to use the
+                           entire Clients' Information
+                           (excluding Clients' Information designated for personal identification), at the absolute
+                           and sole discretion of the
+                           Company without requirement of any additional permission from the Client and/or the
+                           payment of any compensation due to
+                           such use.
+                        </li>
+                        <li>
+                           The Client undertakes that any notice, message or any other material supplied by the
+                           Client shall be appropriate and
+                           shall not harm other persons including their proprietary rights. The Client shall refrain
+                           from uploading or sending any
+                           illegal and/or harmful and/or disturbing to other Clients material, and is strictly
+                           forbidden from taking any action,
+                           which might damage the Company.
+                        </li>
+                     </ol>
+
+                     <h2>7. Content and Third Parties’ Websites</h2>
+                     <ol class="pl-50">
+                        <li>
+                           The Website might include general information, news, comments, quotes and other
+                           information
+                           related to financial markets and/or advertising. Some information is supplied to the
+                           Website
+                           by unaffiliated companies.
+                        </li>
+                        <li>
+                           The Company does not provide investment research. All news, comments, quotes and other
+                           information related to financial markets published by the Company are of a
+                           promotional/marketing nature only.
+                        </li>
+                        <li>
+                           The Company does not prepare, edit or promote the information/links and/or other
+                           information
+                           provided by unaffiliated companies.
+                        </li>
+                        <li>
+                           The Company will not be liable for the content of any third-party websites or the actions
+                           or
+                           omissions of their proprietors, nor for the contents of third-party advertisements and
+                           sponsorship on those websites. The hyperlinks to other websites are provided for
+                           information
+                           purposes only. Any Client and/or potential client uses any such links at his/her own risk.
+                        </li>
+                     </ol>
+
+                     <h2>8. Processing of Client Orders to Open Positions</h2>
+                     <ol class="pl-50">
+                        <li>If the amount of available funds is sufficient to open a position – the position will be
+                           opened.</li>
+                        <li>If the size of the available funds is insufficient to open a position – the position will
+                           not be opened.</li>
+                        <li>
+                           The Client’s order to open a position is processed, and the position is opened only after
+                           the corresponding entry in the
+                           server log file. Each new position is assigned with a serial number.
+                        </li>
+                     </ol>
+
+                     <h2>9. Processing of Client Orders to Close Positions</h2>
+                     <p>Closing of a trading position occurs at the current price at the trading server at the moment
+                        of closing of the trading
+                        operation.</p>
+
+                     <h2>10. OTC Assets</h2>
+                     <ol class="pl-50">
+                        <li>
+                           OTC Asset or “over the counter” is an asset that is traded out of the regular market
+                           (hereinafter referred to as the
+                           “Asset”).
+                        </li>
+                        <li>The Asset’s price is formed from data for trade requests and orders of the Clients,
+                           received by the Company.</li>
+                        <li>
+                           The Client acknowledges that by making trade requests and orders on such Asset, he/she
+                           understands the essence of the
+                           work of such an Asset and the pricing algorithm of the Asset.
+                        </li>
+                        <li>
+                           The Client acknowledges that by making trade requests and orders on such Asset, he/she
+                           admits that the only reliable
+                           source of quoting information is the main server for the trade orders of the Clients.
+                        </li>
+                     </ol>
+
+                     <h2>11. Fraud</h2>
+                     <div>
+                        <p>In the event that the Company has reasonable suspicion to believe and/or comes to its
+                           attention that the Client has
+                           acted fraudulently with regard to the subject matter of the Agreement, including without
+                           limitation to the following
+                           occurrences:</p>
+                        <ol class="pl-50">
+                           <li>Fraud associated with credit card transactions and other ways to fill a balance that
+                              does not belong to the Client;</li>
+                           <li>Fraud associated with the use of software for false trading results;</li>
+                           <li>Fraud associated with errors and system failures for false trading results</li>
+                        </ol>
+                        <p>The Company shall be entitled to block the Client's account without prior notice and
+                           without the possibility of further
+                           money withdrawal, and/or entitled to unilaterally terminate the Agreement in the
+                           extrajudicial procedure.</p>
+                     </div>
+
+                     <h2>12. Benefits</h2>
+                     <p>The Company may provide benefits to clients, including but not limited to, VIP status and/or
+                        other privileges
+                        (“Benefits”), at its absolute discretion and subject to fulfilling the required conditions.
+                     </p>
+                     <p>The Client acknowledges and accepts:</p>
+                     <ol class="pl-50">
+                        <li>
+                           The Company reserves the right, without prior notification, to amend or cancel any of the
+                           Benefits provided at any time
+                           for any reason;
+                        </li>
+                        <li>
+                           Conditions are subject to change at any time and may vary depending on each region;
+                           It is prohibited to abuse any of the privileges provided by the Company (e.g. creating
+                           multiple trading accounts to
+                           claim these Benefits);
+                        </li>
+                        <li>The client may submit a request to support@popomark.com to stop receiving such Benefits
+                           at any time.</li>
+                     </ol>
+
+                     <h2>13. Foreign Exchange</h2>
+                     <ol class="pl-50">
+                        <li>
+                           For any conversion required to be effected from one currency to another for the execution
+                           of any order, the Company is
+                           entitled at its absolute discretion to debit the Client’s Trading Account with the
+                           equivalent amount of the transaction
+                           in the currency in which the Client holds the Trading Account.
+                        </li>
+                        <li>
+                           For the execution of payments when the currency of the trading account is different from
+                           the processing currency of the
+                           payment, the Company shall convert from one currency to another for each transaction,
+                           based on the exchange rate at the
+                           time of conversion (including the currency conversion fee specified in the General Fees
+                           Policy).
+                        </li>
+                        <li>
+                           The Client acknowledges and agrees that he shall undertake all risks deriving from any
+                           such conversion and, in
+                           particular, the risk of loss which may be incurred as a result of the fluctuation in the
+                           exchange rates.
+                        </li>
+                     </ol>
+
+                  </div>
+               </section>
+               <div class="back-to-top">
+                  <svg>
+                     <use xlink:href="#icon-arrow-up"></use>
+                  </svg>
+               </div>
+            </div>
+         </div>
+      </main>
+      <footer class="footer">
+   <div class="footer__body container">
+      <div class="footer__main">
+         <div class="footer__col">
+            <div class="footer__logo">
+               <img src="img/logo-brand.svg" alt="">
+            </div>
+            <nav class="footer__menu">
+               <ul class="footer__menu-list">
+                  <li class="footer__menu-item">
+                     <a href="" class="footer__menu-link footer__menu-add">
+                        For traders
+                        <svg>
+                           <use xlink:href="#icon-chevron"></use>
+                        </svg>
+                     </a>
+                     <ul class="footer__sublist">
+                        <li class="footer__subitem">
+                           <a href="forex.html" class="footer__sublink footer__sublink-add">Forex
+                              <svg>
+                                 <use xlink:href="#icon-chevron"></use>
+                              </svg>
+                           </a>
+                           <ul class="footer__subsublist">
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">EUR/USD</a></li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">GBP/JPY</a></li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">USD/JPY</a></li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">GBP/USD</a></li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">AUD/USD</a></li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">All Pairs</a></li>
+                           </ul>
+                        </li>
+                        <li class="footer__subitem">
+                           <a href="" class="footer__sublink footer__sublink-add">Crypto
+                              <svg>
+                                 <use xlink:href="#icon-chevron"></use>
+                              </svg>
+                           </a>
+                           <ul class="footer__subsublist">
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Bitcoin (BTC)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Ethereum (ETH)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Ripple (XRP)</a></li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Litecoin (LTC)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Dogecoin (DOGE)</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="footer__subitem">
+                           <a href="" class="footer__sublink footer__sublink-add">Stocks
+                              <svg>
+                                 <use xlink:href="#icon-chevron"></use>
+                              </svg>
+                           </a>
+                           <ul class="footer__subsublist">
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Apple (AAPL)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Tesla (TSLA)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Amazon (AMZN)</a>
+                              </li>
+                              <li class="footer__subsubitem"><a href="https://trade.popomark.com/en/register"
+                                    class="footer__subsublink">Microsoft (MSFT)</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="footer__subitem">
+                           <a href="" class="footer__sublink footer__sublink-add">Options</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="footer__menu-item">
+                     <a href="download.html" class="footer__menu-link footer__menu-add">
+                        Download app
+                        <svg>
+                           <use xlink:href="#icon-chevron"></use>
+                        </svg>
+                     </a>
+                     <ul class="footer__sublist">
+                        <li class="footer__subitem">
+                           <a href="https://trade.popomark.com/en/register" class="footer__sublink">
+                              Mac
+                              <svg>
+                                 <use xlink:href="#icon-desktop"></use>
+                              </svg>
+                           </a>
+                        </li>
+                        <li class="footer__subitem">
+                           <a href="https://trade.popomark.com/en/register" class="footer__sublink">
+                              Windows
+                              <svg>
+                                 <use xlink:href="#icon-computer"></use>
+                              </svg>
+                           </a>
+                        </li>
+                        <li class="footer__subitem">
+                           <a href="https://trade.popomark.com/en/register" class="footer__sublink">
+                              Android
+                              <svg>
+                                 <use xlink:href="#icon-android"></use>
+                              </svg>
+                           </a>
+                        </li>
+                        <li class="footer__subitem">
+                           <a href="https://trade.popomark.com/en/register" class="footer__sublink">
+                              iOS
+                              <svg>
+                                 <use xlink:href="#icon-ios"></use>
+                              </svg>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="footer__menu-item">
+                     <a href="about.html" class="footer__menu-link">Company</a>
+                  </li>
+                  <li class="footer__menu-item">
+                     <a href="blog.html" class="footer__menu-link">Blog</a>
+                  </li>
+                  <li class="footer__menu-item">
+                     <a href="affiliate.html" class="footer__menu-link">Affiliate Program</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+         <nav class="footer__col">
+            <div class="footer__col-item">
+               <div class="footer__col-name">Privacy and Data</div>
+               <a href="privacy-policy.html" class="footer__link">Privacy Policy</a>
+               <a href="cookies.html" class="footer__link">Cookies</a>
+            </div>
+            <div class="footer__col-item">
+               <div class="footer__col-name">Financial Transactions</div>
+               <a href="payment-policy.html" class="footer__link">Payment Policy</a>
+               <a href="withdrawal-policy.html" class="footer__link">Withdrawal Policy</a>
+               <a href="refund-policy.html" class="footer__link">Refund Policy</a>
+               <a href="general-fees.html" class="footer__link">General Fees</a>
+               <a href="order-execution-policy.html" class="footer__link">Order Execution Policy</a>
+            </div>
+            <div class="footer__col-item">
+               <div class="footer__col-name">Legal and Regulatory</div>
+               <a href="terms.html" class="footer__link">Terms & Conditions</a>
+               <a href="aml.html" class="footer__link">AML (Anti-Money Laundering)</a>
+               <a href="risk-disclosure.html" class="footer__link">Risk Disclosure</a>
+               <a href="margin-trading.html" class="footer__link">Margin Trading</a>
+               <a href="demo-accounts.html" class="footer__link">Demo Accounts</a>
+            </div>
+         </nav>
+         <div class="footer__lang">
+            <div class="footer__lang-active">
+               English
+               <svg>
+                  <use xlink:href="#icon-chevron"></use>
+               </svg>
+            </div>
+            <ul class="footer__lang-list">
+               <li><a href="">Deutsch</a></li>
+               <li><a href="">Français</a></li>
+               <li><a href="">Русский</a></li>
+            </ul>
+         </div>
+      </div>
+      <div class="footer__text">
+         <p>
+            Payment transactions are managed by: <br>
+            S.W. SUN WAVE CY LTD <br>
+            Address: Lighthouse Trust Nevis Ltd, Suite 1, A.L. Evelyn Ltd Building, Main Street, Charlestown, Nevis
+            Company business number:
+            L 22402
+         </p>
+         <p>Company business number: HE 450991</p>
+         <p>
+            Sun Wave LLC <br>
+            Address: 6 Koutsoventi street, 4101 Agios Athanasios Limassol, Cyprus
+         </p>
+
+         <p>
+            Risk Disclaimer: <br>
+            The financial products offered by the company carry a high level of risk and can result in the loss of all
+            your funds.
+            You should never invest money that you cannot afford to lose.
+         </p>
+      </div>
+   </div>
+</footer>
+   </div>
+
+   <script src="js/swiper-bundle.min.js"></script>
+   <script src="js/app.js"></script>
+
+   <!--SVG sprive-->
+   <svg viewBox="0 0 125 77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      style="display: none;"><svg fill="none" viewBox="0 0 20 21" id="icon-link" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M8.49162 11.255C8.81553 11.6885 9.22878 12.0472 9.70335 12.3067C10.1779 12.5663 10.7027 12.7206 11.2421 12.7593C11.7815 12.7979 12.3229 12.72 12.8295 12.5308C13.3362 12.3416 13.7963 12.0456 14.1786 11.6627L16.4414 9.39768C17.1283 8.68569 17.5085 7.7321 17.4999 6.74228C17.4913 5.75247 17.0946 4.80563 16.3954 4.1057C15.6962 3.40577 14.7503 3.00874 13.7615 3.00014C12.7727 2.99154 11.8201 3.37205 11.1089 4.05971L9.81155 5.35079M11.5084 9.74498C11.1845 9.3115 10.7712 8.95283 10.2966 8.69328C9.82208 8.43374 9.2973 8.2794 8.75791 8.24073C8.21852 8.20206 7.67712 8.27997 7.17045 8.46916C6.66378 8.65836 6.20368 8.95442 5.82137 9.33727L3.55863 11.6023C2.87167 12.3143 2.49155 13.2679 2.50014 14.2577C2.50874 15.2475 2.90535 16.1944 3.60457 16.8943C4.30378 17.5942 5.24966 17.9913 6.23846 17.9999C7.22727 18.0085 8.17989 17.628 8.89115 16.9403L10.1809 15.6492"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 16 17" id="icon-share" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M4 8.5V12.5C4 12.7652 4.10536 13.0196 4.29289 13.2071C4.48043 13.3946 4.73478 13.5 5 13.5H11C11.2652 13.5 11.5196 13.3946 11.7071 13.2071C11.8946 13.0196 12 12.7652 12 12.5V8.5M10 5.5L8 3.5M8 3.5L6 5.5M8 3.5V10"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 16 17" id="icon-eye" xmlns="http://www.w3.org/2000/svg">
+         <path d="M2 9C2 9 4.18182 4.5 8 4.5C11.8182 4.5 14 9 14 9C14 9 11.8182 13.5 8 13.5C4.18182 13.5 2 9 2 9Z"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+         <path
+            d="M8 10.6875C8.90374 10.6875 9.63636 9.93198 9.63636 9C9.63636 8.06802 8.90374 7.3125 8 7.3125C7.09626 7.3125 6.36364 8.06802 6.36364 9C6.36364 9.93198 7.09626 10.6875 8 10.6875Z"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 20 20" id="icon-android" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M6.74047 3.82836C6.90767 3.71616 7.13647 3.7609 7.2494 3.92957L7.86173 4.84549C8.2504 4.67683 8.66546 4.55584 9.10767 4.51696C9.80273 4.45662 10.5021 4.56401 11.1471 4.8301L11.7469 3.9303C11.8584 3.76089 12.0857 3.71616 12.2551 3.82836C12.4238 3.94057 12.4693 4.16863 12.3571 4.33656L11.8005 5.17183C11.9904 5.29429 12.173 5.42776 12.3402 5.58103C13.1095 6.28576 13.5333 7.2259 13.5333 8.22763V12.9943C13.5333 13.567 13.0398 14.0334 12.4333 14.0334H11.3333V16.2334H10.6V14.0334H8.4V16.2334H7.66666V14.0334H6.56667C5.96021 14.0334 5.46667 13.567 5.46667 12.9943V8.37209C5.46667 7.07043 6.16334 5.90296 7.21494 5.19749L6.64 4.3373C6.52706 4.16936 6.57254 3.9413 6.74047 3.82836ZM9.49633 5.23343C9.38853 5.23343 9.28 5.23856 9.17147 5.2481C7.50533 5.39403 6.2 6.76609 6.2 8.37209V12.9943C6.2 13.1622 6.36427 13.3001 6.56667 13.3001H12.4333C12.6357 13.3001 12.8 13.1622 12.8 12.9943V8.22763C12.8 7.43343 12.4612 6.68543 11.8445 6.12149C11.2204 5.54877 10.3785 5.23343 9.49633 5.23343ZM4 12.2001H4.73334V8.53343H4V12.2001ZM14.2667 12.2001H15V8.53343H14.2667V12.2001ZM8.03333 6.84691C7.7092 6.84691 7.44667 7.10944 7.44667 7.43358C7.44667 7.75698 7.7092 8.02024 8.03333 8.02024C8.35747 8.02024 8.62 7.75698 8.62 7.43358C8.62 7.10944 8.35747 6.84691 8.03333 6.84691ZM10.9667 6.84691C10.6425 6.84691 10.38 7.10944 10.38 7.43358C10.38 7.75698 10.6425 8.02024 10.9667 8.02024C11.2908 8.02024 11.5533 7.75698 11.5533 7.43358C11.5533 7.10944 11.2908 6.84691 10.9667 6.84691Z"
+            fill="currentColor" />
+      </svg><svg fill="none" viewBox="0 0 36 36" id="icon-circle-check" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M7.66406 28.3359C6.37031 27.0422 7.22813 24.3281 6.56719 22.7391C5.90625 21.15 3.375 19.7578 3.375 18C3.375 16.2422 5.87813 14.9063 6.56719 13.2609C7.25625 11.6156 6.37031 8.95781 7.66406 7.66406C8.95781 6.37031 11.6719 7.22813 13.2609 6.56719C14.85 5.90625 16.2422 3.375 18 3.375C19.7578 3.375 21.0937 5.87813 22.7391 6.56719C24.3844 7.25625 27.0422 6.37031 28.3359 7.66406C29.6297 8.95781 28.7719 11.6719 29.4328 13.2609C30.0938 14.85 32.625 16.2422 32.625 18C32.625 19.7578 30.1219 21.0937 29.4328 22.7391C28.7438 24.3844 29.6297 27.0422 28.3359 28.3359C27.0422 29.6297 24.3281 28.7719 22.7391 29.4328C21.15 30.0938 19.7578 32.625 18 32.625C16.2422 32.625 14.9063 30.1219 13.2609 29.4328C11.6156 28.7438 8.95781 29.6297 7.66406 28.3359Z"
+            stroke="#00916D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+         <path d="M24.1875 14.625L15.9328 22.5L11.8125 18.5625" stroke="#00916D" stroke-width="3" stroke-linecap="round"
+            stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 20 20" id="icon-ios" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M3.06431 7.91729V12.8872H4.22477V7.91729H3.06431ZM8.08036 7.04088C9.27017 7.04088 10.0345 7.99953 10.0345 9.49953C10.0345 11.0113 9.27017 11.9699 8.08036 11.9699C6.8789 11.9699 6.12017 11.0113 6.12017 9.49953C6.12017 7.99953 6.87843 7.04088 8.08036 7.04088ZM14.4037 6.01175C12.9454 6.01175 11.9071 6.82331 11.9071 8.02914C11.9071 8.98778 12.4961 9.58788 13.733 9.87594L14.6022 10.0879C15.4481 10.282 15.792 10.5644 15.792 11.0526C15.792 11.6175 15.2262 12.0174 14.4214 12.0174C13.5988 12.0174 12.9804 11.6114 12.9165 10.9883H11.75C11.7966 12.2354 12.8117 13 14.3515 13C15.9789 13 17 12.1941 17 10.9121C17 9.90649 16.4165 9.336 15.0636 9.02397L14.2876 8.84727C13.465 8.64709 13.1267 8.38252 13.1267 7.93562C13.1267 7.37077 13.6398 6.99436 14.3985 6.99436C15.1628 6.99436 15.6876 7.37688 15.7459 8.00611H16.8891C16.8597 6.81814 15.8857 6.01222 14.4041 6.01222L14.4037 6.01175ZM8.08036 6.01175C6.12064 6.01175 4.89541 7.35855 4.89541 9.49953C4.89541 11.6584 6.12017 12.9991 8.08036 12.9991C10.0289 12.9991 11.2593 11.6579 11.2593 9.49953C11.2593 7.35855 10.0284 6.01175 8.07989 6.01175H8.08036ZM3.64128 6C3.63802 6 3.63382 6 3.63009 6C3.28196 6 3 6.2843 3 6.63534C3 6.98637 3.28196 7.27068 3.63009 7.27068C3.63429 7.27068 3.63802 7.27068 3.64221 7.27068C3.64734 7.27068 3.65293 7.27115 3.65899 7.27115C4.00712 7.27115 4.28908 6.98684 4.28908 6.63581C4.28908 6.28477 4.00712 6.00047 3.65899 6.00047C3.65293 6.00047 3.64687 6.00047 3.64081 6.00094H3.64174L3.64128 6Z"
+            fill="currentColor" />
+      </svg><svg fill="none" viewBox="0 0 20 20" id="icon-smartphone" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M9.99984 14.5834H10.0082M6.83317 18.3334H13.1665C14.0999 18.3334 14.5666 18.3334 14.9232 18.1518C15.2368 17.992 15.4917 17.737 15.6515 17.4234C15.8332 17.0669 15.8332 16.6002 15.8332 15.6667V4.33341C15.8332 3.39999 15.8332 2.93328 15.6515 2.57676C15.4917 2.26316 15.2368 2.00819 14.9232 1.8484C14.5666 1.66675 14.0999 1.66675 13.1665 1.66675H6.83317C5.89975 1.66675 5.43304 1.66675 5.07652 1.8484C4.76292 2.00819 4.50795 2.26316 4.34816 2.57676C4.1665 2.93328 4.1665 3.39999 4.1665 4.33342V15.6667C4.1665 16.6002 4.1665 17.0669 4.34816 17.4234C4.50795 17.737 4.76292 17.992 5.07652 18.1518C5.43304 18.3334 5.89975 18.3334 6.83317 18.3334ZM10.4165 14.5834C10.4165 14.8135 10.23 15.0001 9.99984 15.0001C9.76972 15.0001 9.58317 14.8135 9.58317 14.5834C9.58317 14.3533 9.76972 14.1667 9.99984 14.1667C10.23 14.1667 10.4165 14.3533 10.4165 14.5834Z"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 20 20" id="icon-computer" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M4.58317 16.6666H6.6665M14.1665 7.49992H14.1748M6.6665 4.99992H4.33317C3.39975 4.99992 2.93304 4.99992 2.57652 5.18157C2.26292 5.34136 2.00795 5.59633 1.84816 5.90993C1.6665 6.26645 1.6665 6.73316 1.6665 7.66659V10.6666C1.6665 11.6 1.6665 12.0667 1.84816 12.4232C2.00795 12.7368 2.26292 12.9918 2.57652 13.1516C2.93304 13.3333 3.39975 13.3333 4.33317 13.3333H6.6665M12.6665 16.6666H15.6665C16.5999 16.6666 17.0666 16.6666 17.4232 16.4849C17.7368 16.3251 17.9917 16.0702 18.1515 15.7566C18.3332 15.4 18.3332 14.9333 18.3332 13.9999V5.99992C18.3332 5.0665 18.3332 4.59979 18.1515 4.24327C17.9917 3.92966 17.7368 3.6747 17.4232 3.51491C17.0666 3.33325 16.5999 3.33325 15.6665 3.33325H12.6665C11.7331 3.33325 11.2664 3.33325 10.9099 3.51491C10.5963 3.6747 10.3413 3.92966 10.1815 4.24327C9.99984 4.59979 9.99984 5.0665 9.99984 5.99992V13.9999C9.99984 14.9333 9.99984 15.4 10.1815 15.7566C10.3413 16.0702 10.5963 16.3251 10.9099 16.4849C11.2664 16.6666 11.7331 16.6666 12.6665 16.6666ZM14.9998 12.4999C14.9998 12.9602 14.6267 13.3333 14.1665 13.3333C13.7063 13.3333 13.3332 12.9602 13.3332 12.4999C13.3332 12.0397 13.7063 11.6666 14.1665 11.6666C14.6267 11.6666 14.9998 12.0397 14.9998 12.4999Z"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 20 20" id="icon-desktop" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M1.6665 11.6667L18.3332 11.6667M6.6665 17.5H13.3332M5.6665 15H14.3332C15.7333 15 16.4334 15 16.9681 14.7275C17.4386 14.4878 17.821 14.1054 18.0607 13.635C18.3332 13.1002 18.3332 12.4001 18.3332 11V6.5C18.3332 5.09987 18.3332 4.3998 18.0607 3.86502C17.821 3.39462 17.4386 3.01217 16.9681 2.77248C16.4334 2.5 15.7333 2.5 14.3332 2.5H5.6665C4.26637 2.5 3.56631 2.5 3.03153 2.77248C2.56112 3.01217 2.17867 3.39462 1.93899 3.86502C1.6665 4.3998 1.6665 5.09987 1.6665 6.5V11C1.6665 12.4001 1.6665 13.1002 1.93899 13.635C2.17867 14.1054 2.56112 14.4878 3.03153 14.7275C3.56631 15 4.26637 15 5.6665 15Z"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 22 22" id="icon-lightning" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11.9588 2.31185C12.2644 2.44425 12.4461 2.76235 12.4049 3.09285L11.7243 8.55004L16.6313 8.55004C16.8214 8.55001 17.0117 8.54997 17.1668 8.56405C17.3139 8.5774 17.5887 8.61242 17.8261 8.80474C18.0992 9.02593 18.2551 9.36021 18.2499 9.71101C18.2453 10.0158 18.0968 10.249 18.0129 10.3707C17.9245 10.499 17.8027 10.6454 17.681 10.7918L10.6661 19.2295C10.4531 19.4856 10.0968 19.5706 9.7912 19.4382C9.48558 19.3058 9.3039 18.9877 9.34511 18.6572L10.0257 13.2L5.14605 13.2C5.13692 13.2 5.12779 13.2 5.11865 13.2C4.92862 13.2001 4.73828 13.2001 4.58318 13.186C4.43607 13.1727 4.16129 13.1377 3.92386 12.9453C3.65077 12.7241 3.49485 12.3899 3.50013 12.0391C3.50471 11.7343 3.65318 11.5011 3.73706 11.3794C3.82548 11.2511 3.94727 11.1046 4.069 10.9583C4.07483 10.9513 4.08066 10.9443 4.08648 10.9373L11.0839 2.52057C11.2969 2.26446 11.6532 2.17945 11.9588 2.31185ZM5.403 11.7L10.875 11.7C11.0901 11.7 11.2948 11.7924 11.4372 11.9536C11.5796 12.1148 11.6459 12.3294 11.6192 12.5429L11.1507 16.3003L16.347 10.05L10.875 10.05C10.6599 10.05 10.4552 9.9577 10.3128 9.79647C10.1704 9.63525 10.1041 9.42066 10.1308 9.20723L10.5993 5.44977L5.403 11.7Z"
+            fill="currentColor" />
+      </svg><svg fill="none" viewBox="0 0 22 22" id="icon-procente" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11 4.75C7.54822 4.75 4.75 7.54822 4.75 11C4.75 14.4517 7.54822 17.25 11 17.25C14.4517 17.25 17.25 14.4517 17.25 11C17.25 7.54822 14.4517 4.75 11 4.75ZM3.25 11C3.25 6.71979 6.71979 3.25 11 3.25C15.2802 3.25 18.75 6.71979 18.75 11C18.75 15.2802 15.2802 18.75 11 18.75C6.71979 18.75 3.25 15.2802 3.25 11ZM14.3303 7.66967C14.6232 7.96256 14.6232 8.43744 14.3303 8.73033L8.73033 14.3303C8.43744 14.6232 7.96256 14.6232 7.66967 14.3303C7.37678 14.0374 7.37678 13.5626 7.66967 13.2697L13.2697 7.66967C13.5626 7.37678 14.0374 7.37678 14.3303 7.66967ZM7.8 8.9C7.8 8.29249 8.29249 7.8 8.9 7.8C9.50751 7.8 10 8.29249 10 8.9C10 9.50751 9.50751 10 8.9 10C8.29249 10 7.8 9.50751 7.8 8.9ZM12 13.1C12 12.4925 12.4925 12 13.1 12C13.7075 12 14.2 12.4925 14.2 13.1C14.2 13.7075 13.7075 14.2 13.1 14.2C12.4925 14.2 12 13.7075 12 13.1Z"
+            fill="currentColor" />
+      </svg><svg fill="currentColor" viewBox="0 0 16 16" id="icon-dots" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+      </svg><svg fill="none" viewBox="0 0 14 15" id="icon-download" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M13 9.5V12.1667C13 12.5203 12.8595 12.8594 12.6095 13.1095C12.3594 13.3595 12.0203 13.5 11.6667 13.5H2.33333C1.97971 13.5 1.64057 13.3595 1.39052 13.1095C1.14048 12.8594 1 12.5203 1 12.1667V9.5M3.66667 6.16667L7 9.5M7 9.5L10.3333 6.16667M7 9.5V1.5"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 56 56" id="icon-plus" xmlns="http://www.w3.org/2000/svg">
+         <path d="M2.72266 27.5498H28.161V2.11144" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+            stroke-linejoin="round" />
+         <path d="M53.7207 27.6709H28.2823V53.1093" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+            stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 83 82" id="icon-refresh" xmlns="http://www.w3.org/2000/svg">
+         <path d="M8.78906 17.4893V34.867H27.1891" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+            stroke-linejoin="round" />
+         <path d="M74.2115 64.5116V47.1338H55.8115" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+            stroke-linejoin="round" />
+         <path
+            d="M66.7472 32.1386C65.239 27.905 62.6758 24.12 59.2966 21.1366C55.9174 18.1533 51.8325 16.0688 47.423 15.0778C43.0135 14.0868 38.4231 14.2214 34.0801 15.4692C29.7372 16.717 25.7832 19.0373 22.5872 22.2136L8.78906 35.0924M74.2113 46.9079L60.4131 59.7867C57.2171 62.963 53.2632 65.2832 48.9202 66.531C44.5773 67.7789 39.9869 67.9135 35.5773 66.9225C31.1678 65.9314 27.0829 63.847 23.7037 60.8636C20.3246 57.8803 17.7613 54.0952 16.2531 49.8617"
+            stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 16 25" id="icon-home" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M6.33333 18.0556V12.5H9.66667V18.0556M3 10.8333L8 6.94444L13 10.8333V16.9444C13 17.2391 12.8829 17.5217 12.6746 17.7301C12.4662 17.9385 12.1836 18.0556 11.8889 18.0556H4.11111C3.81643 18.0556 3.53381 17.9385 3.32544 17.7301C3.11706 17.5217 3 17.2391 3 16.9444V10.8333Z"
+            stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 24 25" id="icon-burger" xmlns="http://www.w3.org/2000/svg">
+         <path d="M3 12.5H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+         <path d="M3 6.5H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+         <path d="M3 18.5H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 17 16" id="icon-arrow-up" xmlns="http://www.w3.org/2000/svg">
+         <path d="M8.2 12.667V3.333M3.534 8 8.2 3.333 12.867 8" stroke="currentColor" stroke-width="1.3"
+            stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 39 40" id="icon-bell" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M29.25 13.5a9.75 9.75 0 1 0-19.5 0c0 11.375-4.875 14.625-4.875 14.625h29.25S29.25 24.875 29.25 13.5ZM22.311 34.625a3.25 3.25 0 0 1-5.622 0"
+            stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 36 36" id="icon-bank" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M9.42681 23.9659V24.0659H9.52681H11.9132H12.0132V23.9659V15.6136V15.5136H11.9132H9.52681H9.42681V15.6136V23.9659ZM16.5859 23.9659V24.0659H16.6859H19.0723H19.1723V23.9659V15.6136V15.5136H19.0723H16.6859H16.5859V15.6136V23.9659ZM5.84727 28.7386V28.8386H5.94727H29.8109H29.9109V28.7386V26.3523V26.2523H29.8109H5.94727H5.84727V26.3523V28.7386ZM23.745 23.9659V24.0659H23.845H26.2314H26.3314V23.9659V15.6136V15.5136H26.2314H23.845H23.745V15.6136V23.9659ZM5.84727 13.2273V13.3273H5.94727H29.8109H29.9109V13.2273V10.8409V10.7791L29.8556 10.7515L17.9238 4.78556L17.8791 4.7632L17.8344 4.78556L5.90254 10.7515L5.84727 10.7791V10.8409V13.2273ZM24.0742 10.7409H11.684L17.8791 7.67126L24.0742 10.7409Z"
+            fill="currentColor" stroke="currentColor" stroke-width="0.2" />
+      </svg><svg fill="none" viewBox="0 0 22 23" id="icon-calendar" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M15.667 6H6.333C5.597 6 5 6.597 5 7.333v9.334C5 17.403 5.597 18 6.333 18h9.334c.736 0 1.333-.597 1.333-1.333V7.333C17 6.597 16.403 6 15.667 6ZM14 4v3M8 4v3M5 10h12"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 39 40" id="icon-chart-arrow" xmlns="http://www.w3.org/2000/svg">
+         <path d="m5 28 8.852-8.438 7.87 7.5L35 13" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+            stroke-linejoin="round" />
+         <path d="M25 12h10v9" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 22 22" id="icon-check" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M18.214 6.05a1 1 0 0 1-.014 1.414l-8.666 8.5a1 1 0 0 1-1.4 0L3.8 11.714a1 1 0 1 1 1.4-1.428l3.633 3.563L16.8 6.036a1 1 0 0 1 1.414.014Z"
+            fill="currentColor" />
+      </svg><svg fill="none" viewBox="0 0 16 16" id="icon-chevron" xmlns="http://www.w3.org/2000/svg">
+         <path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+            stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 16 16" id="icon-chevron-right" xmlns="http://www.w3.org/2000/svg">
+         <path d="M6 6L10 10L6 14" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+            stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 20 20" id="icon-clock" xmlns="http://www.w3.org/2000/svg">
+         <path d="M10 16.363a6.364 6.364 0 1 0 0-12.727 6.364 6.364 0 0 0 0 12.727Z" stroke="currentColor"
+            stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+         <path d="M10 6.364v3.409l2.727 1.136" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+            stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 22 22" id="icon-coin" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11 4.455a6.545 6.545 0 1 0 0 13.09 6.545 6.545 0 0 0 0-13.09ZM3 11a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm8-5.455c.402 0 .727.326.727.728v.363h.121a2.424 2.424 0 0 1 2.425 2.425.727.727 0 1 1-1.455 0 .97.97 0 0 0-.97-.97h-1.575a1.09 1.09 0 0 0 0 2.182h1.454a2.545 2.545 0 0 1 0 5.09v.364a.727.727 0 0 1-1.454 0v-.363h-.121a2.424 2.424 0 0 1-2.425-2.425.727.727 0 1 1 1.455 0c0 .536.434.97.97.97h1.575a1.09 1.09 0 1 0 0-2.182h-1.454a2.545 2.545 0 0 1 0-5.09v-.364c0-.402.325-.728.727-.728Z"
+            fill="currentColor" />
+      </svg><svg fill="none" viewBox="0 0 16 15" id="icon-commas" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M15.868 11.463c0 .99-.329 1.805-.987 2.445-.63.64-1.446.96-2.448.96-1.145 0-2.061-.436-2.748-1.31-.687-.901-1.031-2.095-1.031-3.58 0-1.57.4-3.143 1.202-4.714.83-1.572 2.047-3.13 3.65-4.672 2.677 2.622 1.784 2.307-.043 5.24a10.237 10.237 0 0 0-1.245 2.793l-.859-.392c.115-.059.258-.117.43-.175.2-.058.458-.087.773-.087.916 0 1.689.334 2.319 1.004.658.67.987 1.499.987 2.488ZM7.885 11.463c0 .99-.33 1.805-.988 2.445-.63.64-1.445.96-2.447.96-1.145 0-2.061-.436-2.749-1.31-.687-.901-1.03-2.095-1.03-3.58 0-1.57.4-3.143 1.202-4.714.83-1.572 2.047-3.13 3.65-4.672C8.2 3.214 7.307 2.9 5.48 5.832a10.235 10.235 0 0 0-1.245 2.793l-.859-.392a3.3 3.3 0 0 1 .43-.175c.2-.058.458-.087.773-.087a3.06 3.06 0 0 1 2.318 1.004c.659.67.988 1.499.988 2.488Z"
+            fill="currentColor" />
+      </svg><svg fill="none" viewBox="0 0 125 77" id="icon-crown" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="m96.93 31.804-.006.004c-1.466 1.403-3.649 1.846-5.592 1.294-1.677-.476-2.82-1.982-4.003-3.577L68.789 4.544l-.021-.028-.402.298.402-.298-.045-.06c-1.037-1.398-2.256-3.042-4.121-3.633a7.065 7.065 0 0 0-4.02-.061c-2.055.576-3.394 2.385-4.524 3.913l-.042.057-18.46 24.942-.019.026c-1.1 1.487-2.152 2.879-3.695 3.362-1.955.612-4.223.185-5.771-1.258L12.27 17.08c-2.305-2.149-4.532-3.244-6.44-3.201-1.973.045-3.453 1.297-4.219 3.457-.954 2.693-.253 5.609.407 8.182l6.81 26.555C12.515 66.448 25.471 76.5 40.31 76.5h43.777c14.619 0 27.439-9.76 31.328-23.852l7.413-26.853c.757-2.742 1.59-5.904.448-8.757-.403-1.005-.973-1.802-1.7-2.346-.731-.547-1.594-.82-2.543-.814-1.877.01-4.052 1.103-6.305 3.202L96.929 31.804Z"
+            fill="url(#ja)" stroke="url(#jb)" stroke-linecap="round" stroke-linejoin="round" />
+         <defs>
+            <linearGradient id="ja" x1="62.5" y1="-14.135" x2="62.5" y2="76" gradientUnits="userSpaceOnUse">
+               <stop stop-color="#F9BE08" offset="1" />
+               <stop offset="1" stop-color="#F9BE08" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="jb" x1="62.5" y1="10.098" x2="62.5" y2="76" gradientUnits="userSpaceOnUse">
+               <stop stop-color="#F9BE08" offset="1" />
+               <stop offset="1" stop-color="#F9BE08" stop-opacity="0" />
+            </linearGradient>
+         </defs>
+      </svg><svg fill="none" viewBox="0 0 22 23" id="icon-grid" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M5.25 9.375h12.5m-8.333 0v8.5m-.834-12.75h5.834c1.167 0 1.75 0 2.196.232.392.203.71.528.91.928.227.455.227 1.05.227 2.24v5.95c0 1.19 0 1.785-.227 2.24-.2.4-.518.725-.91.928-.446.232-1.03.232-2.196.232H8.583c-1.166 0-1.75 0-2.195-.232a2.104 2.104 0 0 1-.91-.928c-.228-.455-.228-1.05-.228-2.24v-5.95c0-1.19 0-1.785.227-2.24.2-.4.519-.725.91-.928.446-.232 1.03-.232 2.196-.232Z"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><svg fill="none" viewBox="0 0 19 19" id="icon-star" xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="m9.5 0 2.133 6.91h6.902l-5.584 4.27 2.133 6.91L9.5 13.82l-5.584 4.27 2.133-6.91L.465 6.91h6.902L9.5 0Z"
+            fill="currentColor" />
+      </svg>
+   </svg>
+</body>
+
+</html>
