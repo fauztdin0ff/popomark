@@ -152,33 +152,44 @@ function isDesktop() {
    return window.innerWidth > 1200;
 }
 
+function updateBodyClass() {
+   const hasActiveSubmenu = [...menuItems].some(item =>
+      item.classList.contains('active') && item.querySelector('.menu__sublist')
+   );
+   document.body.classList.toggle('menu-opened', hasActiveSubmenu);
+}
+
 menuItems.forEach(item => {
    const subMenu = item.querySelector('.menu__sublist');
    let timeout;
 
    function handleMouseEnter() {
-      if (!isDesktop()) return;
+      if (!isDesktop() || !subMenu) return;
       clearTimeout(timeout);
       item.classList.add('active');
+      updateBodyClass();
    }
 
    function handleMouseLeave() {
-      if (!isDesktop()) return;
+      if (!isDesktop() || !subMenu) return;
       timeout = setTimeout(() => {
          item.classList.remove('active');
+         updateBodyClass();
       }, 100);
    }
 
    function handleClick(event) {
-      if (isDesktop()) return;
+      if (isDesktop() || !subMenu) return;
       if (event.target.closest('.menu__sublist')) return;
-      if (item.classList.contains('active')) {
-         item.classList.remove('active');
-      } else {
-         menuItems.forEach(i => i.classList.remove('active'));
+
+      const isActive = item.classList.contains('active');
+      menuItems.forEach(i => i.classList.remove('active'));
+
+      if (!isActive) {
          item.classList.add('active');
       }
 
+      updateBodyClass();
       event.preventDefault();
    }
 
@@ -199,6 +210,7 @@ document.addEventListener('click', (event) => {
 function handleScroll() {
    if (isDesktop()) {
       menuItems.forEach(item => item.classList.remove('active'));
+      updateBodyClass();
    }
 }
 window.addEventListener('scroll', handleScroll);
@@ -318,22 +330,6 @@ document.addEventListener("DOMContentLoaded", () => {
          simulateTouch: false,
          slideToClickedSlide: false,
          speed: 1000,
-         /*  effect: "creative",
-          creativeEffect: {
-             prev: {
-                shadow: false,
-                origin: "left center",
-                translate: ["-5%", 0, -200],
-                rotate: [0, 100, 0],
-                opacity: 0.1
-             },
-             next: {
-                origin: "right center",
-                translate: ["5%", 0, -200],
-                rotate: [0, -100, 0],
-                opacity: 0.01
-             },
-          }, */
          effect: "cube",
          cubeEffect: {
             shadow: false,
@@ -507,12 +503,12 @@ document.addEventListener("DOMContentLoaded", function () {
             if (sublink && subsublist) {
                subitem.addEventListener("mouseenter", function () {
                   subsublist.classList.add("open");
-                  subitem.classList.add("active"); // Добавляем класс active к .footer__subitem
+                  subitem.classList.add("active");
                });
 
                subitem.addEventListener("mouseleave", function () {
                   subsublist.classList.remove("open");
-                  subitem.classList.remove("active"); // Убираем класс active
+                  subitem.classList.remove("active");
                });
             }
          });
@@ -526,7 +522,7 @@ Table
 ---------------------------*/
 document.addEventListener("DOMContentLoaded", function () {
    const table = document.querySelector(".leaderboard__table");
-   if (!table) return; // 💡 Если таблицы нет, код дальше не выполняется
+   if (!table) return;
 
    const tableBody = table.querySelector("tbody");
    let isTableVisible = false;
@@ -544,7 +540,7 @@ document.addEventListener("DOMContentLoaded", function () {
    }
 
    async function updateLeaderboard() {
-      if (!isTableVisible) return; // Обновление только если таблица видима
+      if (!isTableVisible) return;
 
       let rows = Array.from(tableBody.querySelectorAll("tr"));
 
@@ -575,7 +571,7 @@ document.addEventListener("DOMContentLoaded", function () {
          row.cells[0].textContent = index + 4;
       });
 
-      tableBody.innerHTML = ""; // Очищаем таблицу перед добавлением отсортированных строк
+      tableBody.innerHTML = "";
       rows.forEach(row => tableBody.appendChild(row));
 
       rows.forEach((row, index) => {
@@ -689,7 +685,7 @@ document.addEventListener("DOMContentLoaded", function () {
          row.cells[0].textContent = index + 4;
       });
 
-      tableBody.innerHTML = ""; // Очищаем таблицу перед добавлением отсортированных строк
+      tableBody.innerHTML = "";
       rows.forEach(row => tableBody.appendChild(row));
    }
 
@@ -699,7 +695,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return parseInt(profitCell.textContent.replace(/\D/g, ""), 10);
    }
 
-   // 📌 Функция для старта/остановки интервала
    function toggleUpdateInterval(visible) {
       isTableVisible = visible;
       if (visible) {
@@ -712,7 +707,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
    }
 
-   // 👀 Создаем IntersectionObserver
    const observer = new IntersectionObserver(
       ([entry]) => {
          toggleUpdateInterval(entry.isIntersecting);
@@ -720,9 +714,316 @@ document.addEventListener("DOMContentLoaded", function () {
       { threshold: 0.1 }
    );
 
-   // Отслеживаем таблицу
    observer.observe(table);
 });
+
+
+/*------------------------------
+Faq
+---------------------------*/
+document.addEventListener("DOMContentLoaded", () => {
+   const faqItems = document.querySelectorAll(".faq__item");
+
+   if (faqItems.length === 0) return;
+
+   faqItems.forEach((item) => {
+      const question = item.querySelector(".faq__question");
+      const icon = item.querySelector(".faq__item-icon");
+      const answer = item.querySelector(".faq__answer");
+
+      if (!question || !icon || !answer) return;
+
+      const toggleFaqItem = () => {
+         const isActive = item.classList.contains("active");
+
+         faqItems.forEach((el) => {
+            const elAnswer = el.querySelector(".faq__answer");
+            if (elAnswer) {
+               el.classList.remove("active");
+               elAnswer.style.maxHeight = null;
+            }
+         });
+
+         if (!isActive) {
+            item.classList.add("active");
+            answer.style.maxHeight = answer.scrollHeight + "px";
+         }
+      };
+
+      question.addEventListener("click", toggleFaqItem);
+      icon.addEventListener("click", toggleFaqItem);
+   });
+});
+
+
+/*------------------------------
+pagination list
+---------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+   const activeElement = document.querySelector(".page-pagination-view-list-active");
+   const sublist = document.querySelector(".page-pagination-view-sublist");
+   const parent = document.querySelector(".page-pagination-view-list");
+
+   if (!activeElement || !sublist || !parent) {
+      return;
+   }
+
+   activeElement.addEventListener("click", function (event) {
+      this.classList.toggle("active");
+      sublist.classList.toggle("active");
+      event.stopPropagation();
+   });
+
+   document.addEventListener("click", function (event) {
+      if (!parent.contains(event.target)) {
+         activeElement.classList.remove("active");
+         sublist.classList.remove("active");
+      }
+   });
+});
+
+
+/*------------------------------
+Back to top
+---------------------------*/
+document.addEventListener("DOMContentLoaded", () => {
+   const backToTop = document.querySelector(".back-to-top");
+
+   if (backToTop) {
+      window.addEventListener("scroll", () => {
+         backToTop.classList.toggle("visible", window.scrollY > 200);
+      });
+
+      backToTop.addEventListener("click", () => {
+         window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+   }
+});
+
+
+/*------------------------------
+Article copy link
+---------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+   const article = document.querySelector(".article__main-text");
+   const toc = document.querySelector(".article__leftside-list");
+   let isLastItemActive = false;
+
+   if (article && toc) {
+      toc.innerHTML = "";
+      const headings = article.querySelectorAll("h2");
+      const links = new Map();
+
+      headings.forEach((heading, index) => {
+         const anchor = `anchor-${index + 1}`;
+         heading.id = anchor;
+
+         // Создаем кнопку копирования ссылки
+         const button = document.createElement("button");
+         button.type = "button";
+         button.classList.add("article__copy-link");
+         button.setAttribute("aria-label", "Copy link");
+         button.innerHTML = `
+            <svg><use xlink:href="#icon-link"></use></svg>
+            <span>Copied</span>
+         `;
+         heading.appendChild(button);
+
+         // Извлекаем чистый текст заголовка
+         const headingText = heading.cloneNode(true);
+         headingText.querySelector(".article__copy-link")?.remove();
+         const cleanText = headingText.textContent.trim();
+
+         // Создаем элемент оглавления
+         const li = document.createElement("li");
+         const a = document.createElement("a");
+         a.href = `#${anchor}`;
+         a.classList.add("article__leftside-link");
+         a.textContent = cleanText;
+         li.appendChild(a);
+         toc.appendChild(li);
+         links.set(anchor, a);
+
+         // Обработчик копирования ссылки
+         button.addEventListener("click", () => {
+            const url = `${window.location.origin}${window.location.pathname}#${anchor}`;
+            navigator.clipboard.writeText(url)
+               .then(() => {
+                  button.classList.add("active");
+                  setTimeout(() => {
+                     button.classList.remove("active");
+                  }, 1000);
+               })
+               .catch(err => console.error("Copy failed:", err));
+         });
+      });
+
+      function updateActiveTocItem() {
+         let activeAnchor = null;
+         const scrollPosition = window.pageYOffset + window.innerHeight;
+
+         for (let i = headings.length - 1; i >= 0; i--) {
+            const rect = headings[i].getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 0.5) {
+               activeAnchor = headings[i].id;
+               break;
+            }
+         }
+         links.forEach((link, id) => {
+            const isActive = id === activeAnchor;
+            link.classList.toggle("active", isActive);
+         });
+
+         // Логика для последнего элемента
+         if (activeAnchor === headings[headings.length - 1]?.id) {
+            if (!isLastItemActive) {
+               links.get(activeAnchor)?.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'nearest'
+               });
+               isLastItemActive = true;
+            }
+         }
+      }
+
+      let timeout;
+      window.addEventListener("scroll", () => {
+         clearTimeout(timeout);
+         timeout = setTimeout(updateActiveTocItem, 100);
+      });
+
+      updateActiveTocItem();
+   }
+});
+
+
+/*------------------------------
+Table of contents
+---------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+   const openBtn = document.querySelector(".article__leftside-open");
+   const closeBtn = document.querySelector(".article__leftside-close");
+   const leftsideBody = document.querySelector(".article__leftside-body");
+   const body = document.body;
+
+   if (!openBtn || !closeBtn || !leftsideBody) return;
+
+   function openSidebar() {
+      leftsideBody.classList.add("opened");
+      body.classList.add("side-opened");
+   }
+
+   function closeSidebar() {
+      leftsideBody.classList.remove("opened");
+      body.classList.remove("side-opened");
+   }
+
+   openBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openSidebar();
+   });
+
+   closeBtn.addEventListener("click", closeSidebar);
+
+   document.addEventListener("click", (e) => {
+      if (!leftsideBody.contains(e.target) && !openBtn.contains(e.target)) {
+         closeSidebar();
+      }
+   });
+   leftsideBody.addEventListener("click", (e) => {
+      if (e.target.closest("a, button")) {
+         closeSidebar();
+      }
+   });
+});
+
+/*------------------------------
+Go to top
+---------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+   let button = document.getElementById("goToTop");
+
+   if (!button) return;
+
+   button.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+   });
+
+});
+
+
+/*------------------------------
+Fixed panel in article
+---------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+   const panel = document.querySelector(".article__fixed-panel");
+
+   if (panel) {
+      window.addEventListener("scroll", function () {
+         if (window.scrollY >= 300) {
+            panel.classList.add("show");
+         } else {
+            panel.classList.remove("show");
+         }
+      });
+   }
+});
+
+
+/*------------------------------
+Move authors
+---------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+   const authors = document.querySelector(".article__rightside-authors");
+   const authorsMob = document.querySelector(".article__authors-mob");
+   const rightsideBody = document.querySelector(".article__rightside-body");
+
+   function moveAuthors() {
+      if (window.matchMedia("(max-width: 767px)").matches) {
+         if (authors && authorsMob && !authorsMob.contains(authors)) {
+            authorsMob.appendChild(authors);
+         }
+      } else {
+         if (authors && rightsideBody && !rightsideBody.contains(authors)) {
+            rightsideBody.appendChild(authors);
+         }
+      }
+   }
+
+   moveAuthors();
+   window.addEventListener("resize", moveAuthors);
+});
+
+/*------------------------------
+Share button   
+---------------------------*/
+document.addEventListener("DOMContentLoaded", () => {
+   const shareButtons = document.querySelectorAll(".share-button");
+
+   shareButtons.forEach(button => {
+      button.addEventListener("click", () => {
+         shareArticle();
+      });
+   });
+});
+
+function shareArticle() {
+   if (navigator.share) {
+      navigator.share({
+         title: document.title,
+         text: "Read this article!",
+         url: window.location.href
+      })
+         .then(() => console.log("Share success"))
+         .catch((error) => console.log("Error: ", error));
+   } else {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+         alert("Link copied");
+      }).catch((error) => {
+         console.log("Error: ", error);
+      });
+   }
+}
 
 })();
 
