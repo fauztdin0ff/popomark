@@ -2338,9 +2338,10 @@ Intro
 .intro__buttons {
   text-align: center;
   margin-bottom: 30px;
-}
-.intro__buttons a {
-  margin-inline: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 @media (max-width: 600px) {
   .intro__buttons {
