@@ -313,6 +313,9 @@ Titles
   height: 12px;
   background: url(../img/icons/title-line.svg) center/contain no-repeat;
 }
+.title-line.title-line-green::after {
+  background: url(../img/icons/title-line-green.svg) center/contain no-repeat;
+}
 
 .subtitle {
   color: rgb(26, 26, 25);
@@ -3846,6 +3849,7 @@ Start
 .start__item-image {
   margin-bottom: 20px;
   max-width: 134px;
+  aspect-ratio: 1/1;
   margin-inline: auto;
 }
 .start__item-image img {
@@ -4801,6 +4805,45 @@ Forex
 @media (max-width: 600px) {
   .hero {
     background-image: url(../img/forex/forex-bg-s.png);
+  }
+}
+.hero.options {
+  background-image: url(../img/forex/options-bg-l.png);
+}
+@media (max-width: 922px) {
+  .hero.options {
+    background-image: url(../img/forex/options-bg-m.png);
+  }
+}
+@media (max-width: 600px) {
+  .hero.options {
+    background-image: url(../img/forex/options-bg-s.png);
+  }
+}
+.hero.crypto {
+  background-image: url(../img/forex/crypto-bg-l.png);
+}
+@media (max-width: 922px) {
+  .hero.crypto {
+    background-image: url(../img/forex/crypto-bg-m.png);
+  }
+}
+@media (max-width: 600px) {
+  .hero.crypto {
+    background-image: url(../img/forex/crypto-bg-s.png);
+  }
+}
+.hero.stocks {
+  background-image: url(../img/forex/stocks-bg-l.png);
+}
+@media (max-width: 922px) {
+  .hero.stocks {
+    background-image: url(../img/forex/stocks-bg-m.png);
+  }
+}
+@media (max-width: 600px) {
+  .hero.stocks {
+    background-image: url(../img/forex/stocks-bg-s.png);
   }
 }
 .hero__body {
